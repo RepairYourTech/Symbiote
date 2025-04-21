@@ -1,10 +1,10 @@
 import * as assert from "assert"
 
-import type { ClineMessage } from "../../../src/exports/roo-code"
+import type { ClineMessage } from "../../../src/exports/roo-code" // TODO: Update import path when exports are renamed
 
 import { sleep, waitFor, waitUntilCompleted } from "./utils"
 
-suite("Roo Code Subtasks", () => {
+suite("Symbiote Subtasks", () => {
 	test("Should handle subtask cancellation and resumption correctly", async () => {
 		const api = globalThis.api
 

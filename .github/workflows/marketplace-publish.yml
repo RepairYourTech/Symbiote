@@ -32,18 +32,16 @@ jobs:
         run: |
           npm install -g vsce ovsx
           npm run install:all
-      - name: Create .env file
-        run: echo "POSTHOG_API_KEY=${{ secrets.POSTHOG_API_KEY }}" >> .env
+      # Removed telemetry-related .env file creation
       - name: Package Extension
         run: |
           current_package_version=$(node -p "require('./package.json').version")
           npm run vsix
-          package=$(unzip -l bin/roo-cline-${current_package_version}.vsix)
+          package=$(unzip -l bin/symbiote-${current_package_version}.vsix)
           echo "$package"
           echo "$package" | grep -q "dist/extension.js" || exit 1
           echo "$package" | grep -q "extension/webview-ui/build/assets/index.js" || exit 1
           echo "$package" | grep -q "extension/node_modules/@vscode/codicons/dist/codicon.ttf" || exit 1
-          echo "$package" | grep -q ".env" || exit 1
       - name: Create and Push Git Tag
         run: |
           current_package_version=$(node -p "require('./package.json').version")
@@ -81,5 +79,5 @@ jobs:
             --title "Release v${current_package_version}" \
             --notes "$changelog_content" \
             --target ${{ env.GIT_REF }} \
-            bin/roo-cline-${current_package_version}.vsix
+            bin/symbiote-${current_package_version}.vsix
           echo "Successfully created GitHub Release v${current_package_version}"

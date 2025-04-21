@@ -37,13 +37,46 @@ const addLineNumbersSpy = jest.requireMock("../../integrations/misc/extract-text
 let mockInputContent = ""
 jest.mock("../../services/tree-sitter")
 jest.mock("isbinaryfile")
-jest.mock("../ignore/RooIgnoreController", () => ({
-	RooIgnoreController: class {
+jest.mock("../ignore/SymbioteIgnoreController", () => ({
+	SymbioteIgnoreController: class {
+		constructor() {
+			// Mock the setupFileWatcher method to avoid RelativePattern issues
+			this.setupFileWatcher = jest.fn()
+			this.symbioteIgnoreContent = undefined
+		}
 		initialize() {
 			return Promise.resolve()
 		}
 		validateAccess() {
 			return true
+		}
+		setupFileWatcher() {
+			// Empty mock implementation
+		}
+		dispose() {
+			// Empty mock implementation
+		}
+	},
+}))
+
+jest.mock("../ignore/RooIgnoreController", () => ({
+	RooIgnoreController: class {
+		constructor() {
+			// Mock the setupFileWatcher method to avoid RelativePattern issues
+			this.setupFileWatcher = jest.fn()
+			this.rooIgnoreContent = undefined
+		}
+		initialize() {
+			return Promise.resolve()
+		}
+		validateAccess() {
+			return true
+		}
+		setupFileWatcher() {
+			// Empty mock implementation
+		}
+		dispose() {
+			// Empty mock implementation
 		}
 	},
 }))
@@ -113,6 +146,9 @@ describe("read_file tool XML output structure", () => {
 		mockCline.rooIgnoreController = {
 			validateAccess: jest.fn().mockReturnValue(true),
 		}
+		mockCline.symbioteIgnoreController = {
+			validateAccess: jest.fn().mockReturnValue(true),
+		}
 		mockCline.say = jest.fn().mockResolvedValue(undefined)
 		mockCline.ask = jest.fn().mockResolvedValue(true)
 		mockCline.presentAssistantMessage = jest.fn()
@@ -151,6 +187,7 @@ describe("read_file tool XML output structure", () => {
 		mockedCountFileLines.mockResolvedValue(totalLines)
 		mockedIsBinaryFile.mockResolvedValue(isBinary)
 		mockCline.rooIgnoreController.validateAccess = jest.fn().mockReturnValue(validateAccess)
+		mockCline.symbioteIgnoreController.validateAccess = jest.fn().mockReturnValue(validateAccess)
 
 		// Create a tool use object
 		const toolUse: ReadFileToolUse = {

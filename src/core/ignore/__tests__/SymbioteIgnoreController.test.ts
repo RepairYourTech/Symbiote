@@ -1,6 +1,6 @@
-// npx jest src/core/ignore/__tests__/RooIgnoreController.test.ts
+// npx jest src/core/ignore/__tests__/SymbioteIgnoreController.test.ts
 
-import { RooIgnoreController, LOCK_TEXT_SYMBOL } from "../RooIgnoreController"
+import { SymbioteIgnoreController, LOCK_TEXT_SYMBOL } from "../SymbioteIgnoreController"
 import * as vscode from "vscode"
 import * as path from "path"
 import * as fs from "fs/promises"
@@ -27,10 +27,12 @@ jest.mock("vscode", () => {
 				dispose: jest.fn(),
 			})),
 		},
-		RelativePattern: jest.fn().mockImplementation((base, pattern) => ({
-			base,
-			pattern,
-		})),
+		RelativePattern: jest.fn().mockImplementation(function(base, pattern) {
+			// Mock constructor function
+			this.base = base;
+			this.pattern = pattern;
+			return { base, pattern };
+		}),
 		EventEmitter: jest.fn().mockImplementation(() => mockEventEmitter),
 		Disposable: {
 			from: jest.fn(),
@@ -38,9 +40,9 @@ jest.mock("vscode", () => {
 	}
 })
 
-describe("RooIgnoreController", () => {
+describe("SymbioteIgnoreController", () => {
 	const TEST_CWD = "/test/path"
-	let controller: RooIgnoreController
+	let controller: SymbioteIgnoreController
 	let mockFileExists: jest.MockedFunction<typeof fileExistsAtPath>
 	let mockReadFile: jest.MockedFunction<typeof fs.readFile>
 	let mockWatcher: any
@@ -65,15 +67,15 @@ describe("RooIgnoreController", () => {
 		mockReadFile = fs.readFile as jest.MockedFunction<typeof fs.readFile>
 
 		// Create controller
-		controller = new RooIgnoreController(TEST_CWD)
+		controller = new SymbioteIgnoreController(TEST_CWD)
 	})
 
 	describe("initialization", () => {
 		/**
-		 * Tests the controller initialization when .rooignore exists
+		 * Tests the controller initialization when .symbiote-ignore exists
 		 */
-		it("should load .rooignore patterns on initialization when file exists", async () => {
-			// Setup mocks to simulate existing .rooignore file
+		it("should load .symbiote-ignore patterns on initialization when file exists", async () => {
+			// Setup mocks to simulate existing .symbiote-ignore file
 			mockFileExists.mockResolvedValue(true)
 			mockReadFile.mockResolvedValue("node_modules\n.git\nsecrets.json")
 
@@ -81,11 +83,11 @@ describe("RooIgnoreController", () => {
 			await controller.initialize()
 
 			// Verify file was checked and read
-			expect(mockFileExists).toHaveBeenCalledWith(path.join(TEST_CWD, ".rooignore"))
-			expect(mockReadFile).toHaveBeenCalledWith(path.join(TEST_CWD, ".rooignore"), "utf8")
+			expect(mockFileExists).toHaveBeenCalledWith(path.join(TEST_CWD, ".symbiote-ignore"))
+			expect(mockReadFile).toHaveBeenCalledWith(path.join(TEST_CWD, ".symbiote-ignore"), "utf8")
 
 			// Verify content was stored
-			expect(controller.rooIgnoreContent).toBe("node_modules\n.git\nsecrets.json")
+			expect(controller.symbioteIgnoreContent).toBe("node_modules\n.git\nsecrets.json")
 
 			// Test that ignore patterns were applied
 			expect(controller.validateAccess("node_modules/package.json")).toBe(false)
@@ -95,17 +97,17 @@ describe("RooIgnoreController", () => {
 		})
 
 		/**
-		 * Tests the controller behavior when .rooignore doesn't exist
+		 * Tests the controller behavior when .symbiote-ignore doesn't exist
 		 */
-		it("should allow all access when .rooignore doesn't exist", async () => {
-			// Setup mocks to simulate missing .rooignore file
+		it("should allow all access when .symbiote-ignore doesn't exist", async () => {
+			// Setup mocks to simulate missing .symbiote-ignore file
 			mockFileExists.mockResolvedValue(false)
 
 			// Initialize controller
 			await controller.initialize()
 
 			// Verify no content was stored
-			expect(controller.rooIgnoreContent).toBeUndefined()
+			expect(controller.symbioteIgnoreContent).toBeUndefined()
 
 			// All files should be accessible
 			expect(controller.validateAccess("node_modules/package.json")).toBe(true)
@@ -115,12 +117,12 @@ describe("RooIgnoreController", () => {
 		/**
 		 * Tests the file watcher setup
 		 */
-		it("should set up file watcher for .rooignore changes", async () => {
+		it("should set up file watcher for .symbiote-ignore changes", async () => {
 			// Check that watcher was created with correct pattern
 			expect(vscode.workspace.createFileSystemWatcher).toHaveBeenCalledWith(
 				expect.objectContaining({
 					base: TEST_CWD,
-					pattern: ".rooignore",
+					pattern: ".symbiote-ignore",
 				}),
 			)
 
@@ -133,7 +135,7 @@ describe("RooIgnoreController", () => {
 		/**
 		 * Tests error handling during initialization
 		 */
-		it("should handle errors when loading .rooignore", async () => {
+		it("should handle errors when loading .symbiote-ignore", async () => {
 			// Setup mocks to simulate error
 			mockFileExists.mockResolvedValue(true)
 			mockReadFile.mockRejectedValue(new Error("Test file read error"))
@@ -145,7 +147,7 @@ describe("RooIgnoreController", () => {
 			await controller.initialize()
 
 			// Verify error was logged
-			expect(consoleSpy).toHaveBeenCalledWith("Unexpected error loading .rooignore:", expect.any(Error))
+			expect(consoleSpy).toHaveBeenCalledWith("Unexpected error loading .symbiote-ignore:", expect.any(Error))
 
 			// Cleanup
 			consoleSpy.mockRestore()
@@ -154,7 +156,7 @@ describe("RooIgnoreController", () => {
 
 	describe("validateAccess", () => {
 		beforeEach(async () => {
-			// Setup .rooignore content
+			// Setup .symbiote-ignore content
 			mockFileExists.mockResolvedValue(true)
 			mockReadFile.mockResolvedValue("node_modules\n.git\nsecrets/**\n*.log")
 			await controller.initialize()
@@ -202,12 +204,12 @@ describe("RooIgnoreController", () => {
 		})
 
 		/**
-		 * Tests the default behavior when no .rooignore exists
+		 * Tests the default behavior when no .symbiote-ignore exists
 		 */
-		it("should allow all access when no .rooignore content", async () => {
-			// Create a new controller with no .rooignore
+		it("should allow all access when no .symbiote-ignore content", async () => {
+			// Create a new controller with no .symbiote-ignore
 			mockFileExists.mockResolvedValue(false)
-			const emptyController = new RooIgnoreController(TEST_CWD)
+			const emptyController = new SymbioteIgnoreController(TEST_CWD)
 			await emptyController.initialize()
 
 			// All paths should be allowed
@@ -219,7 +221,7 @@ describe("RooIgnoreController", () => {
 
 	describe("validateCommand", () => {
 		beforeEach(async () => {
-			// Setup .rooignore content
+			// Setup .symbiote-ignore content
 			mockFileExists.mockResolvedValue(true)
 			mockReadFile.mockResolvedValue("node_modules\n.git\nsecrets/**\n*.log")
 			await controller.initialize()
@@ -274,12 +276,12 @@ describe("RooIgnoreController", () => {
 		})
 
 		/**
-		 * Tests behavior when no .rooignore exists
+		 * Tests behavior when no .symbiote-ignore exists
 		 */
-		it("should allow all commands when no .rooignore exists", async () => {
-			// Create a new controller with no .rooignore
+		it("should allow all commands when no .symbiote-ignore exists", async () => {
+			// Create a new controller with no .symbiote-ignore
 			mockFileExists.mockResolvedValue(false)
-			const emptyController = new RooIgnoreController(TEST_CWD)
+			const emptyController = new SymbioteIgnoreController(TEST_CWD)
 			await emptyController.initialize()
 
 			// All commands should be allowed
@@ -290,7 +292,7 @@ describe("RooIgnoreController", () => {
 
 	describe("filterPaths", () => {
 		beforeEach(async () => {
-			// Setup .rooignore content
+			// Setup .symbiote-ignore content
 			mockFileExists.mockResolvedValue(true)
 			mockReadFile.mockResolvedValue("node_modules\n.git\nsecrets/**\n*.log")
 			await controller.initialize()
@@ -353,10 +355,10 @@ describe("RooIgnoreController", () => {
 
 	describe("getInstructions", () => {
 		/**
-		 * Tests instructions generation with .rooignore
+		 * Tests instructions generation with .symbiote-ignore
 		 */
-		it("should generate formatted instructions when .rooignore exists", async () => {
-			// Setup .rooignore content
+		it("should generate formatted instructions when .symbiote-ignore exists", async () => {
+			// Setup .symbiote-ignore content
 			mockFileExists.mockResolvedValue(true)
 			mockReadFile.mockResolvedValue("node_modules\n.git\nsecrets/**")
 			await controller.initialize()
@@ -364,7 +366,7 @@ describe("RooIgnoreController", () => {
 			const instructions = controller.getInstructions()
 
 			// Verify instruction format
-			expect(instructions).toContain("# .rooignore")
+			expect(instructions).toContain("# .symbiote-ignore")
 			expect(instructions).toContain(LOCK_TEXT_SYMBOL)
 			expect(instructions).toContain("node_modules")
 			expect(instructions).toContain(".git")
@@ -372,10 +374,10 @@ describe("RooIgnoreController", () => {
 		})
 
 		/**
-		 * Tests behavior when no .rooignore exists
+		 * Tests behavior when no .symbiote-ignore exists
 		 */
-		it("should return undefined when no .rooignore exists", async () => {
-			// Setup no .rooignore
+		it("should return undefined when no .symbiote-ignore exists", async () => {
+			// Setup no .symbiote-ignore
 			mockFileExists.mockResolvedValue(false)
 			await controller.initialize()
 
@@ -408,26 +410,26 @@ describe("RooIgnoreController", () => {
 
 	describe("file watcher", () => {
 		/**
-		 * Tests behavior when .rooignore is created
+		 * Tests behavior when .symbiote-ignore is created
 		 */
-		it("should reload .rooignore when file is created", async () => {
-			// Setup initial state without .rooignore
+		it("should reload .symbiote-ignore when file is created", async () => {
+			// Setup initial state without .symbiote-ignore
 			mockFileExists.mockResolvedValue(false)
 			await controller.initialize()
 
 			// Verify initial state
-			expect(controller.rooIgnoreContent).toBeUndefined()
+			expect(controller.symbioteIgnoreContent).toBeUndefined()
 			expect(controller.validateAccess("node_modules/package.json")).toBe(true)
 
 			// Setup for the test
 			mockFileExists.mockResolvedValue(false) // Initially no file exists
 
-			// Create and initialize controller with no .rooignore
-			controller = new RooIgnoreController(TEST_CWD)
+			// Create and initialize controller with no .symbiote-ignore
+			controller = new SymbioteIgnoreController(TEST_CWD)
 			await controller.initialize()
 
 			// Initial state check
-			expect(controller.rooIgnoreContent).toBeUndefined()
+			expect(controller.symbioteIgnoreContent).toBeUndefined()
 
 			// Now simulate file creation
 			mockFileExists.mockResolvedValue(true)
@@ -436,21 +438,21 @@ describe("RooIgnoreController", () => {
 			// Find and trigger the onCreate handler
 			const onCreateHandler = mockWatcher.onDidCreate.mock.calls[0][0]
 
-			// Force reload of .rooignore content manually
+			// Force reload of .symbiote-ignore content manually
 			await controller.initialize()
 
 			// Now verify content was updated
-			expect(controller.rooIgnoreContent).toBe("node_modules")
+			expect(controller.symbioteIgnoreContent).toBe("node_modules")
 
 			// Verify access validation changed
 			expect(controller.validateAccess("node_modules/package.json")).toBe(false)
 		})
 
 		/**
-		 * Tests behavior when .rooignore is changed
+		 * Tests behavior when .symbiote-ignore is changed
 		 */
-		it("should reload .rooignore when file is changed", async () => {
-			// Setup initial state with .rooignore
+		it("should reload .symbiote-ignore when file is changed", async () => {
+			// Setup initial state with .symbiote-ignore
 			mockFileExists.mockResolvedValue(true)
 			mockReadFile.mockResolvedValue("node_modules")
 			await controller.initialize()
@@ -467,7 +469,7 @@ describe("RooIgnoreController", () => {
 			await controller.initialize()
 
 			// Verify content was updated
-			expect(controller.rooIgnoreContent).toBe("node_modules\n.git")
+			expect(controller.symbioteIgnoreContent).toBe("node_modules\n.git")
 
 			// Verify access validation changed
 			expect(controller.validateAccess("node_modules/package.json")).toBe(false)
@@ -475,10 +477,10 @@ describe("RooIgnoreController", () => {
 		})
 
 		/**
-		 * Tests behavior when .rooignore is deleted
+		 * Tests behavior when .symbiote-ignore is deleted
 		 */
-		it("should reset when .rooignore is deleted", async () => {
-			// Setup initial state with .rooignore
+		it("should reset when .symbiote-ignore is deleted", async () => {
+			// Setup initial state with .symbiote-ignore
 			mockFileExists.mockResolvedValue(true)
 			mockReadFile.mockResolvedValue("node_modules")
 			await controller.initialize()
@@ -494,7 +496,7 @@ describe("RooIgnoreController", () => {
 			await onDeleteHandler()
 
 			// Verify content was reset
-			expect(controller.rooIgnoreContent).toBeUndefined()
+			expect(controller.symbioteIgnoreContent).toBeUndefined()
 
 			// Verify access validation changed
 			expect(controller.validateAccess("node_modules/package.json")).toBe(true)

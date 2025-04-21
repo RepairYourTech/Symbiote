@@ -148,6 +148,11 @@ jest.mock("vscode", () => {
 			from: jest.fn(),
 		},
 		TabInputText: jest.fn(),
+		// Add RelativePattern mock
+		RelativePattern: jest.fn().mockImplementation((base, pattern) => ({
+			base,
+			pattern,
+		})),
 	}
 })
 
