@@ -20,6 +20,8 @@ jest.mock("@/components/ui", () => ({
 			value={value[0]}
 			onChange={(e) => onValueChange([parseFloat(e.target.value)])}
 			data-testid={dataTestId}
+			aria-label="Slider control"
+			title="Slider control"
 		/>
 	),
 }))
