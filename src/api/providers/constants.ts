@@ -1,5 +1,5 @@
 export const DEFAULT_HEADERS = {
-	"HTTP-Referer": "https://github.com/mayphilc/Symbiote",
+	"HTTP-Referer": "https://github.com/RepairYourTech/Symbiote",
 	"X-Title": "Symbiote",
 }
 
