@@ -20,7 +20,12 @@ jest.mock("vscode", () => {
 				dispose: jest.fn(),
 			})),
 		},
-		RelativePattern: jest.fn(),
+		RelativePattern: jest.fn().mockImplementation(function(base, pattern) {
+			// Mock constructor function
+			this.base = base;
+			this.pattern = pattern;
+			return { base, pattern };
+		}),
 	}
 })
 

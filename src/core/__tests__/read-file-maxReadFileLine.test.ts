@@ -31,13 +31,70 @@ const addLineNumbersSpy = jest.requireMock("../../integrations/misc/extract-text
 
 jest.mock("../../services/tree-sitter")
 jest.mock("isbinaryfile")
-jest.mock("../ignore/RooIgnoreController", () => ({
-	RooIgnoreController: class {
+// Mock SymbioteIgnoreController
+jest.mock("../ignore/SymbioteIgnoreController", () => ({
+	SymbioteIgnoreController: class {
+		constructor() {
+			// Mock the setupFileWatcher method to avoid RelativePattern issues
+			this.setupFileWatcher = jest.fn()
+			this.symbioteIgnoreContent = undefined
+		}
 		initialize() {
 			return Promise.resolve()
 		}
 		validateAccess() {
 			return true
+		}
+		setupFileWatcher() {
+			// Empty mock implementation
+		}
+		dispose() {
+			// Empty mock implementation
+		}
+	},
+}))
+
+// Mock only the file system operations used by SymbioteIgnoreController
+jest.mock("vscode", () => {
+	const mockDisposable = { dispose: jest.fn() }
+	return {
+		workspace: {
+			createFileSystemWatcher: jest.fn(() => ({
+				onDidCreate: jest.fn(() => mockDisposable),
+				onDidChange: jest.fn(() => mockDisposable),
+				onDidDelete: jest.fn(() => mockDisposable),
+				dispose: jest.fn(),
+			})),
+		},
+		RelativePattern: jest.fn().mockImplementation((base, pattern) => ({
+			base,
+			pattern,
+		})),
+		EventEmitter: jest.fn(),
+		Disposable: {
+			from: jest.fn(),
+		},
+	}
+})
+
+jest.mock("../ignore/RooIgnoreController", () => ({
+	RooIgnoreController: class {
+		constructor() {
+			// Mock the setupFileWatcher method to avoid RelativePattern issues
+			this.setupFileWatcher = jest.fn()
+			this.rooIgnoreContent = undefined
+		}
+		initialize() {
+			return Promise.resolve()
+		}
+		validateAccess() {
+			return true
+		}
+		setupFileWatcher() {
+			// Empty mock implementation
+		}
+		dispose() {
+			// Empty mock implementation
 		}
 	},
 }))
@@ -87,7 +144,7 @@ describe("read_file tool with maxReadFileLine setting", () => {
 	let mockProvider: any
 	let toolResult: string | undefined
 
-	beforeEach(() => {
+	beforeEach(async () => {
 		jest.clearAllMocks()
 
 		// Setup path resolution
@@ -119,6 +176,10 @@ describe("read_file tool with maxReadFileLine setting", () => {
 		mockCline.task = "Test"
 		mockCline.providerRef = mockProvider
 		mockCline.rooIgnoreController = {
+			validateAccess: jest.fn().mockReturnValue(true),
+		}
+		// Use mock SymbioteIgnoreController
+		mockCline.symbioteIgnoreController = {
 			validateAccess: jest.fn().mockReturnValue(true),
 		}
 		mockCline.say = jest.fn().mockResolvedValue(undefined)
@@ -153,6 +214,9 @@ describe("read_file tool with maxReadFileLine setting", () => {
 
 		// Reset the spy before each test
 		addLineNumbersSpy.mockClear()
+
+		// Reset the mock for SymbioteIgnoreController's validateAccess method
+		mockCline.symbioteIgnoreController.validateAccess.mockClear()
 
 		// Create a tool use object
 		const toolUse: ReadFileToolUse = {
@@ -262,7 +326,7 @@ describe("read_file tool with maxReadFileLine setting", () => {
 			expect(mockedReadLines).not.toHaveBeenCalled() // Per implementation line 141
 			expect(mockedParseSourceCodeDefinitionsForFile).toHaveBeenCalledWith(
 				absoluteFilePath,
-				mockCline.rooIgnoreController,
+				mockCline.symbioteIgnoreController,
 			)
 
 			// Verify XML structure
@@ -291,7 +355,7 @@ describe("read_file tool with maxReadFileLine setting", () => {
 			expect(mockedReadLines).toHaveBeenCalled()
 			expect(mockedParseSourceCodeDefinitionsForFile).toHaveBeenCalledWith(
 				absoluteFilePath,
-				mockCline.rooIgnoreController,
+				mockCline.symbioteIgnoreController,
 			)
 
 			// Verify XML structure

@@ -181,14 +181,18 @@
 		"copyToInput": "입력창에 복사 (또는 Shift + 클릭)"
 	},
 	"announcement": {
-		"title": "🎉 Roo Code 3.13 출시",
-		"description": "Roo Code 3.13는 사용자 피드백을 기반으로 새로운 기능과 개선사항을 제공합니다.",
-		"whatsNew": "새로운 기능",
+		"title": "🎉 Symbiote v1.0.0 출시",
+		"description": "Symbiote는 단순화된 설치와 원격 측정 없이 작동하는 Roo Code의 포크입니다.",
+		"symbioteSection": "Symbiote 기능",
+		"symbioteFeature1": "<bold>원격 측정 없음</bold>: Symbiote는 모든 원격 측정을 완전히 제거하여 개인 정보를 존중합니다",
+		"symbioteFeature2": "<bold>단순화된 설치</bold>: Qdrant나 Mem0 없이도 모든 VS Code 사용자에게 작동합니다",
+		"symbioteFeature3": "<bold>독립적인 개발</bold>: Symbiote는 Roo Code의 업데이트를 병합하면서 독립적으로 개발될 것입니다",
+		"rooSection": "최신 Roo Code 업데이트",
 		"feature1": "<bold>Gemini 2.5 Flash Thinking</bold>: 이제 Gemini 2.5 Flash의 thinking 변형을 사용하고 thinking 토큰 예산을 지정할 수 있습니다",
 		"feature2": "<bold>UI 개선</bold>: 작업 헤더, 채팅 뷰, 기록 미리보기 및 환영 뷰가 시각적으로 업그레이드되었습니다",
 		"feature3": "<bold>버그 수정</bold>: 더 안정적인 차이점 편집 등",
 		"hideButton": "공지 숨기기",
-		"detailsDiscussLinks": "<discordLink>Discord</discordLink>와 <redditLink>Reddit</redditLink>에서 더 자세한 정보를 확인하고 논의하세요 🚀"
+		"detailsDiscussLinks": "<githubLink>GitHub</githubLink>에서 더 자세한 정보를 확인하세요 🚀"
 	},
 	"browser": {
 		"rooWantsToUse": "Roo가 브라우저를 사용하고 싶어합니다:",
