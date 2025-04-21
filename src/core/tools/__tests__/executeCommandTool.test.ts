@@ -12,7 +12,7 @@ jest.mock("../../Cline")
 jest.mock("../../prompts/responses")
 
 // Import the real SymbioteIgnoreController
-const { SymbioteIgnoreController } = jest.requireActual("../../ignore/SymbioteIgnoreController")
+import { SymbioteIgnoreController } from "../../ignore/SymbioteIgnoreController"
 
 // Mock only the file system operations used by SymbioteIgnoreController
 jest.mock("vscode", () => {
@@ -26,10 +26,8 @@ jest.mock("vscode", () => {
 				dispose: jest.fn(),
 			})),
 		},
-		RelativePattern: jest.fn().mockImplementation(function(base, pattern) {
+		RelativePattern: jest.fn().mockImplementation((base, pattern) => {
 			// Mock constructor function
-			this.base = base;
-			this.pattern = pattern;
 			return { base, pattern };
 		}),
 		EventEmitter: jest.fn(),
@@ -41,11 +39,20 @@ jest.mock("vscode", () => {
 
 // Mock file system operations
 jest.mock("fs/promises", () => ({
-	readFile: jest.fn().mockResolvedValue("node_modules\n.git\n.env\nsecrets/**\n*.log"),
+	readFile: jest.fn().mockImplementation(async (path) => {
+		if (path.includes(".symbiote-ignore")) {
+			return "node_modules\n.git\n.env\nsecrets/**\n*.log";
+		}
+		throw new Error(`File not found: ${path}`);
+	}),
+	mkdir: jest.fn().mockResolvedValue(undefined),
+	writeFile: jest.fn().mockResolvedValue(undefined),
 }))
 
 jest.mock("../../../utils/fs", () => ({
-	fileExistsAtPath: jest.fn().mockResolvedValue(true),
+	fileExistsAtPath: jest.fn().mockImplementation(async (path) => {
+		return path.includes(".symbiote-ignore");
+	}),
 }))
 
 // Create a mock for the executeCommand function
@@ -72,10 +79,8 @@ beforeEach(() => {
 			return
 		}
 
-		// Check both rooIgnoreController and symbioteIgnoreController
-		const ignoredFileAttemptedToAccess =
-			cline.rooIgnoreController?.validateCommand(block.params.command) ||
-			cline.symbioteIgnoreController?.validateCommand(block.params.command)
+		// Check symbioteIgnoreController
+		const ignoredFileAttemptedToAccess = cline.symbioteIgnoreController?.validateCommand(block.params.command)
 
 		if (ignoredFileAttemptedToAccess) {
 			await cline.say("symbiote_ignore_error", ignoredFileAttemptedToAccess)
@@ -132,10 +137,6 @@ describe("executeCommandTool", () => {
 			consecutiveMistakeCount: 0,
 			didRejectTool: false,
 			cwd: "/test/path",
-			rooIgnoreController: {
-				// @ts-expect-error - Jest mock function type issues
-				validateCommand: jest.fn().mockReturnValue(null),
-			},
 			// Use real SymbioteIgnoreController
 			symbioteIgnoreController: new SymbioteIgnoreController("/test/path"),
 			recordToolUsage: jest.fn().mockReturnValue({} as ToolUsage),
@@ -289,11 +290,6 @@ describe("executeCommandTool", () => {
 			mockToolUse.params.command = "cat .env"
 			// The real SymbioteIgnoreController should block .env files
 			// based on the mock .symbiote-ignore content we set up
-			// Override the rooIgnoreController mock to return null
-			mockCline.rooIgnoreController = {
-				// @ts-expect-error - Jest mock function type issues
-				validateCommand: jest.fn().mockReturnValue(null),
-			}
 			// We're using the real SymbioteIgnoreController here
 
 			const mockSymbioteIgnoreError = "SymbioteIgnore error"
