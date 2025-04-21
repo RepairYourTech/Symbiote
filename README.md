@@ -125,4 +125,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-[MIT License](./LICENSE)
+[Apache License 2.0](./LICENSE)

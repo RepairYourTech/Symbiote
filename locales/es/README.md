@@ -13,7 +13,7 @@
 <br>
 <div align="center">
   <h1>Symbiote</h1>
-  <p>Un asistente de programación basado en IA que trabaja con tu base de código, ayudándote a arquitectar, programar, depurar y aumentar tu productividad.</p>
+  <p>Un asistente de codificación con IA que trabaja con tu base de código, ayudándote a arquitecturar, codificar, depurar y aumentar tu productividad.</p>
 
 </div>
 <br>
@@ -28,18 +28,18 @@
 
 ## ¿Qué es Symbiote?
 
-**Symbiote** es un **agente de programación autónomo** impulsado por IA que vive en tu editor. Es un fork completo de Roo Code, diseñado para funcionar para todos los usuarios de VS Code con un enfoque en la privacidad y la personalización.
+**Symbiote** es un **agente de codificación autónomo** impulsado por IA que vive en tu editor. Es un fork completo de Roo Code, diseñado para funcionar para todos los usuarios de VS Code con un enfoque en la privacidad y la personalización.
 
 Symbiote puede:
 
 - Comunicarse en lenguaje natural
 - Leer y escribir archivos directamente en tu espacio de trabajo
-- Ejecutar comandos en terminal
+- Ejecutar comandos de terminal
 - Automatizar acciones del navegador
 - Integrarse con cualquier API/modelo compatible con OpenAI o personalizado
 - Adaptar sus capacidades a través de **Modos Personalizados**
 
-Consulta el [CHANGELOG](../../CHANGELOG.md) para ver actualizaciones detalladas y correcciones.
+Consulta el [CHANGELOG](../../CHANGELOG.md) para actualizaciones y correcciones detalladas.
 
 ---
 
@@ -50,15 +50,15 @@ Consulta el [CHANGELOG](../../CHANGELOG.md) para ver actualizaciones detalladas 
     - Descarga e instala desde la [página de lanzamientos](https://github.com/RepairYourTech/Symbiote/releases)
     - O instala directamente desde el marketplace de VS Code
 
-2. **Conectar tu Proveedor de IA**
+2. **Conecta Tu Proveedor de IA**
 
     - Configura tu proveedor de IA preferido (OpenAI, Anthropic, etc.)
     - Ingresa tu clave API cuando se te solicite
 
-3. **Comenzar a Usar Symbiote**
+3. **Comienza a Usar Symbiote**
     - Abre el panel de Symbiote en VS Code
     - Escribe una tarea o pregunta en lenguaje natural
-    - Deja que Symbiote te ayude a programar de manera más eficiente
+    - Deja que Symbiote te ayude a codificar de manera más eficiente
 
 ---
 
@@ -68,11 +68,11 @@ Consulta el [CHANGELOG](../../CHANGELOG.md) para ver actualizaciones detalladas 
 
 Symbiote se adapta a tus necesidades con modos especializados:
 
-- **Modo Código:** Para tareas generales de programación
+- **Modo Código:** Para tareas de codificación de propósito general
 - **Modo Arquitecto:** Para planificación y liderazgo técnico
-- **Modo Consulta:** Para responder preguntas y proporcionar información
+- **Modo Preguntar:** Para responder preguntas y proporcionar información
 - **Modo Depuración:** Para diagnóstico sistemático de problemas
-- **Modos Personalizados:** Crea un número ilimitado de personas especializadas para auditoría de seguridad, optimización de rendimiento, documentación o cualquier otra tarea
+- **Modos Personalizados:** Crea personas especializadas ilimitadas para auditoría de seguridad, optimización de rendimiento, documentación o cualquier otra tarea
 
 ### Herramientas Inteligentes
 
@@ -81,9 +81,9 @@ Symbiote viene con potentes herramientas que pueden:
 - Leer y escribir archivos en tu proyecto
 - Ejecutar comandos en tu terminal de VS Code
 - Controlar un navegador web
-- Usar herramientas externas a través de MCP (Model Context Protocol)
+- Usar herramientas externas a través de MCP (Protocolo de Contexto de Modelo)
 
-MCP amplía las capacidades de Symbiote al permitirte añadir herramientas personalizadas ilimitadas. Integra con APIs externas, conéctate a bases de datos o crea herramientas de desarrollo especializadas - MCP proporciona el marco para expandir la funcionalidad de Symbiote para satisfacer tus necesidades específicas.
+MCP extiende las capacidades de Symbiote permitiéndote añadir herramientas personalizadas ilimitadas. Integra con APIs externas, conéctate a bases de datos o crea herramientas de desarrollo especializadas - MCP proporciona el marco para expandir la funcionalidad de Symbiote para satisfacer tus necesidades específicas.
 
 ### Personalización
 
@@ -92,37 +92,37 @@ Haz que Symbiote funcione a tu manera con:
 - Instrucciones Personalizadas para comportamiento personalizado
 - Modos Personalizados para tareas especializadas
 - Modelos Locales para uso sin conexión
-- Configuración de Aprobación Automática para flujos de trabajo más rápidos
+- Configuraciones de Auto-Aprobación para flujos de trabajo más rápidos
 
 ---
 
 ## Recursos
 
-- **GitHub:** Reporta [problemas](https://github.com/RepairYourTech/Symbiote/issues) o solicita funciones
-- **Changelog:** Consulta las actualizaciones recientes en el [CHANGELOG](../../CHANGELOG.md)
+- **GitHub:** Reporta [problemas](https://github.com/RepairYourTech/Symbiote/issues) o solicita funcionalidades
+- **Registro de Cambios:** Ve las actualizaciones recientes en el [CHANGELOG](../../CHANGELOG.md)
 
 ---
 
 ## Aviso Legal
 
-Symbiote es un fork de [Roo Code](https://github.com/RooVetGit/Roo-Code), desarrollado de forma independiente. Mientras mantenemos la funcionalidad principal, hemos realizado cambios significativos, incluida la eliminación completa de la telemetría y el cambio de marca.
+Symbiote es un fork de [Roo Code](https://github.com/RooVetGit/Roo-Code), desarrollado de forma independiente. Si bien mantenemos la funcionalidad principal, hemos realizado cambios significativos, incluida la eliminación completa de la telemetría y el cambio de marca.
 
-**Ten en cuenta** que **no** hacemos ninguna representación o garantía con respecto a cualquier código, modelo u otras herramientas proporcionadas o puestas a disposición en relación con Symbiote, cualquier herramienta de terceros asociada, o cualquier resultado. Asumes **todos los riesgos** asociados con el uso de dichas herramientas o resultados; tales herramientas se proporcionan "**TAL CUAL**" y "**SEGÚN DISPONIBILIDAD**". Dichos riesgos pueden incluir, sin limitación, infracciones de propiedad intelectual, vulnerabilidades o ataques cibernéticos, sesgo, imprecisiones, errores, defectos, virus, tiempo de inactividad, pérdida o daño de propiedad y/o lesiones personales. Eres el único responsable de tu uso de dichas herramientas o resultados (incluidas, entre otras, la legalidad, idoneidad y resultados de los mismos).
+**Ten en cuenta** que **no** hacemos ninguna representación o garantía con respecto a cualquier código, modelo u otras herramientas proporcionadas o puestas a disposición en relación con Symbiote, cualquier herramienta de terceros asociada o cualquier resultado resultante. Asumes **todos los riesgos** asociados con el uso de dichas herramientas o resultados; dichas herramientas se proporcionan "TAL CUAL" y "SEGÚN DISPONIBILIDAD". Dichos riesgos pueden incluir, sin limitación, infracción de propiedad intelectual, vulnerabilidades o ataques cibernéticos, sesgo, inexactitudes, errores, defectos, virus, tiempo de inactividad, pérdida o daño de propiedad y/o lesiones personales. Eres el único responsable de tu uso de dichas herramientas o resultados (incluida, sin limitación, la legalidad, idoneidad y resultados de los mismos).
 
 ---
 
-## Contribuciones
+## Contribuir
 
 ¡Las contribuciones son bienvenidas! No dudes en enviar un Pull Request.
 
 1. Haz un fork del repositorio
-2. Crea tu rama de características (`git checkout -b feature/caracteristica-increible`)
-3. Haz commit de tus cambios (`git commit -m 'Añadir una característica increíble'`)
-4. Haz push a la rama (`git push origin feature/caracteristica-increible`)
+2. Crea tu rama de características (`git checkout -b feature/caracteristica-asombrosa`)
+3. Haz commit de tus cambios (`git commit -m 'Añadir alguna característica asombrosa'`)
+4. Haz push a la rama (`git push origin feature/caracteristica-asombrosa`)
 5. Abre un Pull Request
 
 ---
 
 ## Licencia
 
-[Licencia MIT](../../LICENSE)
+[Licencia Apache 2.0](../../LICENSE)

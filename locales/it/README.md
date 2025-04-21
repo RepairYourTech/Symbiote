@@ -13,7 +13,7 @@
 <br>
 <div align="center">
   <h1>Symbiote</h1>
-  <p>Un assistente di codifica basato sull'IA che lavora con il tuo codebase, aiutandoti ad architettare, codificare, eseguire il debug e aumentare la tua produttività.</p>
+  <p>Un assistente di codifica AI che lavora con la tua codebase, aiutandoti ad architettare, codificare, debuggare e aumentare la tua produttività.</p>
 
 </div>
 <br>
@@ -28,18 +28,18 @@
 
 ## Cos'è Symbiote?
 
-**Symbiote** è un **agente di codifica autonomo** basato sull'IA che vive nel tuo editor. È un fork completo di Roo Code, progettato per funzionare per tutti gli utenti di VS Code con un focus sulla privacy e la personalizzazione.
+**Symbiote** è un **agente di codifica autonomo** alimentato da AI che vive nel tuo editor. È un fork completo di Roo Code, progettato per funzionare per tutti gli utenti di VS Code con un focus sulla privacy e la personalizzazione.
 
 Symbiote può:
 
 - Comunicare in linguaggio naturale
 - Leggere e scrivere file direttamente nel tuo workspace
 - Eseguire comandi del terminale
-- Automatizzare le azioni del browser
+- Automatizzare azioni del browser
 - Integrarsi con qualsiasi API/modello compatibile con OpenAI o personalizzato
 - Adattare le sue capacità attraverso **Modalità Personalizzate**
 
-Consulta il [CHANGELOG](../../CHANGELOG.md) per aggiornamenti dettagliati e correzioni.
+Controlla il [CHANGELOG](../../CHANGELOG.md) per aggiornamenti e correzioni dettagliate.
 
 ---
 
@@ -48,11 +48,11 @@ Consulta il [CHANGELOG](../../CHANGELOG.md) per aggiornamenti dettagliati e corr
 1. **Installa Symbiote**
 
     - Scarica e installa dalla [pagina delle release](https://github.com/RepairYourTech/Symbiote/releases)
-    - O installa direttamente dal marketplace di VS Code
+    - Oppure installa direttamente dal marketplace di VS Code
 
-2. **Connetti il tuo Provider IA**
+2. **Connetti il Tuo Provider AI**
 
-    - Configura il tuo provider IA preferito (OpenAI, Anthropic, ecc.)
+    - Configura il tuo provider AI preferito (OpenAI, Anthropic, ecc.)
     - Inserisci la tua chiave API quando richiesto
 
 3. **Inizia a Usare Symbiote**
@@ -62,13 +62,13 @@ Consulta il [CHANGELOG](../../CHANGELOG.md) per aggiornamenti dettagliati e corr
 
 ---
 
-## Funzionalità Principali
+## Caratteristiche Principali
 
 ### Modalità Multiple
 
 Symbiote si adatta alle tue esigenze con modalità specializzate:
 
-- **Modalità Codice:** Per attività di codifica generale
+- **Modalità Codice:** Per attività di codifica generali
 - **Modalità Architetto:** Per pianificazione e leadership tecnica
 - **Modalità Domanda:** Per rispondere a domande e fornire informazioni
 - **Modalità Debug:** Per diagnosi sistematica dei problemi
@@ -76,7 +76,7 @@ Symbiote si adatta alle tue esigenze con modalità specializzate:
 
 ### Strumenti Intelligenti
 
-Symbiote viene fornito con potenti strumenti che possono:
+Symbiote viene con potenti strumenti che possono:
 
 - Leggere e scrivere file nel tuo progetto
 - Eseguire comandi nel tuo terminale VS Code
@@ -89,7 +89,7 @@ MCP estende le capacità di Symbiote permettendoti di aggiungere strumenti perso
 
 Fai funzionare Symbiote a modo tuo con:
 
-- Istruzioni Personalizzate per comportamenti personalizzati
+- Istruzioni Personalizzate per comportamento personalizzato
 - Modalità Personalizzate per attività specializzate
 - Modelli Locali per uso offline
 - Impostazioni di Auto-Approvazione per flussi di lavoro più veloci
@@ -98,7 +98,7 @@ Fai funzionare Symbiote a modo tuo con:
 
 ## Risorse
 
-- **GitHub:** [Segnala problemi](https://github.com/RepairYourTech/Symbiote/issues) o richiedi funzionalità
+- **GitHub:** Segnala [problemi](https://github.com/RepairYourTech/Symbiote/issues) o richiedi funzionalità
 - **Changelog:** Visualizza gli aggiornamenti recenti nel [CHANGELOG](../../CHANGELOG.md)
 
 ---
@@ -107,17 +107,17 @@ Fai funzionare Symbiote a modo tuo con:
 
 Symbiote è un fork di [Roo Code](https://github.com/RooVetGit/Roo-Code), sviluppato in modo indipendente. Mentre manteniamo la funzionalità principale, abbiamo apportato modifiche significative, inclusa la completa rimozione della telemetria e il rebranding.
 
-**Si prega di notare** che **non** facciamo alcuna dichiarazione o garanzia riguardo a qualsiasi codice, modello o altro strumento fornito o reso disponibile in relazione a Symbiote, qualsiasi strumento di terze parti associato o qualsiasi output risultante. Ti assumi **tutti i rischi** associati all'uso di tali strumenti o output; tali strumenti sono forniti su base **"COSÌ COM'È"** e **"COME DISPONIBILE"**. Tali rischi possono includere, senza limitazione, violazione della proprietà intellettuale, vulnerabilità o attacchi informatici, pregiudizi, imprecisioni, errori, difetti, virus, tempi di inattività, perdita o danneggiamento della proprietà e/o lesioni personali. Sei l'unico responsabile del tuo utilizzo di tali strumenti o output (inclusi, senza limitazione, la legalità, l'appropriatezza e i risultati degli stessi).
+**Si prega di notare** che **non** facciamo alcuna dichiarazione o garanzia riguardo a qualsiasi codice, modello o altri strumenti forniti o resi disponibili in connessione con Symbiote, qualsiasi strumento di terze parti associato o qualsiasi output risultante. Ti assumi **tutti i rischi** associati all'uso di tali strumenti o output; tali strumenti sono forniti su base **"COSÌ COM'È"** e **"COME DISPONIBILE"**. Tali rischi possono includere, senza limitazione, violazione della proprietà intellettuale, vulnerabilità o attacchi informatici, pregiudizi, imprecisioni, errori, difetti, virus, tempi di inattività, perdita o danno alla proprietà e/o lesioni personali. Sei l'unico responsabile del tuo utilizzo di tali strumenti o output (inclusa, senza limitazione, la legalità, l'appropriatezza e i risultati degli stessi).
 
 ---
 
 ## Contribuire
 
-I contributi sono benvenuti! Sentiti libero di inviare una Pull Request.
+I contributi sono benvenuti! Non esitare a inviare una Pull Request.
 
-1. Forka il repository
+1. Fai un fork del repository
 2. Crea il tuo branch delle funzionalità (`git checkout -b feature/funzionalita-incredibile`)
-3. Committa le tue modifiche (`git commit -m 'Aggiungi una funzionalità incredibile'`)
+3. Committa le tue modifiche (`git commit -m 'Aggiungi qualche funzionalità incredibile'`)
 4. Pusha al branch (`git push origin feature/funzionalita-incredibile`)
 5. Apri una Pull Request
 
@@ -125,4 +125,4 @@ I contributi sono benvenuti! Sentiti libero di inviare una Pull Request.
 
 ## Licenza
 
-[Licenza MIT](../../LICENSE)
+[Licenza Apache 2.0](../../LICENSE)
