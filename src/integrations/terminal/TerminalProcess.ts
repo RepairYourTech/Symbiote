@@ -68,7 +68,7 @@
 
 	Contact me if you have any questions:
 		- GitHub: KJ7LNW
-		- Discord: kj7lnw
+
 		- [roo-cline at z.ewheeler.org]
 
 	Cheers,
