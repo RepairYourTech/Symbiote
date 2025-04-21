@@ -10,6 +10,10 @@ import { isBinaryFile } from "isbinaryfile"
 import { ReadFileToolUse } from "../../shared/tools"
 import { ToolUsage } from "../../schemas"
 
+// Variable to control what content is used by the mock
+// Declare it before the mock so it can be used in the mock implementation
+let mockInputContent = ""
+
 // Mock dependencies
 jest.mock("../../integrations/misc/line-counter")
 jest.mock("../../integrations/misc/read-lines")
@@ -22,7 +26,10 @@ jest.mock("../../integrations/misc/extract-text", () => {
 		...actual,
 		// Expose the spy so tests can access it
 		__addLineNumbersSpy: addLineNumbersSpy,
-		extractTextFromFile: jest.fn(),
+		extractTextFromFile: jest.fn().mockImplementation((filePath) => {
+			// Use the actual addLineNumbers function
+			return Promise.resolve(actual.addLineNumbers(mockInputContent))
+		}),
 	}
 })
 
@@ -31,8 +38,8 @@ const addLineNumbersSpy = jest.requireMock("../../integrations/misc/extract-text
 
 jest.mock("../../services/tree-sitter")
 jest.mock("isbinaryfile")
-jest.mock("../ignore/RooIgnoreController", () => ({
-	RooIgnoreController: class {
+jest.mock("../ignore/SymbioteIgnoreController", () => ({
+	SymbioteIgnoreController: class {
 		initialize() {
 			return Promise.resolve()
 		}
@@ -76,9 +83,6 @@ describe("read_file tool with maxReadFileLine setting", () => {
 		typeof parseSourceCodeDefinitionsForFile
 	>
 
-	// Variable to control what content is used by the mock - set in beforeEach
-	let mockInputContent = ""
-
 	const mockedIsBinaryFile = isBinaryFile as jest.MockedFunction<typeof isBinaryFile>
 	const mockedPathResolve = path.resolve as jest.MockedFunction<typeof path.resolve>
 
@@ -99,12 +103,6 @@ describe("read_file tool with maxReadFileLine setting", () => {
 		// Set the default content for the mock
 		mockInputContent = fileContent
 
-		// Setup the extractTextFromFile mock implementation with the current mockInputContent
-		mockedExtractTextFromFile.mockImplementation((filePath) => {
-			const actual = jest.requireActual("../../integrations/misc/extract-text")
-			return Promise.resolve(actual.addLineNumbers(mockInputContent))
-		})
-
 		// No need to setup the extractTextFromFile mock implementation here
 		// as it's already defined at the module level
 
@@ -118,7 +116,7 @@ describe("read_file tool with maxReadFileLine setting", () => {
 		mockCline.cwd = "/"
 		mockCline.task = "Test"
 		mockCline.providerRef = mockProvider
-		mockCline.rooIgnoreController = {
+		mockCline.symbioteIgnoreController = {
 			validateAccess: jest.fn().mockReturnValue(true),
 		}
 		mockCline.say = jest.fn().mockResolvedValue(undefined)
