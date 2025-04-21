@@ -16,12 +16,11 @@
 	"startRouter": "通过路由器快速设置",
 	"startCustom": "使用你自己的 API 密钥",
 	"telemetry": {
-		"title": "帮助改进 Roo Code",
+		"title": "隐私声明",
 		"changeSettings": "可以随时在<settingsLink>设置</settingsLink>页面底部更改此设置",
 		"settings": "设置",
-		"anonymousTelemetry": "发送匿名的错误和使用数据，以帮助我们修复错误并改进扩展程序。不会涉及代码、提示词或个人隐私信息。",
-		"allow": "允许",
-		"deny": "拒绝"
+		"anonymousTelemetry": "Symbiote 尊重您的隐私，不收集任何遥测数据。不会发送代码、查询或个人信息。",
+		"continue": "继续"
 	},
 	"or": "或"
 }

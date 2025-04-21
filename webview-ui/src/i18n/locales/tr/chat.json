@@ -181,14 +181,18 @@
 		"copyToInput": "Giriş alanına kopyala (veya Shift + tıklama)"
 	},
 	"announcement": {
-		"title": "🎉 Roo Code 3.13 Yayınlandı",
-		"description": "Roo Code 3.13 geri bildirimlerinize dayalı yeni özellikler ve iyileştirmeler getiriyor.",
-		"whatsNew": "Yenilikler",
+		"title": "🎉 Symbiote v1.0.0 Yayınlandı",
+		"description": "Symbiote, basitleştirilmiş kurulum ve telemetri olmadan çalışan bir Roo Code fork'udur.",
+		"symbioteSection": "Symbiote Özellikleri",
+		"symbioteFeature1": "<bold>Telemetri Yok</bold>: Symbiote, tüm telemetriyi tamamen kaldırarak gizliliğinize saygı gösterir",
+		"symbioteFeature2": "<bold>Basitleştirilmiş Kurulum</bold>: Qdrant veya Mem0 gerektirmeden tüm VS Code kullanıcıları için çalışır",
+		"symbioteFeature3": "<bold>Bağımsız Geliştirme</bold>: Symbiote, Roo Code'dan güncellemeleri birleştirirken bağımsız olarak gelişecektir",
+		"rooSection": "En Son Roo Code Güncellemeleri",
 		"feature1": "<bold>Gemini 2.5 Flash Thinking</bold>: Artık Gemini 2.5 Flash'ın thinking varyantını kullanabilir ve thinking için token bütçesi belirleyebilirsiniz",
 		"feature2": "<bold>UI İyileştirmeleri</bold>: Görev başlığı, sohbet görünümü, geçmiş önizlemesi ve karşılama ekranı görsel olarak yükseltildi",
 		"feature3": "<bold>Hata Düzeltmeleri</bold>: Daha güvenilir fark düzenlemeleri ve daha fazlası",
 		"hideButton": "Duyuruyu gizle",
-		"detailsDiscussLinks": "<discordLink>Discord</discordLink> ve <redditLink>Reddit</redditLink> üzerinde daha fazla ayrıntı edinin ve tartışmalara katılın 🚀"
+		"detailsDiscussLinks": "<githubLink>GitHub</githubLink> üzerinde daha fazla ayrıntı edinin 🚀"
 	},
 	"browser": {
 		"rooWantsToUse": "Roo tarayıcıyı kullanmak istiyor:",

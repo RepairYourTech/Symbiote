@@ -181,14 +181,18 @@
 		"copyToInput": "複製到輸入框（或按住 Shift 並點選）"
 	},
 	"announcement": {
-		"title": "🎉 Roo Code 3.13 已發布",
-		"description": "Roo Code 3.13 帶來基於您意見回饋的新功能與改進。",
-		"whatsNew": "新功能",
+		"title": "🎉 Symbiote v1.0.0 已發布",
+		"description": "Symbiote 是 Roo Code 的一個分支，具有簡化安裝和無遠端計量特點。",
+		"symbioteSection": "Symbiote 功能",
+		"symbioteFeature1": "<bold>無遠端計量</bold>：Symbiote 通過完全移除所有遠端計量來尊重您的隱私",
+		"symbioteFeature2": "<bold>簡化安裝</bold>：適用於所有 VS Code 用戶，無需 Qdrant 或 Mem0",
+		"symbioteFeature3": "<bold>獨立開發</bold>：Symbiote 將獨立開發，同時合併 Roo Code 的更新",
+		"rooSection": "最新 Roo Code 更新",
 		"feature1": "<bold>Gemini 2.5 Flash Thinking</bold>: 現在可以使用 Gemini 2.5 Flash 的 thinking 變體並指定 thinking Token 預算",
 		"feature2": "<bold>UI 改進</bold>: 工作標題、對話視圖、歷史預覽和歡迎視圖已進行視覺升級",
 		"feature3": "<bold>錯誤修復</bold>: 更可靠的差異編輯等功能",
 		"hideButton": "隱藏公告",
-		"detailsDiscussLinks": "在 <discordLink>Discord</discordLink> 和 <redditLink>Reddit</redditLink> 取得更多詳細資訊並參與討論 🚀"
+		"detailsDiscussLinks": "在 <githubLink>GitHub</githubLink> 取得更多詳細資訊 🚀"
 	},
 	"browser": {
 		"rooWantsToUse": "Roo 想要使用瀏覽器：",
