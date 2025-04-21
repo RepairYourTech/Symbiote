@@ -11,6 +11,43 @@ import { unescapeHtmlEntities } from "../../../utils/text-normalization"
 jest.mock("../../Cline")
 jest.mock("../../prompts/responses")
 
+// Import the real SymbioteIgnoreController
+const { SymbioteIgnoreController } = jest.requireActual("../../ignore/SymbioteIgnoreController")
+
+// Mock only the file system operations used by SymbioteIgnoreController
+jest.mock("vscode", () => {
+	const mockDisposable = { dispose: jest.fn() }
+	return {
+		workspace: {
+			createFileSystemWatcher: jest.fn(() => ({
+				onDidCreate: jest.fn(() => mockDisposable),
+				onDidChange: jest.fn(() => mockDisposable),
+				onDidDelete: jest.fn(() => mockDisposable),
+				dispose: jest.fn(),
+			})),
+		},
+		RelativePattern: jest.fn().mockImplementation(function(base, pattern) {
+			// Mock constructor function
+			this.base = base;
+			this.pattern = pattern;
+			return { base, pattern };
+		}),
+		EventEmitter: jest.fn(),
+		Disposable: {
+			from: jest.fn(),
+		},
+	}
+})
+
+// Mock file system operations
+jest.mock("fs/promises", () => ({
+	readFile: jest.fn().mockResolvedValue("node_modules\n.git\n.env\nsecrets/**\n*.log"),
+}))
+
+jest.mock("../../../utils/fs", () => ({
+	fileExistsAtPath: jest.fn().mockResolvedValue(true),
+}))
+
 // Create a mock for the executeCommand function
 const mockExecuteCommand = jest.fn().mockImplementation(() => {
 	return Promise.resolve([false, "Command executed"])
@@ -35,7 +72,11 @@ beforeEach(() => {
 			return
 		}
 
-		const ignoredFileAttemptedToAccess = cline.rooIgnoreController?.validateCommand(block.params.command)
+		// Check both rooIgnoreController and symbioteIgnoreController
+		const ignoredFileAttemptedToAccess =
+			cline.rooIgnoreController?.validateCommand(block.params.command) ||
+			cline.symbioteIgnoreController?.validateCommand(block.params.command)
+
 		if (ignoredFileAttemptedToAccess) {
 			await cline.say("symbiote_ignore_error", ignoredFileAttemptedToAccess)
 			// Call the mocked formatResponse functions with the correct arguments
@@ -76,7 +117,7 @@ describe("executeCommandTool", () => {
 	let mockRemoveClosingTag: jest.Mock
 	let mockToolUse: ToolUse
 
-	beforeEach(() => {
+	beforeEach(async () => {
 		// Reset mocks
 		jest.clearAllMocks()
 
@@ -90,10 +131,13 @@ describe("executeCommandTool", () => {
 			sayAndCreateMissingParamError: jest.fn().mockResolvedValue("Missing parameter error"),
 			consecutiveMistakeCount: 0,
 			didRejectTool: false,
-			symbioteIgnoreController: {
+			cwd: "/test/path",
+			rooIgnoreController: {
 				// @ts-expect-error - Jest mock function type issues
 				validateCommand: jest.fn().mockReturnValue(null),
 			},
+			// Use real SymbioteIgnoreController
+			symbioteIgnoreController: new SymbioteIgnoreController("/test/path"),
 			recordToolUsage: jest.fn().mockReturnValue({} as ToolUsage),
 			// Add the missing recordToolError function
 			recordToolError: jest.fn(),
@@ -105,6 +149,9 @@ describe("executeCommandTool", () => {
 		mockHandleError = jest.fn().mockResolvedValue(undefined)
 		mockPushToolResult = jest.fn()
 		mockRemoveClosingTag = jest.fn().mockReturnValue("command")
+
+		// Initialize the real SymbioteIgnoreController
+		await mockCline.symbioteIgnoreController.initialize()
 
 		// Create a mock tool use object
 		mockToolUse = {
@@ -240,12 +287,14 @@ describe("executeCommandTool", () => {
 		it("should handle symbiote-ignore validation failures", async () => {
 			// Setup
 			mockToolUse.params.command = "cat .env"
-			// Override the validateCommand mock to return a filename
-			const validateCommandMock = jest.fn().mockReturnValue(".env")
-			mockCline.symbioteIgnoreController = {
+			// The real SymbioteIgnoreController should block .env files
+			// based on the mock .symbiote-ignore content we set up
+			// Override the rooIgnoreController mock to return null
+			mockCline.rooIgnoreController = {
 				// @ts-expect-error - Jest mock function type issues
-				validateCommand: validateCommandMock,
+				validateCommand: jest.fn().mockReturnValue(null),
 			}
+			// We're using the real SymbioteIgnoreController here
 
 			const mockSymbioteIgnoreError = "SymbioteIgnore error"
 			;(formatResponse.symbioteIgnoreError as jest.Mock).mockReturnValue(mockSymbioteIgnoreError)
@@ -262,7 +311,7 @@ describe("executeCommandTool", () => {
 			)
 
 			// Verify
-			expect(validateCommandMock).toHaveBeenCalledWith("cat .env")
+			// The real SymbioteIgnoreController should have blocked the command
 			expect(mockCline.say).toHaveBeenCalledWith("symbiote_ignore_error", ".env")
 			expect(formatResponse.symbioteIgnoreError).toHaveBeenCalledWith(".env")
 			expect(formatResponse.toolError).toHaveBeenCalledWith(mockSymbioteIgnoreError)

@@ -12,40 +12,17 @@ import { ClineProvider } from "../webview/ClineProvider"
 import { ApiConfiguration, ModelInfo } from "../../shared/api"
 import { ApiStreamChunk } from "../../api/transform/stream"
 
-// Mock RooIgnoreController
-jest.mock("../ignore/RooIgnoreController")
+// Import the real SymbioteIgnoreController
+const { SymbioteIgnoreController } = jest.requireActual("../ignore/SymbioteIgnoreController")
 
-// Mock storagePathManager to prevent dynamic import issues
-jest.mock("../../shared/storagePathManager", () => ({
-	getTaskDirectoryPath: jest
-		.fn()
-		.mockImplementation((globalStoragePath, taskId) => Promise.resolve(`${globalStoragePath}/tasks/${taskId}`)),
-	getSettingsDirectoryPath: jest
-		.fn()
-		.mockImplementation((globalStoragePath) => Promise.resolve(`${globalStoragePath}/settings`)),
-}))
-
-// Mock fileExistsAtPath
-jest.mock("../../utils/fs", () => ({
-	fileExistsAtPath: jest.fn().mockImplementation((filePath) => {
-		return filePath.includes("ui_messages.json") || filePath.includes("api_conversation_history.json")
-	}),
-}))
-
-// Mock fs/promises
-const mockMessages = [
-	{
-		ts: Date.now(),
-		type: "say",
-		say: "text",
-		text: "historical task",
-	},
-]
-
+// Mock only the file system operations used by SymbioteIgnoreController
 jest.mock("fs/promises", () => ({
 	mkdir: jest.fn().mockResolvedValue(undefined),
 	writeFile: jest.fn().mockResolvedValue(undefined),
 	readFile: jest.fn().mockImplementation((filePath) => {
+		if (filePath.includes(".symbiote-ignore")) {
+			return Promise.resolve("node_modules\n.git\n.env\nsecrets/**\n*.log")
+		}
 		if (filePath.includes("ui_messages.json")) {
 			return Promise.resolve(JSON.stringify(mockMessages))
 		}
@@ -70,6 +47,35 @@ jest.mock("fs/promises", () => ({
 	unlink: jest.fn().mockResolvedValue(undefined),
 	rmdir: jest.fn().mockResolvedValue(undefined),
 }))
+
+// Mock storagePathManager to prevent dynamic import issues
+jest.mock("../../shared/storagePathManager", () => ({
+	getTaskDirectoryPath: jest
+		.fn()
+		.mockImplementation((globalStoragePath, taskId) => Promise.resolve(`${globalStoragePath}/tasks/${taskId}`)),
+	getSettingsDirectoryPath: jest
+		.fn()
+		.mockImplementation((globalStoragePath) => Promise.resolve(`${globalStoragePath}/settings`)),
+}))
+
+// Mock fileExistsAtPath
+jest.mock("../../utils/fs", () => ({
+	fileExistsAtPath: jest.fn().mockImplementation((filePath) => {
+		return filePath.includes(".symbiote-ignore") ||
+			filePath.includes("ui_messages.json") ||
+			filePath.includes("api_conversation_history.json")
+	}),
+}))
+
+// Define mock messages for tests
+const mockMessages = [
+	{
+		ts: Date.now(),
+		type: "say",
+		say: "text",
+		text: "historical task",
+	},
+]
 
 // Mock dependencies
 jest.mock("vscode", () => {
@@ -148,6 +154,12 @@ jest.mock("vscode", () => {
 			from: jest.fn(),
 		},
 		TabInputText: jest.fn(),
+		RelativePattern: jest.fn().mockImplementation(function(base, pattern) {
+			// Mock constructor function
+			this.base = base;
+			this.pattern = pattern;
+			return { base, pattern };
+		}),
 	}
 })
 
@@ -163,7 +175,7 @@ describe("Cline", () => {
 	let mockOutputChannel: any
 	let mockExtensionContext: vscode.ExtensionContext
 
-	beforeEach(() => {
+	beforeEach(async () => {
 		// Setup mock extension context
 		const storageUri = {
 			fsPath: path.join(os.tmpdir(), "test-storage"),
@@ -268,6 +280,7 @@ describe("Cline", () => {
 
 	describe("constructor", () => {
 		it("should respect provided settings", async () => {
+			// Create a Cline instance with the real SymbioteIgnoreController
 			const cline = new Cline({
 				provider: mockProvider,
 				apiConfiguration: mockApiConfig,
@@ -277,11 +290,15 @@ describe("Cline", () => {
 				startTask: false,
 			})
 
+			// Initialize the SymbioteIgnoreController
+			await cline.symbioteIgnoreController.initialize()
+
 			expect(cline.customInstructions).toBe("custom instructions")
 			expect(cline.diffEnabled).toBe(false)
 		})
 
 		it("should use default fuzzy match threshold when not provided", async () => {
+			// Create a Cline instance with the real SymbioteIgnoreController
 			const cline = new Cline({
 				provider: mockProvider,
 				apiConfiguration: mockApiConfig,
@@ -291,6 +308,9 @@ describe("Cline", () => {
 				task: "test task",
 				startTask: false,
 			})
+
+			// Initialize the SymbioteIgnoreController
+			await cline.symbioteIgnoreController.initialize()
 
 			expect(cline.diffEnabled).toBe(true)
 
@@ -350,12 +370,16 @@ describe("Cline", () => {
 		})
 
 		it("should include timezone information in environment details", async () => {
+			// Create a Cline instance with the real SymbioteIgnoreController
 			const cline = new Cline({
 				provider: mockProvider,
 				apiConfiguration: mockApiConfig,
 				task: "test task",
 				startTask: false,
 			})
+
+			// Initialize the SymbioteIgnoreController
+			await cline.symbioteIgnoreController.initialize()
 
 			const details = await cline["getEnvironmentDetails"](false)
 
@@ -397,6 +421,9 @@ describe("Cline", () => {
 					apiConfiguration: mockApiConfig,
 					task: "test task",
 				})
+
+				// Initialize the SymbioteIgnoreController
+				await cline.symbioteIgnoreController.initialize()
 
 				cline.abandoned = true
 				await task
@@ -512,6 +539,9 @@ describe("Cline", () => {
 					task: "test task",
 				})
 
+				// Initialize the SymbioteIgnoreController
+				await clineWithImages.symbioteIgnoreController.initialize()
+
 				// Mock the model info to indicate image support
 				jest.spyOn(clineWithImages.api, "getModel").mockReturnValue({
 					id: "claude-3-sonnet",
@@ -534,6 +564,9 @@ describe("Cline", () => {
 					apiConfiguration: configWithoutImages,
 					task: "test task",
 				})
+
+				// Initialize the SymbioteIgnoreController
+				await clineWithoutImages.symbioteIgnoreController.initialize()
 
 				// Mock the model info to indicate no image support
 				jest.spyOn(clineWithoutImages.api, "getModel").mockReturnValue({
