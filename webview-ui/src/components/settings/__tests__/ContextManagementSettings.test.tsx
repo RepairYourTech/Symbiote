@@ -28,7 +28,7 @@ describe("ContextManagementSettings", () => {
 	const defaultProps = {
 		maxOpenTabsContext: 20,
 		maxWorkspaceFiles: 200,
-		showRooIgnoredFiles: false,
+		showSymbioteIgnoredFiles: false,
 		setCachedStateField: jest.fn(),
 	}
 
@@ -47,10 +47,10 @@ describe("ContextManagementSettings", () => {
 		const workspaceFilesSlider = screen.getByTestId("workspace-files-limit-slider")
 		expect(workspaceFilesSlider).toBeInTheDocument()
 
-		// Show .rooignore'd files
-		const showRooIgnoredFilesCheckbox = screen.getByTestId("show-rooignored-files-checkbox")
-		expect(showRooIgnoredFilesCheckbox).toBeInTheDocument()
-		expect(screen.getByTestId("show-rooignored-files-checkbox")).not.toBeChecked()
+		// Show .symbiote-ignored files
+		const showSymbioteIgnoredFilesCheckbox = screen.getByTestId("show-symbiote-ignored-files-checkbox")
+		expect(showSymbioteIgnoredFilesCheckbox).toBeInTheDocument()
+		expect(screen.getByTestId("show-symbiote-ignored-files-checkbox")).not.toBeChecked()
 	})
 
 	it("updates open tabs context limit", () => {
@@ -71,12 +71,12 @@ describe("ContextManagementSettings", () => {
 		expect(defaultProps.setCachedStateField).toHaveBeenCalledWith("maxWorkspaceFiles", 50)
 	})
 
-	it("updates show rooignored files setting", () => {
+	it("updates show symbiote-ignored files setting", () => {
 		render(<ContextManagementSettings {...defaultProps} />)
 
-		const checkbox = screen.getByTestId("show-rooignored-files-checkbox")
+		const checkbox = screen.getByTestId("show-symbiote-ignored-files-checkbox")
 		fireEvent.click(checkbox)
 
-		expect(defaultProps.setCachedStateField).toHaveBeenCalledWith("showRooIgnoredFiles", true)
+		expect(defaultProps.setCachedStateField).toHaveBeenCalledWith("showSymbioteIgnoredFiles", true)
 	})
 })
