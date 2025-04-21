@@ -262,7 +262,7 @@ describe("read_file tool with maxReadFileLine setting", () => {
 			expect(mockedReadLines).not.toHaveBeenCalled() // Per implementation line 141
 			expect(mockedParseSourceCodeDefinitionsForFile).toHaveBeenCalledWith(
 				absoluteFilePath,
-				mockCline.rooIgnoreController,
+				mockCline.symbioteIgnoreController,
 			)
 
 			// Verify XML structure
@@ -291,7 +291,7 @@ describe("read_file tool with maxReadFileLine setting", () => {
 			expect(mockedReadLines).toHaveBeenCalled()
 			expect(mockedParseSourceCodeDefinitionsForFile).toHaveBeenCalledWith(
 				absoluteFilePath,
-				mockCline.rooIgnoreController,
+				mockCline.symbioteIgnoreController,
 			)
 
 			// Verify XML structure
