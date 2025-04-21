@@ -1,0 +1,26 @@
+{
+	"greeting": "Hi, I'm Symbiote!",
+	"introduction": "<strong>Symbiote is the premiere autonomous coding agent.</strong> Get ready to architect, code, debug, and boost your productivity like you've never seen before. To continue, Symbiote requires an API key.",
+	"notice": "To get started, this extension needs an API provider.",
+	"start": "Let's go!",
+	"chooseProvider": "Choose an API provider to get started:",
+	"routers": {
+		"requesty": {
+			"description": "Your optimized LLM router",
+			"incentive": "$1 free credit"
+		},
+		"openrouter": {
+			"description": "A unified interface for LLMs"
+		}
+	},
+	"startRouter": "Express Setup Through a Router",
+	"startCustom": "Bring Your Own API Key",
+	"telemetry": {
+		"title": "Privacy Notice",
+		"anonymousTelemetry": "Symbiote respects your privacy and does not collect any telemetry data. No code, prompts, or personal information is ever sent.",
+		"changeSettings": "You can always change this at the bottom of the <settingsLink>settings</settingsLink>",
+		"settings": "settings",
+		"continue": "Continue"
+	},
+	"or": "or"
+}
