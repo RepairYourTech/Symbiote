@@ -1,0 +1,15 @@
+name: Discord PR Notifier
+
+# This workflow is intentionally disabled
+on:
+  workflow_dispatch:
+    # Only manual triggers, no automatic triggers
+
+jobs:
+  notify:
+    # This condition will never be true, effectively disabling the workflow
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Disabled Notification
+        run: echo "This workflow has been intentionally disabled"
