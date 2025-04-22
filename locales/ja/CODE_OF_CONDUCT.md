@@ -56,7 +56,7 @@
 ## 施行
 
 虐待的、嫌がらせ、またはその他容認できない行動の事例は、
-support@repairmytech.com でプロジェクトチームに連絡することで報告することができます。
+support@repairyour.tech でプロジェクトチームに連絡することで報告することができます。
 すべての苦情は審査・調査され、状況に応じて必要かつ適切と
 判断される対応がとられます。プロジェクトチームは
 インシデント報告者に関する守秘義務を守る義務があります。
@@ -71,8 +71,9 @@ support@repairmytech.com でプロジェクトチームに連絡することで�
 この行動規範は、[Roo Codeのバージョン][roo_coc]の[Contributor Covenant][homepage]、バージョン1.4から適用されています。
 https://www.contributor-covenant.org/version/1/4/code-of-conduct.html から入手可能です。
 
-[roo_coc]: https://github.com/RooVetGit/Roo-Code/blob/main/CODE_OF_CONDUCT.md
 [homepage]: https://www.contributor-covenant.org
 
 この行動規範に関する一般的な質問への回答については、
 https://www.contributor-covenant.org/faq をご覧ください。
+
+

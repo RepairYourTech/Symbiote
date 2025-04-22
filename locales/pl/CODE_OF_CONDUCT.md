@@ -55,7 +55,7 @@ dalej definiowana i wyjaśniana przez opiekunów projektu.
 ## Egzekwowanie
 
 Przypadki obraźliwego, nękającego lub w inny sposób niedopuszczalnego zachowania mogą być
-zgłaszane poprzez kontakt z zespołem projektu pod adresem support@repairmytech.com. Wszystkie skargi
+zgłaszane poprzez kontakt z zespołem projektu pod adresem support@repairyour.tech. Wszystkie skargi
 zostaną przejrzane i zbadane, co zaowocuje odpowiedzią, która
 zostanie uznana za niezbędną i odpowiednią do okoliczności. Zespół projektu jest
 zobowiązany do zachowania poufności w odniesieniu do zgłaszającego incydent.
@@ -67,11 +67,14 @@ członków kierownictwa projektu.
 
 ## Atrybucja
 
-Niniejszy Kodeks Postępowania jest adaptacją [wersji Roo Code][roo_coc] [Covenant Współtwórców][homepage], wersja 1.4,
+Niniejszy Kodeks Postępowania jest adaptacją [wersji Roo Code] [Covenant Współtwórców][homepage], wersja 1.4,
 dostępnej pod adresem https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
 
-[roo_coc]: https://github.com/RooVetGit/Roo-Code/blob/main/CODE_OF_CONDUCT.md
 [homepage]: https://www.contributor-covenant.org
 
 Odpowiedzi na często zadawane pytania dotyczące tego kodeksu postępowania można znaleźć pod adresem
 https://www.contributor-covenant.org/faq
+
+
+
+

@@ -55,7 +55,7 @@ tại một sự kiện trực tuyến hoặc ngoại tuyến. Đại diện c�
 ## Thực Thi
 
 Các trường hợp hành vi lạm dụng, quấy rối, hoặc không thể chấp nhận khác có thể được
-báo cáo bằng cách liên hệ với nhóm dự án tại support@repairmytech.com. Tất cả khiếu nại
+báo cáo bằng cách liên hệ với nhóm dự án tại support@repairyour.tech. Tất cả khiếu nại
 sẽ được xem xét và điều tra và sẽ dẫn đến phản hồi được
 cho là cần thiết và phù hợp với hoàn cảnh. Nhóm dự án có
 nghĩa vụ duy trì tính bảo mật đối với người báo cáo về một sự cố.
@@ -67,11 +67,14 @@ của ban lãnh đạo dự án quyết định.
 
 ## Ghi Công
 
-Quy Tắc Ứng Xử này được chuyển thể từ [phiên bản của Roo Code][roo_coc] của [Giao Ước Người Đóng Góp][homepage], phiên bản 1.4,
+Quy Tắc Ứng Xử này được chuyển thể từ [phiên bản của Roo Code] của [Giao Ước Người Đóng Góp][homepage], phiên bản 1.4,
 có sẵn tại https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
 
-[roo_coc]: https://github.com/RooVetGit/Roo-Code/blob/main/CODE_OF_CONDUCT.md
 [homepage]: https://www.contributor-covenant.org
 
 Để biết câu trả lời cho các câu hỏi thường gặp về quy tắc ứng xử này, xem tại
 https://www.contributor-covenant.org/faq
+
+
+
+

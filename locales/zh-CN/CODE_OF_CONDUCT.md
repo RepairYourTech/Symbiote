@@ -50,7 +50,7 @@
 
 ## 执行
 
-可能通过联系项目团队（support@repairmytech.com）
+可能通过联系项目团队（support@repairyour.tech）
 来报告辱骂、骚扰或其他不可接受的行为的情况。所有
 投诉将被审查和调查，并将导致被认为
 必要且适合情况的回应。项目团队有
@@ -63,11 +63,14 @@
 
 ## 归属
 
-本行为准则改编自 [Roo Code 的版本][roo_coc] 的 [贡献者契约][homepage]，版本 1.4，
+本行为准则改编自 [Roo Code 的版本] 的 [贡献者契约][homepage]，版本 1.4，
 可在 https://www.contributor-covenant.org/version/1/4/code-of-conduct.html 获取
 
-[roo_coc]: https://github.com/RooVetGit/Roo-Code/blob/main/CODE_OF_CONDUCT.md
 [homepage]: https://www.contributor-covenant.org
 
 有关此行为准则的常见问题解答，请参阅
 https://www.contributor-covenant.org/faq
+
+
+
+

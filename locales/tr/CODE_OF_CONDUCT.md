@@ -51,7 +51,7 @@ tanımlanabilir ve netleştirilebilir.
 ## Uygulama
 
 Taciz edici veya başka türlü kabul edilemez davranış örnekleri,
-support@repairmytech.com adresinden proje ekibiyle iletişime geçilerek bildirilebilir. Tüm şikayetler
+support@repairyour.tech adresinden proje ekibiyle iletişime geçilerek bildirilebilir. Tüm şikayetler
 incelenecek ve araştırılacak ve koşullara
 göre gerekli ve uygun görülen bir yanıtla sonuçlanacaktır. Proje ekibi,
 bir olayı bildiren kişiye ilişkin gizliliği korumakla yükümlüdür.
@@ -63,11 +63,14 @@ liderliğinin diğer üyeleri tarafından belirlenen geçici veya kalıcı yapt�
 
 ## Atıf
 
-Bu Davranış Kuralları, [Roo Code'un versiyonundan][roo_coc] [Katkıda Bulunan Sözleşmesi][homepage], versiyon 1.4'ten uyarlanmıştır,
+Bu Davranış Kuralları, [Roo Code'un versiyonundan] [Katkıda Bulunan Sözleşmesi][homepage], versiyon 1.4'ten uyarlanmıştır,
 https://www.contributor-covenant.org/version/1/4/code-of-conduct.html adresinde mevcuttur
 
-[roo_coc]: https://github.com/RooVetGit/Roo-Code/blob/main/CODE_OF_CONDUCT.md
 [homepage]: https://www.contributor-covenant.org
 
 Bu davranış kuralları hakkında sık sorulan sorulara yanıtlar için
 https://www.contributor-covenant.org/faq adresini ziyaret edin
+
+
+
+
