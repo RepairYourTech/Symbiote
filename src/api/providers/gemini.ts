@@ -143,3 +143,4 @@ export class GeminiHandler extends BaseProvider implements SingleCompletionHandl
 		}
 	}
 }
+

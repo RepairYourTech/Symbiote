@@ -66,3 +66,4 @@ export function createBashCommandStream(command: string): CommandStream {
 
 	return { stream, exitCode }
 }
+

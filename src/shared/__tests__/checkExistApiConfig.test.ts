@@ -58,3 +58,4 @@ describe("checkExistKey", () => {
 		expect(checkExistKey(config)).toBe(false)
 	})
 })
+

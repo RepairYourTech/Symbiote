@@ -33,3 +33,4 @@ export interface CheckpointEventMap {
 	restore: { type: "restore"; commitHash: string; duration: number }
 	error: { type: "error"; error: Error }
 }
+

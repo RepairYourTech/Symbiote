@@ -224,3 +224,4 @@ const SvgContainer = styled.div<SvgContainerProps>`
 	display: flex;
 	justify-content: center;
 `
+

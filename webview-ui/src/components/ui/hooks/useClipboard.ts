@@ -20,3 +20,4 @@ export function useClipboard({ timeout = 2000 }: UseClipboardProps = {}) {
 
 	return { isCopied, copy }
 }
+

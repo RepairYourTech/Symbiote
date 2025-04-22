@@ -87,3 +87,4 @@ export function getLanguageFromPath(path: string): string | undefined {
 	const extension = path.split(".").pop()?.toLowerCase() || ""
 	return extensionToLanguage[extension]
 }
+

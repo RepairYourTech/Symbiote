@@ -63,7 +63,7 @@ export const importSettings = async ({ providerSettingsManager, contextProxy }: 
 export const exportSettings = async ({ providerSettingsManager, contextProxy }: ImportExportOptions) => {
 	const uri = await vscode.window.showSaveDialog({
 		filters: { JSON: ["json"] },
-		defaultUri: vscode.Uri.file(path.join(os.homedir(), "Documents", "roo-code-settings.json")),
+		defaultUri: vscode.Uri.file(path.join(os.homedir(), "Documents", "symbiote-settings.json")),
 	})
 
 	if (!uri) {
@@ -79,3 +79,4 @@ export const exportSettings = async ({ providerSettingsManager, contextProxy }: 
 		await fs.writeFile(uri.fsPath, JSON.stringify({ providerProfiles, globalSettings }, null, 2), "utf-8")
 	} catch (e) {}
 }
+

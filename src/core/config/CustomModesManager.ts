@@ -59,11 +59,7 @@ export class CustomModesManager {
 		return exists ? symbioteModesPath : undefined
 	}
 
-	// For backward compatibility - will be removed in future versions
-	private async getWorkspaceRoomodes(): Promise<string | undefined> {
-		// Just redirect to the new method
-		return this.getWorkspaceSymbioteModes()
-	}
+	// For backward compatibility - will be removed in future versions\r\n\tprivate async getWorkspaceRoomodes\(\): Promise<string \| undefined> \{\r\n\t\t// Just redirect to the new method\r\n\t\treturn this.getWorkspaceSymbioteModes\(\)\r\n\t\}
 
 	private async loadModesFromFile(filePath: string): Promise<ModeConfig[]> {
 		try {
@@ -361,3 +357,5 @@ export class CustomModesManager {
 		this.disposables = []
 	}
 }
+
+

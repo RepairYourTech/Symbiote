@@ -43,3 +43,4 @@ export const TEST_TEXT = {
 	MULTILINE_SECOND: "b",
 	LARGE_PREFIX: "Line ",
 }
+

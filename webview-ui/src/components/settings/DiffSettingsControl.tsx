@@ -66,3 +66,4 @@ export const DiffSettingsControl: React.FC<DiffSettingsControlProps> = ({
 		</div>
 	)
 }
+

@@ -1,5 +1,5 @@
 export function getCallbackUrl(provider: string, uriScheme?: string) {
-	const callbackUrl = `${uriScheme || "vscode"}://rooveterinaryinc.roo-cline/${provider}`
+	const callbackUrl = `${uriScheme || "vscode"}://Symbioteveterinaryinc.Symbiote-cline/${provider}`
 	return encodeURIComponent(callbackUrl)
 }
 
@@ -14,3 +14,4 @@ export function getOpenRouterAuthUrl(uriScheme?: string) {
 export function getRequestyAuthUrl(uriScheme?: string) {
 	return `https://app.requesty.ai/oauth/authorize?callback_url=${getCallbackUrl("requesty", uriScheme)}`
 }
+

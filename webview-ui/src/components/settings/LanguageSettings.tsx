@@ -47,3 +47,4 @@ export const LanguageSettings = ({ language, setCachedStateField, className, ...
 		</div>
 	)
 }
+

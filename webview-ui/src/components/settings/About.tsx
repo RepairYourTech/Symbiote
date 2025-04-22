@@ -67,3 +67,4 @@ export const About = ({ version, telemetrySetting, setTelemetrySetting, classNam
 		</div>
 	)
 }
+

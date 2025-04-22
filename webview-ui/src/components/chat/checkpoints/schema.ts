@@ -7,3 +7,4 @@ export const checkpointSchema = z.object({
 })
 
 export type Checkpoint = z.infer<typeof checkpointSchema>
+

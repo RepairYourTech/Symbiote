@@ -40,3 +40,4 @@ class TelemetryClient {
 }
 
 export const telemetryClient = TelemetryClient.getInstance()
+

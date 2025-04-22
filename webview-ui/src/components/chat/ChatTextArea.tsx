@@ -1113,3 +1113,4 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 )
 
 export default ChatTextArea
+

@@ -24,3 +24,4 @@ export function checkExistKey(config: ProviderSettings | undefined) {
 
 	return hasSecretKey || hasOtherConfig
 }
+

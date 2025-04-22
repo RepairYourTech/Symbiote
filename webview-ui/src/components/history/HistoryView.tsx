@@ -491,3 +491,4 @@ const HistoryView = ({ onDone }: HistoryViewProps) => {
 }
 
 export default memo(HistoryView)
+

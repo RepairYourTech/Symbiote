@@ -492,7 +492,7 @@ export const webviewMessageHandler = async (provider: ClineProvider, message: We
 			await provider.context.globalState.update("allowedCommands", message.commands)
 			// Also update workspace settings
 			await vscode.workspace
-				.getConfiguration("roo-cline")
+				.getConfiguration("symbiote")
 				.update("allowedCommands", message.commands, vscode.ConfigurationTarget.Global)
 			break
 		case "openMcpSettings": {
@@ -1329,7 +1329,7 @@ export const webviewMessageHandler = async (provider: ClineProvider, message: We
 			break
 		case "humanRelayResponse":
 			if (message.requestId && message.text) {
-				vscode.commands.executeCommand("roo-cline.handleHumanRelayResponse", {
+				vscode.commands.executeCommand("symbiote.handleHumanRelayResponse", {
 					requestId: message.requestId,
 					text: message.text,
 					cancelled: false,
@@ -1339,7 +1339,7 @@ export const webviewMessageHandler = async (provider: ClineProvider, message: We
 
 		case "humanRelayCancel":
 			if (message.requestId) {
-				vscode.commands.executeCommand("roo-cline.handleHumanRelayResponse", {
+				vscode.commands.executeCommand("symbiote.handleHumanRelayResponse", {
 					requestId: message.requestId,
 					cancelled: true,
 				})
@@ -1420,3 +1420,5 @@ const generateSystemPrompt = async (provider: ClineProvider, message: WebviewMes
 	)
 	return systemPrompt
 }
+
+

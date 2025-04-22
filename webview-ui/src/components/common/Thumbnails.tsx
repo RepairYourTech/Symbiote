@@ -96,3 +96,4 @@ const Thumbnails = ({ images, style, setImages, onHeightChange }: ThumbnailsProp
 }
 
 export default memo(Thumbnails)
+

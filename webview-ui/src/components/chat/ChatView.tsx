@@ -1422,3 +1422,4 @@ const ScrollToBottomButton = styled.div`
 `
 
 export default ChatView
+

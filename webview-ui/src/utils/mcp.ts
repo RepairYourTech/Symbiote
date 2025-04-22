@@ -43,3 +43,4 @@ export function findMatchingResourceOrTemplate(
 	// If no exact match, try to find a matching template
 	return findMatchingTemplate(uri, templates)
 }
+

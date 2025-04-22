@@ -170,3 +170,4 @@ export const checkoutRestorePayloadSchema = z.object({
 export type CheckpointRestorePayload = z.infer<typeof checkoutRestorePayloadSchema>
 
 export type WebViewMessagePayload = CheckpointDiffPayload | CheckpointRestorePayload
+

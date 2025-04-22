@@ -2161,3 +2161,4 @@ describe("getTelemetryProperties", () => {
 		expect(properties).toHaveProperty("modelId", "claude-3-7-sonnet-20250219")
 	})
 })
+

@@ -23,3 +23,4 @@ export const R1FormatSetting = ({ onChange, openAiR1FormatEnabled }: R1FormatSet
 		</div>
 	)
 }
+

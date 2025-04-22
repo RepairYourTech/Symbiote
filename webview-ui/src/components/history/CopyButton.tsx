@@ -36,3 +36,4 @@ export const CopyButton = ({ itemTask }: CopyButtonProps) => {
 		</Button>
 	)
 }
+

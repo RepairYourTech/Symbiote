@@ -84,3 +84,4 @@ describe("TemperatureControl", () => {
 		expect(checkbox).toBeChecked()
 	})
 })
+

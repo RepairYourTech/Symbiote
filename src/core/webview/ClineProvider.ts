@@ -1529,3 +1529,4 @@ export class ClineProvider extends EventEmitter<ClineProviderEvents> implements 
 		return properties
 	}
 }
+

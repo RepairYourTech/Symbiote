@@ -48,3 +48,4 @@ const CommandOutputViewer = forwardRef<HTMLDivElement, CommandOutputViewerProps>
 CommandOutputViewer.displayName = "CommandOutputViewer"
 
 export default CommandOutputViewer
+

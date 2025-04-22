@@ -9,3 +9,4 @@ type ChatContext = ChatHandler & {
 export const chatContext = createContext<ChatContext | null>(null)
 
 export const ChatProvider = chatContext.Provider
+

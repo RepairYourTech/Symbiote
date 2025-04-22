@@ -881,7 +881,7 @@ const PromptsView = ({ onDone }: PromptsViewProps) => {
 
 													vscode.postMessage({
 														type: "openFile",
-														text: `./.roo/system-prompt-${currentMode.slug}`,
+														text: `./.Symbiote/system-prompt-${currentMode.slug}`,
 														values: {
 															create: true,
 															content: "",
@@ -1427,3 +1427,4 @@ const PromptsView = ({ onDone }: PromptsViewProps) => {
 }
 
 export default PromptsView
+

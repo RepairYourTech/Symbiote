@@ -291,3 +291,4 @@ export function shouldShowContextMenu(text: string, position: number): boolean {
 	// Show menu in all other cases
 	return true
 }
+

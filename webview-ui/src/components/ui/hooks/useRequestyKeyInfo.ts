@@ -48,3 +48,4 @@ export const useRequestyKeyInfo = (apiKey?: string, options?: UseRequestyKeyInfo
 		...options,
 	})
 }
+

@@ -8,3 +8,4 @@ export type SetCachedStateField<K extends keyof ExtensionStateContextType> = (
 ) => void
 
 export type SetExperimentEnabled = (id: ExperimentId, enabled: boolean) => void
+

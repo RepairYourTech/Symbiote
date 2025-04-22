@@ -52,3 +52,4 @@ describe("getVisibleProviderOrLog", () => {
 		expect(mockOutputChannel.appendLine).toHaveBeenCalledWith("Cannot find any visible Symbiote instances.")
 	})
 })
+

@@ -197,3 +197,4 @@ describe("App", () => {
 		expect(screen.queryByTestId(`${view}-view`)).not.toBeInTheDocument()
 	})
 })
+

@@ -97,3 +97,4 @@ export const ReasoningBlock = ({ content, elapsed, isCollapsed = false, onToggle
 		</div>
 	)
 }
+

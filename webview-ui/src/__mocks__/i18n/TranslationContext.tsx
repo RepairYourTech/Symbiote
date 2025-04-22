@@ -45,3 +45,4 @@ export const TranslationProvider: React.FC<{ children: ReactNode }> = ({ childre
 export const useAppTranslation = () => React.useContext(TranslationContext)
 
 export default TranslationProvider
+

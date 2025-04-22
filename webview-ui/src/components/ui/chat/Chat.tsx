@@ -27,3 +27,5 @@ const InnerChat = ({ className, children, ...props }: InnerChatProps) => (
 		<ChatInput />
 	</div>
 )
+
+

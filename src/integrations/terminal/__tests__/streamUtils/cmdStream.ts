@@ -46,3 +46,4 @@ export function createCmdCommandStream(command: string): CommandStream {
 
 	return { stream, exitCode }
 }
+

@@ -9,3 +9,4 @@ interface ChatInputContext {
 export const chatInputContext = createContext<ChatInputContext | null>(null)
 
 export const ChatInputProvider = chatInputContext.Provider
+

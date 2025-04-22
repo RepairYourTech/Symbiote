@@ -1,5 +1,5 @@
 {
-	"greeting": "Roo Code へようこそ",
+	"greeting": "Symbiote へようこそ",
 	"task": {
 		"title": "タスク",
 		"seeMore": "もっと見る",
@@ -86,7 +86,7 @@
 	"diffError": {
 		"title": "編集に失敗しました"
 	},
-	"troubleMessage": "Rooに問題が発生しています...",
+	"troubleMessage": "Symbiote��問題が発生しています...",
 	"apiRequest": {
 		"title": "APIリクエスト",
 		"failed": "APIリクエスト失敗",
@@ -112,42 +112,42 @@
 		"current": "現在"
 	},
 	"instructions": {
-		"wantsToFetch": "Rooは現在のタスクを支援するための詳細な指示を取得したい"
+		"wantsToFetch": "Symbiote��現在のタスクを支援するための詳細な指示を取得したい"
 	},
 	"fileOperations": {
-		"wantsToRead": "Rooはこのファイルを読みたい:",
-		"wantsToReadOutsideWorkspace": "Rooはワークスペース外のこのファイルを読みたい:",
-		"didRead": "Rooはこのファイルを読みました:",
-		"wantsToEdit": "Rooはこのファイルを編集したい:",
-		"wantsToEditOutsideWorkspace": "Rooはワークスペース外のこのファイルを編集したい:",
-		"wantsToCreate": "Rooは新しいファイルを作成したい:"
+		"wantsToRead": "Symbiote��このファイルを読みたい:",
+		"wantsToReadOutsideWorkspace": "Symbiote��ワークスペース外のこのファイルを読みたい:",
+		"didRead": "Symbiote��このファイルを読みました:",
+		"wantsToEdit": "Symbiote��このファイルを編集したい:",
+		"wantsToEditOutsideWorkspace": "Symbiote��ワークスペース外のこのファイルを編集したい:",
+		"wantsToCreate": "Symbiote��新しいファイルを作成したい:"
 	},
 	"directoryOperations": {
-		"wantsToViewTopLevel": "Rooはこのディレクトリのトップレベルファイルを表示したい:",
-		"didViewTopLevel": "Rooはこのディレクトリのトップレベルファイルを表示しました:",
-		"wantsToViewRecursive": "Rooはこのディレクトリのすべてのファイルを再帰的に表示したい:",
-		"didViewRecursive": "Rooはこのディレクトリのすべてのファイルを再帰的に表示しました:",
-		"wantsToViewDefinitions": "Rooはこのディレクトリで使用されているソースコード定義名を表示したい:",
-		"didViewDefinitions": "Rooはこのディレクトリで使用されているソースコード定義名を表示しました:",
-		"wantsToSearch": "Rooはこのディレクトリで <code>{{regex}}</code> を検索したい:",
-		"didSearch": "Rooはこのディレクトリで <code>{{regex}}</code> を検索しました:"
+		"wantsToViewTopLevel": "Symbiote��このディレクトリのトップレベルファイルを表示したい:",
+		"didViewTopLevel": "Symbiote��このディレクトリのトップレベルファイルを表示しました:",
+		"wantsToViewRecursive": "Symbiote��このディレクトリのすべてのファイルを再帰的に表示したい:",
+		"didViewRecursive": "Symbiote��このディレクトリのすべてのファイルを再帰的に表示しました:",
+		"wantsToViewDefinitions": "Symbiote��このディレクトリで使用されているソースコード定義名を表示したい:",
+		"didViewDefinitions": "Symbiote��このディレクトリで使用されているソースコード定義名を表示しました:",
+		"wantsToSearch": "Symbiote��このディレクトリで <code>{{regex}}</code> を検索したい:",
+		"didSearch": "Symbiote��このディレクトリで <code>{{regex}}</code> を検索しました:"
 	},
 	"commandOutput": "コマンド出力",
 	"response": "応答",
 	"arguments": "引数",
 	"mcp": {
-		"wantsToUseTool": "RooはMCPサーバー{{serverName}}でツールを使用したい:",
-		"wantsToAccessResource": "RooはMCPサーバー{{serverName}}のリソースにアクセスしたい:"
+		"wantsToUseTool": "Symbiote��MCPサーバー{{serverName}}でツールを使用したい:",
+		"wantsToAccessResource": "Symbiote��MCPサーバー{{serverName}}のリソースにアクセスしたい:"
 	},
 	"modes": {
-		"wantsToSwitch": "Rooは<code>{{mode}}</code>モードに切り替えたい",
-		"wantsToSwitchWithReason": "Rooは次の理由で<code>{{mode}}</code>モードに切り替えたい: {{reason}}",
-		"didSwitch": "Rooは<code>{{mode}}</code>モードに切り替えました",
-		"didSwitchWithReason": "Rooは次の理由で<code>{{mode}}</code>モードに切り替えました: {{reason}}"
+		"wantsToSwitch": "Symbiote��<code>{{mode}}</code>モードに切り替えたい",
+		"wantsToSwitchWithReason": "Symbiote��次の理由で<code>{{mode}}</code>モードに切り替えたい: {{reason}}",
+		"didSwitch": "Symbiote��<code>{{mode}}</code>モードに切り替えました",
+		"didSwitchWithReason": "Symbiote��次の理由で<code>{{mode}}</code>モードに切り替えました: {{reason}}"
 	},
 	"subtasks": {
-		"wantsToCreate": "Rooは<code>{{mode}}</code>モードで新しいサブタスクを作成したい:",
-		"wantsToFinish": "Rooはこのサブタスクを終了したい",
+		"wantsToCreate": "Symbiote��<code>{{mode}}</code>モードで新しいサブタスクを作成したい:",
+		"wantsToFinish": "Symbiote��このサブタスクを終了したい",
 		"newTaskContent": "サブタスク指示",
 		"completionContent": "サブタスク完了",
 		"resultContent": "サブタスク結果",
@@ -155,7 +155,7 @@
 		"completionInstructions": "サブタスク完了！結果を確認し、修正や次のステップを提案できます。問題なければ、親タスクに結果を返すために確認してください。"
 	},
 	"questions": {
-		"hasQuestion": "Rooは質問があります:"
+		"hasQuestion": "Symbiote��質問があります:"
 	},
 	"taskCompleted": "タスク完了",
 	"shellIntegration": {
@@ -171,7 +171,7 @@
 	"autoApprove": {
 		"title": "自動承認:",
 		"none": "なし",
-		"description": "自動承認はRoo Codeに許可を求めずに操作を実行する権限を与えます。完全に信頼できる操作のみ有効にしてください。より詳細な設定は<settingsLink>設定</settingsLink>で利用できます。"
+		"description": "自動承認はSymbioteに許可を求めずに操作を実行する権限を与えます。完全に信頼できる操作のみ有効にしてください。より詳細な設定は<settingsLink>設定</settingsLink>で利用できます。"
 	},
 	"reasoning": {
 		"thinking": "考え中",
@@ -182,12 +182,12 @@
 	},
 	"announcement": {
 		"title": "🎉 Symbiote v1.0.0 リリース",
-		"description": "SymbioteはRoo Codeのフォークで、プライバシー強化とテレメトリーなしで動作します。",
+		"description": "SymbioteはSymbioteのフォークで、プライバシー強化とテレメトリーなしで動作します。",
 		"symbioteSection": "Symbioteの機能",
 		"symbioteFeature1": "<bold>テレメトリーなし</bold>：Symbioteはすべてのテレメトリーを完全に削除してプライバシーを尊重します",
 		"symbioteFeature2": "<bold>コンテキスト強化</bold>：高度なコンテキスト認識のためのQdrantとMem0のサポート（オプション）",
-		"symbioteFeature3": "<bold>独立した開発</bold>：SymbioteはRoo Codeの更新を取り込みながら独自に開発を進めます",
-		"rooSection": "最新のRoo Codeアップデート",
+		"symbioteFeature3": "<bold>独立した開発</bold>：SymbioteはSymbioteの更新を取り込みながら独自に開発を進めます",
+		"symbioteSection": "最新のSymbioteアップデート",
 		"feature1": "<bold>Gemini 2.5 Flash Thinking</bold>: Gemini 2.5 Flashのthinkingバリアントを使用し、thinking用のトークン予算を指定できるようになりました",
 		"feature2": "<bold>UI改善</bold>: タスクヘッダー、チャットビュー、履歴プレビュー、ウェルカムビューが視覚的に強化されました",
 		"feature3": "<bold>バグ修正</bold>: より信頼性の高い差分編集など",
@@ -195,7 +195,7 @@
 		"detailsDiscussLinks": "詳細は<githubLink>GitHub</githubLink>でご確認ください 🚀"
 	},
 	"browser": {
-		"rooWantsToUse": "Rooはブラウザを使用したい:",
+		"symbioteWantsToUse": "Symbiote��ブラウザを使用したい:",
 		"consoleLogs": "コンソールログ",
 		"noNewLogs": "(新しいログはありません)",
 		"screenshot": "ブラウザのスクリーンショット",
@@ -217,3 +217,7 @@
 		}
 	}
 }
+
+
+
+

@@ -90,3 +90,4 @@ export function formatGitSuggestion(commit: {
 		date: commit.date,
 	}
 }
+

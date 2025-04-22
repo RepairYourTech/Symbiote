@@ -14,13 +14,13 @@ const TERMINAL_COMMAND_IDS = {
 export const registerTerminalActions = (context: vscode.ExtensionContext) => {
 	registerTerminalAction(context, TERMINAL_COMMAND_IDS.ADD_TO_CONTEXT, "TERMINAL_ADD_TO_CONTEXT")
 
-	registerTerminalActionPair(context, TERMINAL_COMMAND_IDS.FIX, "TERMINAL_FIX", "What would you like Roo to fix?")
+	registerTerminalActionPair(context, TERMINAL_COMMAND_IDS.FIX, "TERMINAL_FIX", "What would you like Symbiote to fix?")
 
 	registerTerminalActionPair(
 		context,
 		TERMINAL_COMMAND_IDS.EXPLAIN,
 		"TERMINAL_EXPLAIN",
-		"What would you like Roo to explain?",
+		"What would you like Symbiote to explain?",
 	)
 }
 
@@ -69,3 +69,4 @@ const registerTerminalActionPair = (
 	// Register current task version
 	registerTerminalAction(context, `${baseCommand}InCurrentTask`, promptType, inputPrompt)
 }
+

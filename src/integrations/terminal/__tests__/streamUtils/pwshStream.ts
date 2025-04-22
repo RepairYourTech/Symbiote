@@ -63,3 +63,4 @@ export function createPowerShellStream(command: string): CommandStream {
 
 	return { stream, exitCode }
 }
+

@@ -109,7 +109,7 @@ export class GlamaHandler extends BaseProvider implements SingleCompletionHandle
 						labels: [
 							{
 								key: "app",
-								value: "vscode.rooveterinaryinc.roo-cline",
+								value: "vscode.repairyourtech.symbiote",
 							},
 						],
 					}),
@@ -232,3 +232,5 @@ export async function getGlamaModels() {
 
 	return models
 }
+
+

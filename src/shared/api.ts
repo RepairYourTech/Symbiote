@@ -1179,3 +1179,4 @@ export const xaiModels = {
 		description: "xAI's Grok Beta model (legacy) with 131K context window",
 	},
 } as const satisfies Record<string, ModelInfo>
+

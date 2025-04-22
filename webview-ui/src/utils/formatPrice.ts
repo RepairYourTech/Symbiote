@@ -6,3 +6,4 @@ export const formatPrice = (price: number) => {
 		maximumFractionDigits: 2,
 	}).format(price)
 }
+

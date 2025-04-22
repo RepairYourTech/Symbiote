@@ -50,7 +50,7 @@ export class TerminalRegistry {
 						terminalInfo.setActiveStream(stream)
 					} else {
 						console.error(
-							"[TerminalRegistry] Shell execution started, but not from a Roo-registered terminal:",
+							"[TerminalRegistry] Shell execution started, but not from a Symbiote-registered terminal:",
 							e,
 						)
 					}
@@ -74,7 +74,7 @@ export class TerminalRegistry {
 
 					if (!terminalInfo) {
 						console.error(
-							"[TerminalRegistry] Shell execution ended, but not from a Roo-registered terminal:",
+							"[TerminalRegistry] Shell execution ended, but not from a Symbiote-registered terminal:",
 							e,
 						)
 						return
@@ -162,7 +162,7 @@ export class TerminalRegistry {
 
 		const terminal = vscode.window.createTerminal({
 			cwd,
-			name: "Roo Code",
+			name: "Symbiote",
 			iconPath: new vscode.ThemeIcon("rocket"),
 			env,
 		})
@@ -387,8 +387,8 @@ export class TerminalRegistry {
 
 				const zshrcContent = `
 source "${shellIntegrationPath}"
-ZDOTDIR=\${ROO_ZDOTDIR:-$HOME}
-unset ROO_ZDOTDIR
+ZDOTDIR=\${SYMBIOTE_ZDOTDIR:-$HOME}
+unset SYMBIOTE_ZDOTDIR
 [ -f "$ZDOTDIR/.zshenv" ] && source "$ZDOTDIR/.zshenv"
 [ -f "$ZDOTDIR/.zprofile" ] && source "$ZDOTDIR/.zprofile"
 [ -f "$ZDOTDIR/.zshrc" ] && source "$ZDOTDIR/.zshrc"
@@ -525,3 +525,4 @@ unset ROO_ZDOTDIR
 		return terminal
 	}
 }
+

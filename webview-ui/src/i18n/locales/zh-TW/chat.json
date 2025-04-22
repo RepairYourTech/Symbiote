@@ -1,5 +1,5 @@
 {
-	"greeting": "歡迎使用 Roo Code",
+	"greeting": "歡迎使用 Symbiote",
 	"task": {
 		"title": "工作",
 		"seeMore": "顯示更多",
@@ -65,7 +65,7 @@
 		"tooltip": "取消目前操作"
 	},
 	"scrollToBottom": "捲動至對話框底部",
-	"onboarding": "<strong>您在此工作區中的工作清單是空的。</strong> 請在下方輸入工作以開始。 不確定如何開始？ 在 <DocsLink>說明文件</DocsLink> 中閱讀更多關於 Roo 能為您做什麼的資訊。",
+	"onboarding": "<strong>您在此工作區中的工作清單是空的。</strong> 請在下方輸入工作以開始。 不確定如何開始？ 在 <DocsLink>說明文件</DocsLink> 中閱讀更多關於 Symbiote 能為您做什麼的資訊。",
 	"selectMode": "選擇互動模式",
 	"selectApiConfig": "選擇 API 設定",
 	"enhancePrompt": "使用額外內容增強提示",
@@ -86,7 +86,7 @@
 	"diffError": {
 		"title": "編輯失敗"
 	},
-	"troubleMessage": "Roo 遇到問題...",
+	"troubleMessage": "Symbiote 遇到問題...",
 	"apiRequest": {
 		"title": "API 請求",
 		"failed": "API 請求失敗",
@@ -112,42 +112,42 @@
 		"current": "目前"
 	},
 	"instructions": {
-		"wantsToFetch": "Roo 想要取得詳細指示以協助目前任務"
+		"wantsToFetch": "Symbiote 想要取得詳細指示以協助目前任務"
 	},
 	"fileOperations": {
-		"wantsToRead": "Roo 想要讀取此檔案：",
-		"wantsToReadOutsideWorkspace": "Roo 想要讀取此工作區外的檔案：",
-		"didRead": "Roo 已讀取此檔案：",
-		"wantsToEdit": "Roo 想要編輯此檔案：",
-		"wantsToEditOutsideWorkspace": "Roo 想要編輯此工作區外的檔案：",
-		"wantsToCreate": "Roo 想要建立新檔案："
+		"wantsToRead": "Symbiote 想要讀取此檔案：",
+		"wantsToReadOutsideWorkspace": "Symbiote 想要讀取此工作區外的檔案：",
+		"didRead": "Symbiote 已讀取此檔案：",
+		"wantsToEdit": "Symbiote 想要編輯此檔案：",
+		"wantsToEditOutsideWorkspace": "Symbiote 想要編輯此工作區外的檔案：",
+		"wantsToCreate": "Symbiote 想要建立新檔案："
 	},
 	"directoryOperations": {
-		"wantsToViewTopLevel": "Roo 想要檢視此目錄中最上層的檔案：",
-		"didViewTopLevel": "Roo 已檢視此目錄中最上層的檔案：",
-		"wantsToViewRecursive": "Roo 想要遞迴檢視此目錄中的所有檔案：",
-		"didViewRecursive": "Roo 已遞迴檢視此目錄中的所有檔案：",
-		"wantsToViewDefinitions": "Roo 想要檢視此目錄中使用的原始碼定義名稱：",
-		"didViewDefinitions": "Roo 已檢視此目錄中使用的原始碼定義名稱：",
-		"wantsToSearch": "Roo 想要在此目錄中搜尋 <code>{{regex}}</code>：",
-		"didSearch": "Roo 已在此目錄中搜尋 <code>{{regex}}</code>："
+		"wantsToViewTopLevel": "Symbiote 想要檢視此目錄中最上層的檔案：",
+		"didViewTopLevel": "Symbiote 已檢視此目錄中最上層的檔案：",
+		"wantsToViewRecursive": "Symbiote 想要遞迴檢視此目錄中的所有檔案：",
+		"didViewRecursive": "Symbiote 已遞迴檢視此目錄中的所有檔案：",
+		"wantsToViewDefinitions": "Symbiote 想要檢視此目錄中使用的原始碼定義名稱：",
+		"didViewDefinitions": "Symbiote 已檢視此目錄中使用的原始碼定義名稱：",
+		"wantsToSearch": "Symbiote 想要在此目錄中搜尋 <code>{{regex}}</code>：",
+		"didSearch": "Symbiote 已在此目錄中搜尋 <code>{{regex}}</code>："
 	},
 	"commandOutput": "命令輸出",
 	"response": "回應",
 	"arguments": "參數",
 	"mcp": {
-		"wantsToUseTool": "Roo 想要在 {{serverName}} MCP 伺服器上使用工具：",
-		"wantsToAccessResource": "Roo 想要存取 {{serverName}} MCP 伺服器上的資源："
+		"wantsToUseTool": "Symbiote 想要在 {{serverName}} MCP 伺服器上使用工具：",
+		"wantsToAccessResource": "Symbiote 想要存取 {{serverName}} MCP 伺服器上的資源："
 	},
 	"modes": {
-		"wantsToSwitch": "Roo 想要切換至 <code>{{mode}}</code> 模式",
-		"wantsToSwitchWithReason": "Roo 想要切換至 <code>{{mode}}</code> 模式，原因：{{reason}}",
-		"didSwitch": "Roo 已切換至 <code>{{mode}}</code> 模式",
-		"didSwitchWithReason": "Roo 已切換至 <code>{{mode}}</code> 模式，原因：{{reason}}"
+		"wantsToSwitch": "Symbiote 想要切換至 <code>{{mode}}</code> 模式",
+		"wantsToSwitchWithReason": "Symbiote 想要切換至 <code>{{mode}}</code> 模式，原因：{{reason}}",
+		"didSwitch": "Symbiote 已切換至 <code>{{mode}}</code> 模式",
+		"didSwitchWithReason": "Symbiote 已切換至 <code>{{mode}}</code> 模式，原因：{{reason}}"
 	},
 	"subtasks": {
-		"wantsToCreate": "Roo 想要在 <code>{{mode}}</code> 模式下建立新的子工作：",
-		"wantsToFinish": "Roo 想要完成此子工作",
+		"wantsToCreate": "Symbiote 想要在 <code>{{mode}}</code> 模式下建立新的子工作：",
+		"wantsToFinish": "Symbiote 想要完成此子工作",
 		"newTaskContent": "子工作指示",
 		"completionContent": "子工作已完成",
 		"resultContent": "子工作結果",
@@ -155,7 +155,7 @@
 		"completionInstructions": "子工作已完成！您可以檢閱結果並提出修正或下一步建議。如果一切看起來良好，請確認以將結果傳回主工作。"
 	},
 	"questions": {
-		"hasQuestion": "Roo 有一個問題："
+		"hasQuestion": "Symbiote 有一個問題："
 	},
 	"taskCompleted": "工作完成",
 	"shellIntegration": {
@@ -171,7 +171,7 @@
 	"autoApprove": {
 		"title": "自動核准：",
 		"none": "無",
-		"description": "自動核准讓 Roo Code 可以在無需徵求您同意的情況下執行動作。請僅對您完全信任的動作啟用此功能。您可以在<settingsLink>設定</settingsLink>中進行更詳細的調整。"
+		"description": "自動核准讓 Symbiote 可以在無需徵求您同意的情況下執行動作。請僅對您完全信任的動作啟用此功能。您可以在<settingsLink>設定</settingsLink>中進行更詳細的調整。"
 	},
 	"reasoning": {
 		"thinking": "思考中",
@@ -182,12 +182,12 @@
 	},
 	"announcement": {
 		"title": "🎉 Symbiote v1.0.0 已發布",
-		"description": "Symbiote 是 Roo Code 的一個分支，具有增強隱私和無遠端計量特點。",
+		"description": "Symbiote 是 Symbiote 的一個分支，具有增強隱私和無遠端計量特點。",
 		"symbioteSection": "Symbiote 功能",
 		"symbioteFeature1": "<bold>無遠端計量</bold>：Symbiote 通過完全移除所有遠端計量來尊重您的隱私",
 		"symbioteFeature2": "<bold>增強上下文</bold>：支持 Qdrant 和 Mem0 以實現高級上下文感知（可選）",
-		"symbioteFeature3": "<bold>獨立開發</bold>：Symbiote 將獨立開發，同時合併 Roo Code 的更新",
-		"rooSection": "最新 Roo Code 更新",
+		"symbioteFeature3": "<bold>獨立開發</bold>：Symbiote 將獨立開發，同時合併 Symbiote 的更新",
+		"symbioteSection": "最新 Symbiote 更新",
 		"feature1": "<bold>Gemini 2.5 Flash Thinking</bold>: 現在可以使用 Gemini 2.5 Flash 的 thinking 變體並指定 thinking Token 預算",
 		"feature2": "<bold>UI 改進</bold>: 工作標題、對話視圖、歷史預覽和歡迎視圖已進行視覺升級",
 		"feature3": "<bold>錯誤修復</bold>: 更可靠的差異編輯等功能",
@@ -195,7 +195,7 @@
 		"detailsDiscussLinks": "在 <githubLink>GitHub</githubLink> 取得更多詳細資訊 🚀"
 	},
 	"browser": {
-		"rooWantsToUse": "Roo 想要使用瀏覽器：",
+		"symbioteWantsToUse": "Symbiote 想要使用瀏覽器：",
 		"consoleLogs": "主控台記錄",
 		"noNewLogs": "（沒有新記錄）",
 		"screenshot": "瀏覽器螢幕擷圖",
@@ -217,3 +217,7 @@
 		}
 	}
 }
+
+
+
+

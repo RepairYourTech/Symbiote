@@ -49,3 +49,4 @@ describe("formatDate", () => {
 		expect(result).toBe("SEPTEMBER 21, 4:45 PM")
 	})
 })
+

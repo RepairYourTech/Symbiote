@@ -102,3 +102,4 @@ export function createChunkedMockStream(output: string, chunkSize: number = 100,
 
 	return { stream, exitCode }
 }
+

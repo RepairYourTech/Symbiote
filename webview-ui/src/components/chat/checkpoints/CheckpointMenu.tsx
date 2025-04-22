@@ -122,3 +122,4 @@ export const CheckpointMenu = ({ ts, commitHash, currentHash, checkpoint }: Chec
 		</div>
 	)
 }
+

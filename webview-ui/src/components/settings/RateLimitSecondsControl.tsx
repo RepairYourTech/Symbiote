@@ -36,3 +36,4 @@ export const RateLimitSecondsControl: React.FC<RateLimitSecondsControlProps> = (
 		</div>
 	)
 }
+

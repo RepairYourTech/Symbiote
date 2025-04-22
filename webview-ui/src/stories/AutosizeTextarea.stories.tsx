@@ -20,3 +20,4 @@ type Story = StoryObj<typeof AutosizeTextarea>
 export const Default: Story = {
 	args: {},
 }
+

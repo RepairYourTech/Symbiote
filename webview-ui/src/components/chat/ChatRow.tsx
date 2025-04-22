@@ -921,7 +921,7 @@ export const ChatRowContent = ({
 									</div>
 									<br />
 									<a
-										href="http://docs.roocode.com/troubleshooting/shell-integration/"
+										href="http://docs.Symbiotecode.com/troubleshooting/shell-integration/"
 										style={{ color: "inherit", textDecoration: "underline" }}>
 										{t("chat:shellIntegration.troubleshooting")}
 									</a>
@@ -1258,3 +1258,4 @@ const Markdown = memo(({ markdown, partial }: { markdown?: string; partial?: boo
 		</div>
 	)
 })
+

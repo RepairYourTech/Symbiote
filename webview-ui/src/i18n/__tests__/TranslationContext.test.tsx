@@ -44,3 +44,4 @@ describe("TranslationContext", () => {
 		expect(getByTestId("translation-interpolation")).toHaveTextContent("Operation failed: Test error")
 	})
 })
+

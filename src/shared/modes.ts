@@ -302,3 +302,4 @@ export function getCustomInstructions(modeSlug: string, customModes?: ModeConfig
 	}
 	return mode.customInstructions ?? ""
 }
+

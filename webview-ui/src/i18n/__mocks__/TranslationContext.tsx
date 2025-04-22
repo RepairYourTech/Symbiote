@@ -56,3 +56,4 @@ export const TranslationProvider: React.FC<{ children: ReactNode }> = ({ childre
 export const useAppTranslation = () => useContext(TranslationContext)
 
 export default TranslationProvider
+

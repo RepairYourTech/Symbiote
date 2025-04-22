@@ -42,3 +42,4 @@ export function highlightFzfMatch(
 		.map((part) => (part.highlight ? `<span class="${highlightClassName}">${part.text}</span>` : part.text))
 		.join("")
 }
+
