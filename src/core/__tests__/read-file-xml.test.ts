@@ -546,7 +546,7 @@ describe("read_file tool XML output structure", () => {
 			expect(result).not.toContain(`<content`)
 		})
 
-		it("should include error tag for RooIgnore error", async () => {
+		it("should include error tag for SymbioteIgnore error", async () => {
 			// Execute - skip addLineNumbers check as it returns early with an error
 			const result = await executeReadFileTool({}, { validateAccess: false, skipAddLineNumbersCheck: true })
 

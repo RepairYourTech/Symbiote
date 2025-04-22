@@ -1,5 +1,5 @@
 {
-  description = "Roo Code development environment";
+  description = "Symbiote development environment";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
@@ -13,8 +13,8 @@
     mkDevShell = system: let
       pkgs = import nixpkgs { inherit system; };
     in pkgs.mkShell {
-      name = "roo-code";
-      
+      name = "symbiote";
+
       packages = with pkgs; [
         nodejs_20
         corepack_20

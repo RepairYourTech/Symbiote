@@ -978,7 +978,7 @@ export class Cline extends EventEmitter<ClineEvents> {
 			})
 		}
 
-		const rooIgnoreInstructions = this.symbioteIgnoreController?.getInstructions()
+		const symbioteIgnoreInstructions = this.symbioteIgnoreController?.getInstructions()
 
 		const {
 			browserViewportSize,
@@ -1010,7 +1010,7 @@ export class Cline extends EventEmitter<ClineEvents> {
 				experiments,
 				enableMcpServerCreation,
 				language,
-				rooIgnoreInstructions,
+				symbioteIgnoreInstructions,
 			)
 		})()
 
