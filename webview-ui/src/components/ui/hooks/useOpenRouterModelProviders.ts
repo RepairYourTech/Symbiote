@@ -114,3 +114,4 @@ export const useOpenRouterModelProviders = (modelId?: string, options?: UseOpenR
 		queryFn: () => (modelId ? getOpenRouterProvidersForModel(modelId) : {}),
 		...options,
 	})
+

@@ -62,3 +62,4 @@ export abstract class BaseProvider implements ApiHandler {
 		return Math.ceil(totalTokens * TOKEN_FUDGE_FACTOR)
 	}
 }
+

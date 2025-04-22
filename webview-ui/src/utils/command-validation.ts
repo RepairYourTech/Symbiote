@@ -122,3 +122,4 @@ export function validateCommand(command: string, allowedCommands: string[]): boo
 		return isAllowedSingleCommand(cmdWithoutRedirection, allowedCommands)
 	})
 }
+

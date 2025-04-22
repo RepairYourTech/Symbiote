@@ -24,8 +24,8 @@ vsc-extension-quickstart.md
 .gitattributes
 .prettierignore
 .clinerules*
-.roomodes
-.roo/**
+.symbiote-modes
+.symbiote/**
 cline_docs/**
 coverage/**
 locales/**

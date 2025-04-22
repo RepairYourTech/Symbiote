@@ -36,3 +36,4 @@ export const handleUri = async (uri: vscode.Uri) => {
 			break
 	}
 }
+

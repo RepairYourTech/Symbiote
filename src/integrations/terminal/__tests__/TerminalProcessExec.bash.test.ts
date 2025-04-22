@@ -129,7 +129,7 @@ async function testTerminalCommand(
 			executeCommand: jest.fn(),
 			cwd: vscode.Uri.file("/test/path"),
 		},
-		name: "Roo Code",
+		name: "Symbiote",
 		processId: Promise.resolve(123),
 		creationOptions: {},
 		exitStatus: undefined,
@@ -411,3 +411,4 @@ describe("TerminalProcess with Bash Command Output", () => {
 		}
 	})
 })
+

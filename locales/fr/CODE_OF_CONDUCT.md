@@ -55,7 +55,7 @@ La représentation d'un projet peut être définie et clarifiée davantage par l
 ## Application
 
 Les cas de comportement abusif, harcelant ou autrement inacceptable peuvent être
-signalés en contactant l'équipe du projet à support@roocode.com. Toutes les plaintes
+signalés en contactant l'équipe du projet à support@repairmytech.com. Toutes les plaintes
 seront examinées et étudiées et donneront lieu à une réponse qui
 est jugée nécessaire et appropriée aux circonstances. L'équipe du projet est
 obligée de maintenir la confidentialité concernant la personne qui signale un incident.
@@ -67,10 +67,10 @@ membres de la direction du projet.
 
 ## Attribution
 
-Ce Code de Conduite est adapté de la [version de Cline][cline_coc] du [Contributor Covenant][homepage], version 1.4,
+Ce Code de Conduite est adapté de la [version de Roo Code][roo_coc] du [Contributor Covenant][homepage], version 1.4,
 disponible à https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
 
-[cline_coc]: https://github.com/cline/cline/blob/main/CODE_OF_CONDUCT.md
+[roo_coc]: https://github.com/RooVetGit/Roo-Code/blob/main/CODE_OF_CONDUCT.md
 [homepage]: https://www.contributor-covenant.org
 
 Pour obtenir des réponses aux questions courantes sur ce code de conduite, voir

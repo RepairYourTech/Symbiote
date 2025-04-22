@@ -102,3 +102,4 @@ export async function getOllamaModels(baseUrl = "http://localhost:11434") {
 		return []
 	}
 }
+

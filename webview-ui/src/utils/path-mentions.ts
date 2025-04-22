@@ -50,3 +50,4 @@ export function convertToMentionPath(path: string, cwd?: string): string {
 
 	return pathWithoutProtocol
 }
+

@@ -114,3 +114,4 @@ const McpToolRow = ({ tool, serverName, serverSource, alwaysAllowMcp }: McpToolR
 }
 
 export default McpToolRow
+

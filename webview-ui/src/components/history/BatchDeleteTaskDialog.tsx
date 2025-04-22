@@ -56,3 +56,4 @@ export const BatchDeleteTaskDialog = ({ taskIds, ...props }: BatchDeleteTaskDial
 		</AlertDialog>
 	)
 }
+

@@ -35,3 +35,4 @@ export const experiments = {
 	isEnabled: (experimentsConfig: Record<ExperimentId, boolean>, id: ExperimentId) =>
 		experimentsConfig[id] ?? experimentDefault[id],
 } as const
+

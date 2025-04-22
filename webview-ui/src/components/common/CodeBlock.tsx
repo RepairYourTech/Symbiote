@@ -157,3 +157,4 @@ const CodeBlock = memo(({ source, forceWrap = false }: CodeBlockProps) => {
 })
 
 export default CodeBlock
+

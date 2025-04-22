@@ -262,7 +262,7 @@ const ApiOptions = ({
 	)
 
 	// Base URL for provider documentation
-	const DOC_BASE_URL = "https://docs.roocode.com/providers"
+	const DOC_BASE_URL = "https://docs.Symbiotecode.com/providers"
 
 	// Custom URL path mappings for providers with different slugs
 	const providerUrlSlugs: Record<string, string> = {
@@ -1843,3 +1843,4 @@ export function normalizeApiConfiguration(apiConfiguration?: ApiConfiguration) {
 }
 
 export default memo(ApiOptions)
+

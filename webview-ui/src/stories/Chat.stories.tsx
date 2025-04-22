@@ -49,3 +49,4 @@ const useStorybookChat = (): ChatHandler => {
 
 	return { isLoading, setIsLoading, input, setInput, messages, append }
 }
+

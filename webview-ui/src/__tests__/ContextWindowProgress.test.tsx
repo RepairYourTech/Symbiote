@@ -131,3 +131,4 @@ describe("ContextWindowProgress", () => {
 		expect(screen.getByTestId("context-tokens-count")).toHaveTextContent("1000")
 	})
 })
+

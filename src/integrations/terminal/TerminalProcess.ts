@@ -69,7 +69,7 @@
 	Contact me if you have any questions:
 		- GitHub: KJ7LNW
 
-		- [roo-cline at z.ewheeler.org]
+		- [symbiote at z.ewheeler.org]
 
 	Cheers,
 		-Eric, KJ7LNW
@@ -294,7 +294,7 @@ export class TerminalProcess extends EventEmitter<TerminalProcessEvents> {
 
 				// Only add the PowerShell counter workaround if enabled
 				if (Terminal.getPowershellCounter()) {
-					commandToExecute += ` ; "(Roo/PS Workaround: ${this.terminalInfo.cmdCounter++})" > $null`
+					commandToExecute += ` ; "(Symbiote/PS Workaround: ${this.terminalInfo.cmdCounter++})" > $null`
 				}
 
 				// Only add the sleep command if the command delay is greater than 0
@@ -700,3 +700,4 @@ export function mergePromise(process: TerminalProcess, promise: Promise<void>): 
 	}
 	return process as TerminalProcessResultPromise
 }
+

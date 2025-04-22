@@ -39,7 +39,7 @@ const HistoryPreview = ({ showHistoryView }: HistoryPreviewProps) => {
 								components={{
 									DocsLink: (
 										<a
-											href="https://docs.roocode.com/getting-started/your-first-task"
+											href="https://docs.Symbiotecode.com/getting-started/your-first-task"
 											target="_blank"
 											rel="noopener noreferrer">
 											the docs
@@ -117,3 +117,4 @@ const HistoryPreview = ({ showHistoryView }: HistoryPreviewProps) => {
 }
 
 export default memo(HistoryPreview)
+

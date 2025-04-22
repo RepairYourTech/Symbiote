@@ -513,376 +513,53 @@ export const globalSettingsSchema = z.object({
 	browserViewportSize: z.string().optional(),
 	screenshotQuality: z.number().optional(),
 	remoteBrowserEnabled: z.boolean().optional(),
-	remoteBrowserHost: z.string().optional(),
+	remoteBrowserUrl: z.string().optional(),
+	remoteBrowserApiKey: z.string().optional(),
 
-	enableCheckpoints: z.boolean().optional(),
-	checkpointStorage: checkpointStoragesSchema.optional(),
-
-	ttsEnabled: z.boolean().optional(),
-	ttsSpeed: z.number().optional(),
-	soundEnabled: z.boolean().optional(),
-	soundVolume: z.number().optional(),
-
-	maxOpenTabsContext: z.number().optional(),
-	maxWorkspaceFiles: z.number().optional(),
-	showRooIgnoredFiles: z.boolean().optional(),
-	maxReadFileLine: z.number().optional(),
-
-	terminalOutputLineLimit: z.number().optional(),
-	terminalShellIntegrationTimeout: z.number().optional(),
-	terminalCommandDelay: z.number().optional(),
-	terminalPowershellCounter: z.boolean().optional(),
-	terminalZshClearEolMark: z.boolean().optional(),
-	terminalZshOhMy: z.boolean().optional(),
-	terminalZshP10k: z.boolean().optional(),
-	terminalZdotdir: z.boolean().optional(),
-
-	diffEnabled: z.boolean().optional(),
-	fuzzyMatchThreshold: z.number().optional(),
-	experiments: experimentsSchema.optional(),
-
+	telemetry: telemetrySettingsSchema.optional(),
 	language: languagesSchema.optional(),
-
-	telemetrySetting: telemetrySettingsSchema.optional(),
-
-	mcpEnabled: z.boolean().optional(),
-	enableMcpServerCreation: z.boolean().optional(),
-
-	mode: z.string().optional(),
-	modeApiConfigs: z.record(z.string(), z.string()).optional(),
-	customModes: z.array(modeConfigSchema).optional(),
+	checkpointStorage: checkpointStoragesSchema.optional(),
+	experiments: z.record(z.string(), z.boolean()).optional(),
+	customStoragePath: z.string().optional(),
 	customModePrompts: customModePromptsSchema.optional(),
 	customSupportPrompts: customSupportPromptsSchema.optional(),
-	enhancementApiConfigId: z.string().optional(),
 })
 
 export type GlobalSettings = z.infer<typeof globalSettingsSchema>
-
-type GlobalSettingsRecord = Record<Keys<GlobalSettings>, undefined>
-
-const globalSettingsRecord: GlobalSettingsRecord = {
-	currentApiConfigName: undefined,
-	listApiConfigMeta: undefined,
-	pinnedApiConfigs: undefined,
-
-	lastShownAnnouncementId: undefined,
-	customInstructions: undefined,
-	taskHistory: undefined,
-
-	autoApprovalEnabled: undefined,
-	alwaysAllowReadOnly: undefined,
-	alwaysAllowReadOnlyOutsideWorkspace: undefined,
-	alwaysAllowWrite: undefined,
-	alwaysAllowWriteOutsideWorkspace: undefined,
-	writeDelayMs: undefined,
-	alwaysAllowBrowser: undefined,
-	alwaysApproveResubmit: undefined,
-	requestDelaySeconds: undefined,
-	alwaysAllowMcp: undefined,
-	alwaysAllowModeSwitch: undefined,
-	alwaysAllowSubtasks: undefined,
-	alwaysAllowExecute: undefined,
-	allowedCommands: undefined,
-
-	browserToolEnabled: undefined,
-	browserViewportSize: undefined,
-	screenshotQuality: undefined,
-	remoteBrowserEnabled: undefined,
-	remoteBrowserHost: undefined,
-
-	enableCheckpoints: undefined,
-	checkpointStorage: undefined,
-
-	ttsEnabled: undefined,
-	ttsSpeed: undefined,
-	soundEnabled: undefined,
-	soundVolume: undefined,
-
-	maxOpenTabsContext: undefined,
-	maxWorkspaceFiles: undefined,
-	showRooIgnoredFiles: undefined,
-	maxReadFileLine: undefined,
-
-	terminalOutputLineLimit: undefined,
-	terminalShellIntegrationTimeout: undefined,
-	terminalCommandDelay: undefined,
-	terminalPowershellCounter: undefined,
-	terminalZshClearEolMark: undefined,
-	terminalZshOhMy: undefined,
-	terminalZshP10k: undefined,
-	terminalZdotdir: undefined,
-
-	diffEnabled: undefined,
-	fuzzyMatchThreshold: undefined,
-	experiments: undefined,
-
-	language: undefined,
-
-	telemetrySetting: undefined,
-
-	mcpEnabled: undefined,
-	enableMcpServerCreation: undefined,
-
-	mode: undefined,
-	modeApiConfigs: undefined,
-	customModes: undefined,
-	customModePrompts: undefined,
-	customSupportPrompts: undefined,
-	enhancementApiConfigId: undefined,
-}
-
-export const GLOBAL_SETTINGS_KEYS = Object.keys(globalSettingsRecord) as Keys<GlobalSettings>[]
 
 /**
  * RooCodeSettings
  */
 
-export const rooCodeSettingsSchema = providerSettingsSchema.merge(globalSettingsSchema)
+export const symbioteSettingsSchema = z.intersection(providerSettingsSchema, globalSettingsSchema)
 
-export type RooCodeSettings = GlobalSettings & ProviderSettings
-
-export const ROO_CODE_SETTINGS_KEYS = [...GLOBAL_SETTINGS_KEYS, ...PROVIDER_SETTINGS_KEYS] as Keys<RooCodeSettings>[]
+export type SymbioteSettings = z.infer<typeof symbioteSettingsSchema>
 
 /**
- * SecretState
+ * ApiConfig
  */
 
-export type SecretState = Pick<
-	ProviderSettings,
-	| "apiKey"
-	| "glamaApiKey"
-	| "openRouterApiKey"
-	| "awsAccessKey"
-	| "awsSecretKey"
-	| "awsSessionToken"
-	| "openAiApiKey"
-	| "geminiApiKey"
-	| "openAiNativeApiKey"
-	| "deepSeekApiKey"
-	| "mistralApiKey"
-	| "unboundApiKey"
-	| "requestyApiKey"
->
-
-type SecretStateRecord = Record<Keys<SecretState>, undefined>
-
-const secretStateRecord: SecretStateRecord = {
-	apiKey: undefined,
-	glamaApiKey: undefined,
-	openRouterApiKey: undefined,
-	awsAccessKey: undefined,
-	awsSecretKey: undefined,
-	awsSessionToken: undefined,
-	openAiApiKey: undefined,
-	geminiApiKey: undefined,
-	openAiNativeApiKey: undefined,
-	deepSeekApiKey: undefined,
-	mistralApiKey: undefined,
-	unboundApiKey: undefined,
-	requestyApiKey: undefined,
-}
-
-export const SECRET_STATE_KEYS = Object.keys(secretStateRecord) as Keys<SecretState>[]
-
-export const isSecretStateKey = (key: string): key is Keys<SecretState> =>
-	SECRET_STATE_KEYS.includes(key as Keys<SecretState>)
-
-/**
- * GlobalState
- */
-
-export type GlobalState = Omit<RooCodeSettings, Keys<SecretState>>
-
-export const GLOBAL_STATE_KEYS = [...GLOBAL_SETTINGS_KEYS, ...PROVIDER_SETTINGS_KEYS].filter(
-	(key: Keys<RooCodeSettings>) => !SECRET_STATE_KEYS.includes(key as Keys<SecretState>),
-) as Keys<GlobalState>[]
-
-export const isGlobalStateKey = (key: string): key is Keys<GlobalState> =>
-	GLOBAL_STATE_KEYS.includes(key as Keys<GlobalState>)
-
-/**
- * ClineAsk
- */
-
-export const clineAsks = [
-	"followup",
-	"command",
-	"command_output",
-	"completion_result",
-	"tool",
-	"api_req_failed",
-	"resume_task",
-	"resume_completed_task",
-	"mistake_limit_reached",
-	"browser_action_launch",
-	"use_mcp_server",
-	"finishTask",
-] as const
-
-export const clineAskSchema = z.enum(clineAsks)
-
-export type ClineAsk = z.infer<typeof clineAskSchema>
-
-// ClineSay
-
-export const clineSays = [
-	"task",
-	"error",
-	"api_req_started",
-	"api_req_finished",
-	"api_req_retried",
-	"api_req_retry_delayed",
-	"api_req_deleted",
-	"text",
-	"reasoning",
-	"completion_result",
-	"user_feedback",
-	"user_feedback_diff",
-	"command_output",
-	"tool",
-	"shell_integration_warning",
-	"browser_action",
-	"browser_action_result",
-	"command",
-	"mcp_server_request_started",
-	"mcp_server_response",
-	"new_task_started",
-	"new_task",
-	"checkpoint_saved",
-	"rooignore_error",
-	"diff_error",
-] as const
-
-export const clineSaySchema = z.enum(clineSays)
-
-export type ClineSay = z.infer<typeof clineSaySchema>
-
-/**
- * ToolProgressStatus
- */
-
-export const toolProgressStatusSchema = z.object({
-	icon: z.string().optional(),
-	text: z.string().optional(),
+export const apiConfigSchema = z.object({
+	id: z.string(),
+	name: z.string(),
+	settings: symbioteSettingsSchema,
 })
 
-export type ToolProgressStatus = z.infer<typeof toolProgressStatusSchema>
+export type ApiConfig = z.infer<typeof apiConfigSchema>
 
 /**
- * ClineMessage
+ * ApiConfigs
  */
 
-export const clineMessageSchema = z.object({
-	ts: z.number(),
-	type: z.union([z.literal("ask"), z.literal("say")]),
-	ask: clineAskSchema.optional(),
-	say: clineSaySchema.optional(),
-	text: z.string().optional(),
-	images: z.array(z.string()).optional(),
-	partial: z.boolean().optional(),
-	reasoning: z.string().optional(),
-	conversationHistoryIndex: z.number().optional(),
-	checkpoint: z.record(z.string(), z.unknown()).optional(),
-	progressStatus: toolProgressStatusSchema.optional(),
+export const apiConfigsSchema = z.object({
+	apiConfigs: z.array(apiConfigSchema),
 })
 
-export type ClineMessage = z.infer<typeof clineMessageSchema>
+export type ApiConfigs = z.infer<typeof apiConfigsSchema>
 
 /**
- * TokenUsage
+ * Backward compatibility
  */
 
-export const tokenUsageSchema = z.object({
-	totalTokensIn: z.number(),
-	totalTokensOut: z.number(),
-	totalCacheWrites: z.number().optional(),
-	totalCacheReads: z.number().optional(),
-	totalCost: z.number(),
-	contextTokens: z.number(),
-})
-
-export type TokenUsage = z.infer<typeof tokenUsageSchema>
-
-/**
- * ToolName
- */
-
-export const toolNames = [
-	"execute_command",
-	"read_file",
-	"write_to_file",
-	"append_to_file",
-	"apply_diff",
-	"insert_content",
-	"search_and_replace",
-	"search_files",
-	"list_files",
-	"list_code_definition_names",
-	"browser_action",
-	"use_mcp_tool",
-	"access_mcp_resource",
-	"ask_followup_question",
-	"attempt_completion",
-	"switch_mode",
-	"new_task",
-	"fetch_instructions",
-] as const
-
-export const toolNamesSchema = z.enum(toolNames)
-
-export type ToolName = z.infer<typeof toolNamesSchema>
-
-/**
- * ToolUsage
- */
-
-export const toolUsageSchema = z.record(
-	toolNamesSchema,
-	z.object({
-		attempts: z.number(),
-		failures: z.number(),
-	}),
-)
-
-export type ToolUsage = z.infer<typeof toolUsageSchema>
-
-/**
- * RooCodeEvent
- */
-
-export enum RooCodeEventName {
-	Connect = "connect",
-	Message = "message",
-	TaskCreated = "taskCreated",
-	TaskStarted = "taskStarted",
-	TaskModeSwitched = "taskModeSwitched",
-	TaskPaused = "taskPaused",
-	TaskUnpaused = "taskUnpaused",
-	TaskAskResponded = "taskAskResponded",
-	TaskAborted = "taskAborted",
-	TaskSpawned = "taskSpawned",
-	TaskCompleted = "taskCompleted",
-	TaskTokenUsageUpdated = "taskTokenUsageUpdated",
-}
-
-export const rooCodeEventsSchema = z.object({
-	[RooCodeEventName.Message]: z.tuple([
-		z.object({
-			taskId: z.string(),
-			action: z.union([z.literal("created"), z.literal("updated")]),
-			message: clineMessageSchema,
-		}),
-	]),
-	[RooCodeEventName.TaskCreated]: z.tuple([z.string()]),
-	[RooCodeEventName.TaskStarted]: z.tuple([z.string()]),
-	[RooCodeEventName.TaskModeSwitched]: z.tuple([z.string(), z.string()]),
-	[RooCodeEventName.TaskPaused]: z.tuple([z.string()]),
-	[RooCodeEventName.TaskUnpaused]: z.tuple([z.string()]),
-	[RooCodeEventName.TaskAskResponded]: z.tuple([z.string()]),
-	[RooCodeEventName.TaskAborted]: z.tuple([z.string()]),
-	[RooCodeEventName.TaskSpawned]: z.tuple([z.string(), z.string()]),
-	[RooCodeEventName.TaskCompleted]: z.tuple([z.string(), tokenUsageSchema, toolUsageSchema]),
-	[RooCodeEventName.TaskTokenUsageUpdated]: z.tuple([z.string(), tokenUsageSchema]),
-})
-
-export type RooCodeEvents = z.infer<typeof rooCodeEventsSchema>
+export const rooCodeSettingsSchema = symbioteSettingsSchema
+export type RooCodeSettings = SymbioteSettings

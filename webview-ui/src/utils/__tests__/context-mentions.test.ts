@@ -373,3 +373,4 @@ describe("shouldShowContextMenu", () => {
 		expect(shouldShowContextMenu("@problems", 9)).toBe(true)
 	})
 })
+

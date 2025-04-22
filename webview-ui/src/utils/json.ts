@@ -15,3 +15,4 @@ export function safeJsonParse<T>(jsonString: string | null | undefined, defaultV
 		return defaultValue
 	}
 }
+

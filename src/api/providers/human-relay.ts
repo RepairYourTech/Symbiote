@@ -1,4 +1,4 @@
-// filepath: e:\Project\Roo-Code\src\api\providers\human-relay.ts
+// filepath: e:\Project\symbiote\src\api\providers\human-relay.ts
 import { Anthropic } from "@anthropic-ai/sdk"
 import { ApiHandlerOptions, ModelInfo } from "../../shared/api"
 import { ApiHandler, SingleCompletionHandler } from "../index"
@@ -123,7 +123,7 @@ async function showHumanRelayDialog(promptText: string): Promise<string | undefi
 
 		// Register a global callback function
 		vscode.commands.executeCommand(
-			"roo-cline.registerHumanRelayCallback",
+			"symbiote.registerHumanRelayCallback",
 			requestId,
 			(response: string | undefined) => {
 				resolve(response)
@@ -131,9 +131,10 @@ async function showHumanRelayDialog(promptText: string): Promise<string | undefi
 		)
 
 		// Open the dialog box directly using the current panel
-		vscode.commands.executeCommand("roo-cline.showHumanRelayDialog", {
+		vscode.commands.executeCommand("symbiote.showHumanRelayDialog", {
 			requestId,
 			promptText,
 		})
 	})
 }
+

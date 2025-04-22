@@ -156,23 +156,20 @@ function formatDirectoryContent(dirPath: string, files: Array<{ filename: string
  * Load rule files from the specified directory
  */
 export async function loadRuleFiles(cwd: string): Promise<string> {
-	// Check for .roo/rules/ directory
-	const rooRulesDir = path.join(cwd, ".roo", "rules")
-	if (await directoryExists(rooRulesDir)) {
-		const files = await readTextFilesFromDirectory(rooRulesDir)
+	// Check for .symbiote/rules/ directory
+	const symbioteRulesDir = path.join(cwd, ".symbiote", "rules")
+	if (await directoryExists(symbioteRulesDir)) {
+		const files = await readTextFilesFromDirectory(symbioteRulesDir)
 		if (files.length > 0) {
-			return formatDirectoryContent(rooRulesDir, files)
+			return formatDirectoryContent(symbioteRulesDir, files)
 		}
 	}
 
-	// Fall back to existing behavior
-	const ruleFiles = [".roorules", ".clinerules"]
-
-	for (const file of ruleFiles) {
-		const content = await safeReadFile(path.join(cwd, file))
-		if (content) {
-			return `\n# Rules from ${file}:\n${content}\n`
-		}
+	// Fall back to .symbiote-rules file
+	const symbioteRulesFile = ".symbiote-rules"
+	const content = await safeReadFile(path.join(cwd, symbioteRulesFile))
+	if (content) {
+		return `\n# Rules from ${symbioteRulesFile}:\n${content}\n`
 	}
 
 	return ""
@@ -183,7 +180,7 @@ export async function addCustomInstructions(
 	globalCustomInstructions: string,
 	cwd: string,
 	mode: string,
-	options: { language?: string; rooIgnoreInstructions?: string } = {},
+	options: { language?: string; symbioteIgnoreInstructions?: string } = {},
 ): Promise<string> {
 	const sections = []
 
@@ -192,8 +189,8 @@ export async function addCustomInstructions(
 	let usedRuleFile = ""
 
 	if (mode) {
-		// Check for .roo/rules-${mode}/ directory
-		const modeRulesDir = path.join(cwd, ".roo", `rules-${mode}`)
+		// Check for .symbiote/rules-${mode}/ directory
+		const modeRulesDir = path.join(cwd, ".symbiote", `rules-${mode}`)
 		if (await directoryExists(modeRulesDir)) {
 			const files = await readTextFilesFromDirectory(modeRulesDir)
 			if (files.length > 0) {
@@ -202,18 +199,21 @@ export async function addCustomInstructions(
 			}
 		}
 
-		// If no directory exists, fall back to existing behavior
+		// If no directory exists, fall back to .symbiote-rules-${mode} file
 		if (!modeRuleContent) {
-			const rooModeRuleFile = `.roorules-${mode}`
-			modeRuleContent = await safeReadFile(path.join(cwd, rooModeRuleFile))
+			const symbioteRulesFile = `.symbiote-rules-${mode}`
+			modeRuleContent = await safeReadFile(path.join(cwd, symbioteRulesFile))
 			if (modeRuleContent) {
-				usedRuleFile = rooModeRuleFile
-			} else {
-				const clineModeRuleFile = `.clinerules-${mode}`
-				modeRuleContent = await safeReadFile(path.join(cwd, clineModeRuleFile))
-				if (modeRuleContent) {
-					usedRuleFile = clineModeRuleFile
-				}
+				usedRuleFile = symbioteRulesFile
+			}
+		}
+
+		// For backward compatibility, fall back to .clinerules-${mode} file
+		if (!modeRuleContent) {
+			const clinerRulesFile = `.clinerules-${mode}`
+			modeRuleContent = await safeReadFile(path.join(cwd, clinerRulesFile))
+			if (modeRuleContent) {
+				usedRuleFile = clinerRulesFile
 			}
 		}
 	}
@@ -241,15 +241,15 @@ export async function addCustomInstructions(
 
 	// Add mode-specific rules first if they exist
 	if (modeRuleContent && modeRuleContent.trim()) {
-		if (usedRuleFile.includes(path.join(".roo", `rules-${mode}`))) {
+		if (usedRuleFile.includes(path.join(".symbiote", `rules-${mode}`))) {
 			rules.push(modeRuleContent.trim())
 		} else {
 			rules.push(`# Rules from ${usedRuleFile}:\n${modeRuleContent}`)
 		}
 	}
 
-	if (options.rooIgnoreInstructions) {
-		rules.push(options.rooIgnoreInstructions)
+	if (options.symbioteIgnoreInstructions) {
+		rules.push(options.symbioteIgnoreInstructions)
 	}
 
 	// Add generic rules

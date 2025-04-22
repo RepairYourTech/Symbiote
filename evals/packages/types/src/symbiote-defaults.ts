@@ -1,6 +1,6 @@
-import { RooCodeSettings } from "./roo-code.js"
+import { SymbioteSettings } from "./symbiote.js"
 
-export const rooCodeDefaults: RooCodeSettings = {
+export const symbioteDefaults: SymbioteSettings = {
 	apiProvider: "openrouter",
 	openRouterUseMiddleOutTransform: false,
 
@@ -41,7 +41,7 @@ export const rooCodeDefaults: RooCodeSettings = {
 
 	maxOpenTabsContext: 20,
 	maxWorkspaceFiles: 200,
-	showRooIgnoredFiles: true,
+	showSymbioteIgnoredFiles: true,
 	maxReadFileLine: 500,
 
 	terminalOutputLineLimit: 500,

@@ -20,3 +20,4 @@ export function findLast<T>(array: Array<T>, predicate: (value: T, index: number
 	const index = findLastIndex(array, predicate)
 	return index === -1 ? undefined : array[index]
 }
+

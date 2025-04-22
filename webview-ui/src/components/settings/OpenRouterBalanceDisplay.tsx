@@ -17,3 +17,4 @@ export const OpenRouterBalanceDisplay = ({ apiKey, baseUrl }: { apiKey: string; 
 		</VSCodeLink>
 	)
 }
+

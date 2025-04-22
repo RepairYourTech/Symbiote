@@ -14,7 +14,10 @@
 <div align="center">
   <h1>Symbiote</h1>
   <p>Un assistente di codifica basato sull'IA che lavora con il tuo codebase, aiutandoti ad architettare, codificare, eseguire il debug e aumentare la tua produttività.</p>
-
+  <p style="font-size: 1.1em; margin-top: 15px;"><strong>Basato su <a href="https://github.com/RooVetGit/Roo-Code" target="_blank">Roo Code</a></strong></p>
+  <a href="https://github.com/RooVetGit/Roo-Code" target="_blank">
+    <img src="https://img.shields.io/badge/Fork%20di-Roo%20Code-6F42C1?style=for-the-badge&logo=github&logoColor=white" alt="Fork di Roo Code">
+  </a>
 </div>
 <br>
 <br>
@@ -28,7 +31,7 @@
 
 ## Cos'è Symbiote?
 
-**Symbiote** è un **agente di codifica autonomo** basato sull'IA che vive nel tuo editor. È un fork completo di Roo Code, progettato per funzionare per tutti gli utenti di VS Code con un focus sulla privacy e la personalizzazione.
+**Symbiote** è un **agente di codifica autonomo** basato sull'IA che vive nel tuo editor. È un fork completo di [Roo Code](https://github.com/RooVetGit/Roo-Code), progettato per funzionare per tutti gli utenti di VS Code con un focus sulla privacy e la personalizzazione.
 
 Symbiote può:
 
@@ -105,7 +108,7 @@ Fai funzionare Symbiote a modo tuo con:
 
 ## Disclaimer
 
-Symbiote è un fork di [Roo Code](https://github.com/RooVetGit/Roo-Code), sviluppato in modo indipendente. Mentre manteniamo la funzionalità principale, abbiamo apportato modifiche significative, inclusa la completa rimozione della telemetria e il rebranding.
+**Symbiote è un fork di [Roo Code](https://github.com/RooVetGit/Roo-Code)**, sviluppato in modo indipendente. Mentre manteniamo la funzionalità principale, abbiamo apportato modifiche significative, inclusa la completa rimozione della telemetria e il rebranding. Siamo grati al team di Roo Code per il loro eccellente lavoro sul progetto originale.
 
 **Si prega di notare** che **non** facciamo alcuna dichiarazione o garanzia riguardo a qualsiasi codice, modello o altro strumento fornito o reso disponibile in relazione a Symbiote, qualsiasi strumento di terze parti associato o qualsiasi output risultante. Ti assumi **tutti i rischi** associati all'uso di tali strumenti o output; tali strumenti sono forniti su base **"COSÌ COM'È"** e **"COME DISPONIBILE"**. Tali rischi possono includere, senza limitazione, violazione della proprietà intellettuale, vulnerabilità o attacchi informatici, pregiudizi, imprecisioni, errori, difetti, virus, tempi di inattività, perdita o danneggiamento della proprietà e/o lesioni personali. Sei l'unico responsabile del tuo utilizzo di tali strumenti o output (inclusi, senza limitazione, la legalità, l'appropriatezza e i risultati degli stessi).
 
@@ -125,4 +128,4 @@ I contributi sono benvenuti! Sentiti libero di inviare una Pull Request.
 
 ## Licenza
 
-[Licenza MIT](../../LICENSE)
+[Apache 2.0 © 2025 RepairYourTech](../../LICENSE)

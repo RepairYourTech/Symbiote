@@ -409,7 +409,7 @@ export class McpHub {
 		}
 
 		const workspaceFolder = vscode.workspace.workspaceFolders[0]
-		const projectMcpDir = path.join(workspaceFolder.uri.fsPath, ".roo")
+		const projectMcpDir = path.join(workspaceFolder.uri.fsPath, ".symbiote")
 		const projectMcpPath = path.join(projectMcpDir, "mcp.json")
 
 		try {
@@ -436,7 +436,7 @@ export class McpHub {
 		try {
 			const client = new Client(
 				{
-					name: "Roo Code",
+					name: "Symbiote",
 					version: this.providerRef.deref()?.context.extension?.packageJSON?.version ?? "1.0.0",
 				},
 				{

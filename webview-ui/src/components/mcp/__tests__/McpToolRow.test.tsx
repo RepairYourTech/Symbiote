@@ -141,3 +141,4 @@ describe("McpToolRow", () => {
 		expect(screen.getByText("Second parameter")).toBeInTheDocument()
 	})
 })
+

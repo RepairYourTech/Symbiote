@@ -1,6 +1,6 @@
 import * as vscode from "vscode"
 
-import type { RooCodeAPI } from "../../../src/exports/roo-code"
+import type { SymbioteAPI } from "../../../src/exports/symbiote"
 
 type WaitForOptions = {
 	timeout?: number
@@ -42,7 +42,7 @@ export const waitFor = (
 }
 
 type WaitUntilAbortedOptions = WaitForOptions & {
-	api: RooCodeAPI
+	api: SymbioteAPI
 	taskId: string
 }
 
@@ -53,7 +53,7 @@ export const waitUntilAborted = async ({ api, taskId, ...options }: WaitUntilAbo
 }
 
 type WaitUntilCompletedOptions = WaitForOptions & {
-	api: RooCodeAPI
+	api: SymbioteAPI
 	taskId: string
 }
 

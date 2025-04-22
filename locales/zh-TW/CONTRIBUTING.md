@@ -1,62 +1,68 @@
-# 參與貢獻 Roo Code
+# 參與貢獻 Symbiote
 
-我們非常歡迎您參與貢獻 Roo Code。無論是修正錯誤、新增功能或改善文件，每一份貢獻都能讓 Roo Code 變得更加出色！為了維持社群的活力與友善氛圍，所有成員皆須遵守我們的[行為準則](CODE_OF_CONDUCT.md)。
+<div align="center">
+  <p style="font-size: 1.1em; margin-top: 15px;"><strong>基於 <a href="https://github.com/RooVetGit/Roo-Code" target="_blank">Roo Code</a></strong></p>
+  <a href="https://github.com/RooVetGit/Roo-Code" target="_blank">
+    <img src="https://img.shields.io/badge/Fork%20from-Roo%20Code-6F42C1?style=for-the-badge&logo=github&logoColor=white" alt="Fork from Roo Code">
+  </a>
+</div>
 
-## 加入我們的社群
+我們非常歡迎您參與貢獻 Symbiote。無論是修正錯誤、新增功能或改善文件，每一份貢獻都能讓 Symbiote 變得更加出色！為了維持社群的活力與友善氛圍，所有成員皆須遵守我們的[行為準則](CODE_OF_CONDUCT.md)。
 
-我們強烈建議所有貢獻者加入我們的 [Discord 社群](https://discord.gg/roocode)！加入 Discord 伺服器後，您可以：
+## 社群參與
 
-- 即時取得貢獻相關的協助與指引
-- 與其他貢獻者及核心團隊成員交流
-- 掌握專案的最新進展與優先事項
-- 參與討論，共同塑造 Roo Code 的未來
-- 尋找與其他開發者合作的機會
+我們鼓勵所有貢獻者透過 GitHub 參與 Symbiote 社群：
+
+- 使用 GitHub Discussions 提問和分享想法
+- 參與議題討論以提供回饋
+- 審查其他貢獻者的拉取請求
+- 分享您使用 Symbiote 的經驗
+- 與在類似專案上工作的其他開發者建立連結
 
 ## 回報錯誤或問題
 
-回報錯誤能幫助我們改善 Roo Code！在建立新議題前，請先[搜尋現有議題](https://github.com/RooVetGit/Roo-Code/issues)，避免重複回報。當您準備好回報錯誤時，請前往我們的 [議題頁面](https://github.com/RooVetGit/Roo-Code/issues/new/choose)，您將找到協助填寫相關資訊的範本。
+回報錯誤能幫助我們改善 Symbiote！在建立新議題前，請先[搜尋現有議題](https://github.com/RepairYourTech/Symbiote/issues)，避免重複回報。當您準備好回報錯誤時，請前往我們的 [議題頁面](https://github.com/RepairYourTech/Symbiote/issues/new/choose)，您將找到協助填寫相關資訊的範本。
 
-<blockquote class='warning-note'>
-     🔐 <b>重要：</b> 若您發現安全性漏洞，請透過 <a href="https://github.com/RooVetGit/Roo-Code/security/advisories/new">GitHub 安全性通報工具進行私密回報</a>。
-</blockquote>
+> **重要：** 若您發現安全性漏洞，請透過 [GitHub 安全性通報工具進行私密回報](https://github.com/RepairYourTech/Symbiote/security/advisories/new)。
 
 ## 決定貢獻方向
 
-正在尋找適合新手的貢獻機會嗎？請查看我們 [Roo Code Issues](https://github.com/orgs/RooVetGit/projects/1) GitHub 專案中的「Issue [Unassigned]」區塊。這些議題特別適合新進貢獻者，也是我們最需要協助的領域！
+正在尋找適合新手的貢獻機會嗎？請查看我們 [Symbiote 議題頁面](https://github.com/RepairYourTech/Symbiote/issues)中標記為「good first issue」的議題。這些議題特別適合新進貢獻者，也是我們最需要協助的領域！
 
-我們也歡迎您對[文件](https://docs.roocode.com/)提出貢獻！無論是修正錯字、改善現有指南，或建立新的教學內容，我們都希望打造一個由社群推動的知識庫，協助每個人充分運用 Roo Code。您可以點選任何頁面上的「編輯此頁面」按鈕，快速前往 GitHub 上的檔案編輯介面，或直接造訪 https://github.com/RooVetGit/Roo-Code-Docs。
+我們也歡迎您對文件提出貢獻！無論是修正錯字、改善現有指南，或建立新的教學內容，我們都希望打造一個由社群推動的知識庫，協助每個人充分運用 Symbiote。
 
-若您計畫開發較大型的功能，請先建立一個[功能請求](https://github.com/RooVetGit/Roo-Code/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop)，讓我們能討論該功能是否符合 Roo Code 的願景。您也可以參考下方的[專案藍圖](#專案藍圖)，確認您的想法是否符合我們的策略方向。
+若您計畫開發較大型的功能，請先建立一個[功能請求](https://github.com/RepairYourTech/Symbiote/discussions/categories/feature-requests)，讓我們能討論該功能是否符合 Symbiote 的願景。您也可以參考下方的[專案藍圖](#專案藍圖)，確認您的想法是否符合我們的策略方向。
 
 ## 專案藍圖
 
-Roo Code 擁有明確的開發藍圖，指引我們的優先事項與未來方向。了解我們的藍圖能協助您：
+Symbiote 擁有開發藍圖，指引我們的優先事項與未來方向。了解我們的藍圖能協助您：
 
 - 讓您的貢獻與專案目標保持一致
 - 找到最能發揮您專長的領域
 - 理解特定設計決策的脈絡
 - 為支援我們願景的新功能尋找靈感
 
-目前的藍圖聚焦於六大核心支柱：
+目前的藍圖聚焦於這些核心支柱：
 
 ### 供應商支援
 
-我們致力於完善各家供應商的支援：
+我們致力於完善各家 AI 供應商的支援：
 
-- 對於「OpenAI 相容」API 的更全面支援
-- xAI、Microsoft Azure AI、Alibaba Cloud Qwen、IBM Watsonx、Together AI、DeepInfra、Fireworks AI、Cohere、Perplexity AI、FriendliAI、Replicate
-- 強化對 Ollama 與 LM Studio 的支援
+- 多功能的「OpenAI 相容」支援
+- 支援主要 AI 供應商，包括 Anthropic、Google、xAI、Microsoft Azure AI 等
+- 透過 Ollama 和類似平台強化對本機模型的支援
 
-### 模型支援
+### 隱私與安全
 
-我們希望 Roo 能在更多模型上順暢運作，包括本機模型：
+我們優先考量使用者隱私與安全：
 
-- 透過自訂系統提示與工作流程支援本機模型
-- 基準測試評估與測試案例
+- 無遙測或資料收集
+- 可能時提供本機處理選項
+- 透明的使用者資料處理
 
 ### 系統支援
 
-我們希望 Roo 能在每個人的電腦上順暢運作：
+我們希望 Symbiote 能在每個人的電腦上順暢運作：
 
 - 跨平台終端機整合
 - 為 Mac、Windows 與 Linux 提供穩定且一致的支援
@@ -69,23 +75,22 @@ Roo Code 擁有明確的開發藍圖，指引我們的優先事項與未來方�
 - 清晰的 API 文件
 - 更完善的貢獻者指引
 - 多語言文件資源
-- 互動式範例與程式碼範例
 
 ### 穩定性
 
 我們希望顯著降低錯誤數量並增加自動化測試：
 
-- 除錯記錄開關
-- 用於傳送錯誤／支援請求的「機器／工作資訊」複製按鈕
+- 全面的測試覆蓋
+- 除錯記錄功能
+- 簡化的錯誤回報流程
 
 ### 國際化
 
-我們希望 Roo 能說每個人的語言：
+我們希望 Symbiote 能讓全球使用者都能使用：
 
-- 我們希望 Roo Code 說每個人的語言
-- Queremos que Roo Code hable el idioma de todos
-- हम चाहते हैं कि Roo Code हर किसी की भाषा बोले
-- نريد أن يتحدث Roo Code لغة الجميع
+- 介面支援多種語言
+- 本地化文件
+- 社群主導的翻譯工作
 
 我們特別歡迎推動藍圖目標的貢獻。如果您的貢獻符合這些核心支柱，請在 PR 描述中提及。
 
@@ -94,7 +99,7 @@ Roo Code 擁有明確的開發藍圖，指引我們的優先事項與未來方�
 1. **複製**儲存庫：
 
 ```sh
-git clone https://github.com/RooVetGit/Roo-Code.git
+git clone https://github.com/RepairYourTech/Symbiote.git
 ```
 
 2. **安裝相依套件**：
@@ -110,7 +115,7 @@ npm run dev
 ```
 
 4. **除錯**：
-   在 VSCode 中按下 `F5`（或選擇**執行** → **開始除錯**）以開啟載入 Roo Code 的新工作階段。
+   在 VSCode 中按下 `F5`（或選擇**執行** → **開始除錯**）以開啟載入 Symbiote 的新工作階段。
 
 網頁檢視的變更會立即顯示。核心擴充功能的變更則需要重新啟動擴充主機。
 
@@ -123,12 +128,12 @@ npm run build
 建置完成後，`.vsix` 檔案會出現在 `bin/` 目錄中，可使用以下指令安裝：
 
 ```sh
-code --install-extension bin/roo-cline-<version>.vsix
+code --install-extension bin/symbiote-<version>.vsix
 ```
 
 ## 撰寫與提交程式碼
 
-任何人都能為 Roo Code 貢獻程式碼，但請遵守以下準則，確保您的貢獻能順利整合：
+任何人都能為 Symbiote 貢獻程式碼，但請遵守以下準則，確保您的貢獻能順利整合：
 
 1. **保持 Pull Request 聚焦**
 
@@ -171,3 +176,7 @@ code --install-extension bin/roo-cline-<version>.vsix
 ## 貢獻協議
 
 透過提交 Pull Request，您同意您的貢獻將依照與專案相同的授權條款（[Apache 2.0](../LICENSE)）進行授權。
+
+## 致謝
+
+本貢獻指南改編自 [Roo Code 的貢獻指南](https://github.com/RooVetGit/Roo-Code/blob/main/CONTRIBUTING.md)，並進行了修改以反映 Symbiote 的特定需求和流程。

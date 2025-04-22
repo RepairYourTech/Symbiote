@@ -119,3 +119,4 @@ describe("TaskHeader", () => {
 		expect(screen.queryByText(/\$/)).not.toBeInTheDocument()
 	})
 })
+

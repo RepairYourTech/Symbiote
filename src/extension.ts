@@ -134,3 +134,5 @@ export async function deactivate() {
 	// Clean up terminal handlers
 	TerminalRegistry.cleanup()
 }
+
+

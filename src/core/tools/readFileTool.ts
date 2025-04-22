@@ -244,3 +244,4 @@ export async function readFileTool(
 		await handleError("reading file", error)
 	}
 }
+

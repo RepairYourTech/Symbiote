@@ -160,3 +160,4 @@ describe("TerminalProcess.interpretExitCode with real commands", () => {
 		expect(sigintResult.coreDumpPossible).toBe(false)
 	})
 })
+

@@ -1,6 +1,6 @@
 {
-	"greeting": "Hola, sóc Roo!",
-	"introduction": "<strong>Roo Code és el principal agent de codificació autònom.</strong> Prepara't per arquitectar, codificar, depurar i augmentar la teva productivitat com mai abans. Per continuar, Roo Code necessita una clau API.",
+	"greeting": "Hola, sóc Symbiote!",
+	"introduction": "<strong>Symbiote és el principal agent de codificació autònom.</strong> Prepara't per arquitectar, codificar, depurar i augmentar la teva productivitat com mai abans. Per continuar, Symbiote necessita una clau API.",
 	"notice": "Per començar, aquesta extensió necessita un proveïdor d'API.",
 	"start": "Som-hi!",
 	"chooseProvider": "Tria un proveïdor d'API per començar:",
@@ -24,3 +24,5 @@
 	},
 	"or": "o"
 }
+
+

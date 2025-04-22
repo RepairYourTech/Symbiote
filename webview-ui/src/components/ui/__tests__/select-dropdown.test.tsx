@@ -25,7 +25,7 @@ jest.mock("@/components/ui", () => {
 		}) => {
 			// Force open to true for testing
 			if (onOpenChange) setTimeout(() => onOpenChange(true), 0)
-			return <div data-testid="dropdown-root">{children}</div>
+			return <div data-testid="dropdown-Root">{children}</div>
 		},
 
 		PopoverTrigger: ({
@@ -139,8 +139,8 @@ describe("SelectDropdown", () => {
 		// Test that the component accepts and uses the open state controlled prop
 		render(<SelectDropdown value="option1" options={options} onChange={onChangeMock} />)
 
-		// The component should render the dropdown root with correct props
-		const dropdown = screen.getByTestId("dropdown-root")
+		// The component should render the dropdown Root with correct props
+		const dropdown = screen.getByTestId("dropdown-Root")
 		expect(dropdown).toBeInTheDocument()
 
 		// Verify trigger is rendered
@@ -277,3 +277,5 @@ describe("SelectDropdown", () => {
 		})
 	})
 })
+
+

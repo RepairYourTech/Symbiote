@@ -175,12 +175,12 @@
 	},
 	"announcement": {
 		"title": "🎉 Symbiote v1.0.0 Released",
-		"description": "Symbiote is a fork of Roo Code with simplified installation and no telemetry.",
+		"description": "Symbiote is a fork of Symbiote with enhanced privacy and no telemetry.",
 		"symbioteSection": "Symbiote Features",
 		"symbioteFeature1": "<bold>No Telemetry</bold>: Symbiote respects your privacy with all telemetry completely removed",
-		"symbioteFeature2": "<bold>Simplified Installation</bold>: Works for all VS Code users without requiring Qdrant or Mem0",
-		"symbioteFeature3": "<bold>Independent Development</bold>: Symbiote will develop independently while merging updates from Roo Code",
-		"rooSection": "Latest Roo Code Updates",
+		"symbioteFeature2": "<bold>Enhanced Context</bold>: Support for Qdrant and Mem0 for advanced context awareness (optional)",
+		"symbioteFeature3": "<bold>Independent Development</bold>: Symbiote will develop independently while merging updates from Symbiote",
+		"symbioteSection": "Latest Symbiote Updates",
 		"feature1": "<bold>Gemini 2.5 Flash Thinking</bold>: You can now use the thinking variant of Gemini 2.5 Flash and specify a thinking token budget",
 		"feature2": "<bold>UI Improvements</bold>: The task header, chat view, history preview, and welcome view have been visually upgraded",
 		"feature3": "<bold>Bug Fixes</bold>: More reliable diff edits & more",
@@ -195,7 +195,7 @@
 		"copyToInput": "Copy to input (same as shift + click)"
 	},
 	"browser": {
-		"rooWantsToUse": "Symbiote wants to use the browser:",
+		"symbioteWantsToUse": "Symbiote wants to use the browser:",
 		"consoleLogs": "Console Logs",
 		"noNewLogs": "(No new logs)",
 		"screenshot": "Browser screenshot",
@@ -217,3 +217,6 @@
 		}
 	}
 }
+
+
+

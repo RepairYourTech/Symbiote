@@ -740,12 +740,12 @@ it("should parse switch/case statements", async function () {
 	          return "Freezing";
 	
 	        case 25:
-	          // Handle room temperature
+	          // Handle symbiote temperature
 	          logTemperature("Normal");
 	          updateComfortMetrics();
 	          setHeating(false);
 	          setCooling(false);
-	          return "Room temperature";
+	          return "symbiote temperature";
 	
 	        default:
 	          // Handle unknown temperature
@@ -905,3 +905,4 @@ describe("parseSourceCodeDefinitions", () => {
 		expect(result).toContain("enum LogLevel")
 	})
 })
+

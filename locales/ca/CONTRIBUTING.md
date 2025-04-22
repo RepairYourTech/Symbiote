@@ -1,62 +1,68 @@
-# Contribuir a Roo Code
+# Contribuir a Symbiote
 
-Estem entusiasmats que estigueu interessats en contribuir a Roo Code. Ja sigui arreglant un error, afegint una funcionalitat o millorant la nostra documentació, cada contribució fa que Roo Code sigui més intel·ligent! Per mantenir la nostra comunitat vibrant i acollidora, tots els membres han de complir el nostre [Codi de Conducta](CODE_OF_CONDUCT.md).
+<div align="center">
+  <p style="font-size: 1.1em; margin-top: 15px;"><strong>Basat en <a href="https://github.com/RooVetGit/Roo-Code" target="_blank">Roo Code</a></strong></p>
+  <a href="https://github.com/RooVetGit/Roo-Code" target="_blank">
+    <img src="https://img.shields.io/badge/Fork%20de-Roo%20Code-6F42C1?style=for-the-badge&logo=github&logoColor=white" alt="Fork de Roo Code">
+  </a>
+</div>
 
-## Uniu-vos a la nostra comunitat
+Estem entusiasmats que estigueu interessats en contribuir a Symbiote. Ja sigui arreglant un error, afegint una funcionalitat o millorant la nostra documentació, cada contribució fa que Symbiote sigui més intel·ligent! Per mantenir la nostra comunitat vibrant i acollidora, tots els membres han de complir el nostre [Codi de Conducta](CODE_OF_CONDUCT.md).
 
-Encoratgem fortament a tots els col·laboradors a unir-se a la nostra [comunitat de Discord](https://discord.gg/roocode)! Formar part del nostre servidor de Discord us ajuda a:
+## Participació a la Comunitat
 
-- Obtenir ajuda i orientació en temps real sobre les vostres contribucions
-- Connectar amb altres col·laboradors i membres de l'equip principal
-- Mantenir-vos al dia sobre els desenvolupaments i prioritats del projecte
-- Participar en discussions que configuren el futur de Roo Code
-- Trobar oportunitats de col·laboració amb altres desenvolupadors
+Encoratgem a tots els col·laboradors a participar amb la comunitat Symbiote a través de GitHub:
+
+- Utilitzeu GitHub Discussions per a preguntes i idees
+- Participeu en discussions d'incidències per proporcionar comentaris
+- Reviseu les sol·licituds d'extracció d'altres col·laboradors
+- Compartiu les vostres experiències utilitzant Symbiote
+- Connecteu amb altres desenvolupadors que treballen en projectes similars
 
 ## Informar d'errors o problemes
 
-Els informes d'errors ajuden a millorar Roo Code per a tothom! Abans de crear un nou informe, si us plau [cerqueu entre els existents](https://github.com/RooVetGit/Roo-Code/issues) per evitar duplicats. Quan estigueu a punt per informar d'un error, dirigiu-vos a la nostra [pàgina d'incidències](https://github.com/RooVetGit/Roo-Code/issues/new/choose) on trobareu una plantilla per ajudar-vos a completar la informació rellevant.
+Els informes d'errors ajuden a millorar Symbiote per a tothom! Abans de crear un nou informe, si us plau [cerqueu entre els existents](https://github.com/RepairYourTech/Symbiote/issues) per evitar duplicats. Quan estigueu a punt per informar d'un error, dirigiu-vos a la nostra [pàgina d'incidències](https://github.com/RepairYourTech/Symbiote/issues/new/choose) on trobareu una plantilla per ajudar-vos a completar la informació rellevant.
 
-<blockquote class='warning-note'>
-     🔐 <b>Important:</b> Si descobriu una vulnerabilitat de seguretat, utilitzeu l'<a href="https://github.com/RooVetGit/Roo-Code/security/advisories/new">eina de seguretat de Github per informar-ne privadament</a>.
-</blockquote>
+> **Important:** Si descobriu una vulnerabilitat de seguretat, utilitzeu l'[eina de seguretat de Github per informar-ne privadament](https://github.com/RepairYourTech/Symbiote/security/advisories/new).
 
 ## Decidir en què treballar
 
-Buscant una bona primera contribució? Consulteu les incidències a la secció "Issue [Unassigned]" del nostre [Projecte de Github de Roo Code](https://github.com/orgs/RooVetGit/projects/1). Aquestes estan específicament seleccionades per a nous col·laboradors i àrees on ens encantaria rebre ajuda!
+Buscant una bona primera contribució? Consulteu les incidències marcades com a "good first issue" a la nostra [pàgina d'incidències de Symbiote](https://github.com/RepairYourTech/Symbiote/issues). Aquestes estan específicament seleccionades per a nous col·laboradors i àrees on ens encantaria rebre ajuda!
 
-També donem la benvinguda a contribucions a la nostra [documentació](https://docs.roocode.com/)! Ja sigui corregint errors tipogràfics, millorant guies existents o creant nou contingut educatiu - ens encantaria construir un repositori de recursos impulsat per la comunitat que ajudi a tothom a aprofitar al màxim Roo Code. Podeu fer clic a "Editar aquesta pàgina" a qualsevol pàgina per arribar ràpidament al lloc correcte a Github per editar el fitxer, o podeu anar directament a https://github.com/RooVetGit/Roo-Code-Docs.
+També donem la benvinguda a contribucions a la nostra documentació! Ja sigui corregint errors tipogràfics, millorant guies existents o creant nou contingut educatiu - ens encantaria construir un repositori de recursos impulsat per la comunitat que ajudi a tothom a aprofitar al màxim Symbiote.
 
-Si esteu planejant treballar en una funcionalitat més gran, si us plau creeu primer una [sol·licitud de funcionalitat](https://github.com/RooVetGit/Roo-Code/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop) perquè puguem discutir si s'alinea amb la visió de Roo Code. També podeu consultar el nostre [Full de Ruta del Projecte](#full-de-ruta-del-projecte) a continuació per veure si la vostra idea s'ajusta a la nostra direcció estratègica.
+Si esteu planejant treballar en una funcionalitat més gran, si us plau creeu primer una [sol·licitud de funcionalitat](https://github.com/RepairYourTech/Symbiote/discussions/categories/feature-requests) perquè puguem discutir si s'alinea amb la visió de Symbiote. També podeu consultar el nostre [Full de Ruta del Projecte](#full-de-ruta-del-projecte) a continuació per veure si la vostra idea s'ajusta a la nostra direcció estratègica.
 
 ## Full de Ruta del Projecte
 
-Roo Code té un full de ruta de desenvolupament clar que guia les nostres prioritats i direcció futura. Entendre el nostre full de ruta us pot ajudar a:
+Symbiote té un full de ruta de desenvolupament que guia les nostres prioritats i direcció futura. Entendre el nostre full de ruta us pot ajudar a:
 
 - Alinear les vostres contribucions amb els objectius del projecte
 - Identificar àrees on la vostra experiència seria més valuosa
 - Entendre el context darrere de certes decisions de disseny
 - Trobar inspiració per a noves funcionalitats que donin suport a la nostra visió
 
-El nostre full de ruta actual se centra en sis pilars clau:
+El nostre full de ruta actual se centra en aquests pilars clau:
 
 ### Suport de Proveïdors
 
-Aspirem a donar suport a tants proveïdors com sigui possible:
+Aspirem a donar suport a tants proveïdors d'IA com sigui possible:
 
-- Suport més versàtil per a "OpenAI Compatible"
-- xAI, Microsoft Azure AI, Alibaba Cloud Qwen, IBM Watsonx, Together AI, DeepInfra, Fireworks AI, Cohere, Perplexity AI, FriendliAI, Replicate
-- Suport millorat per a Ollama i LM Studio
+- Suport versàtil per a "OpenAI Compatible"
+- Suport per als principals proveïdors d'IA, incloent Anthropic, Google, xAI, Microsoft Azure AI i més
+- Suport millorat per a models locals a través d'Ollama i plataformes similars
 
-### Suport de Models
+### Privacitat i Seguretat
 
-Volem que Roo funcioni tan bé com sigui possible amb tants models com sigui possible, inclosos els models locals:
+Prioritzem la privacitat i seguretat de l'usuari:
 
-- Suport de models locals a través de prompts de sistema personalitzats i fluxos de treball
-- Avaluacions de rendiment i casos de prova
+- Sense telemetria ni recol·lecció de dades
+- Opcions de processament local quan sigui possible
+- Gestió transparent de les dades dels usuaris
 
 ### Suport de Sistemes
 
-Volem que Roo funcioni bé a l'ordinador de tothom:
+Volem que Symbiote funcioni bé a l'ordinador de tothom:
 
 - Integració de terminal multiplataforma
 - Suport sòlid i consistent per a Mac, Windows i Linux
@@ -69,23 +75,22 @@ Volem documentació completa i accessible per a tots els usuaris i col·laborado
 - Documentació clara de l'API
 - Millor orientació per als col·laboradors
 - Recursos de documentació multilingües
-- Exemples interactius i mostres de codi
 
 ### Estabilitat
 
 Volem reduir significativament el nombre d'errors i augmentar les proves automatitzades:
 
-- Interruptor de registre de depuració
-- Botó de còpia "Informació de Màquina/Tasca" per enviar amb sol·licituds d'error/suport
+- Cobertura de proves completa
+- Capacitats de registre de depuració
+- Procés simplificat d'informes d'errors
 
 ### Internacionalització
 
-Volem que Roo parli l'idioma de tothom:
+Volem que Symbiote sigui accessible per als usuaris de tot el món:
 
-- 我们希望 Roo Code 说每个人的语言
-- Queremos que Roo Code hable el idioma de todos
-- हम चाहते हैं कि Roo Code हर किसी की भाषा बोले
-- نريد أن يتحدث Roo Code لغة الجميع
+- Suport per a múltiples idiomes a la interfície
+- Documentació localitzada
+- Esforços de traducció liderats per la comunitat
 
 Donem especialment la benvinguda a contribucions que avancin els nostres objectius del full de ruta. Si esteu treballant en alguna cosa que s'alinea amb aquests pilars, si us plau mencioneu-ho a la descripció del vostre PR.
 
@@ -94,7 +99,7 @@ Donem especialment la benvinguda a contribucions que avancin els nostres objecti
 1. **Cloneu** el repositori:
 
 ```sh
-git clone https://github.com/RooVetGit/Roo-Code.git
+git clone https://github.com/RepairYourTech/Symbiote.git
 ```
 
 2. **Instal·leu les dependències**:
@@ -110,7 +115,7 @@ npm run dev
 ```
 
 4. **Depuració**:
-   Premeu `F5` (o **Execució** → **Inicia la depuració**) a VSCode per obrir una nova sessió amb Roo Code carregat.
+   Premeu `F5` (o **Execució** → **Inicia la depuració**) a VSCode per obrir una nova sessió amb Symbiote carregat.
 
 Els canvis a la vista web apareixeran immediatament. Els canvis a l'extensió principal requeriran reiniciar l'amfitrió de l'extensió.
 
@@ -123,12 +128,12 @@ npm run build
 Apareixerà un fitxer `.vsix` al directori `bin/` que es pot instal·lar amb:
 
 ```sh
-code --install-extension bin/roo-cline-<version>.vsix
+code --install-extension bin/symbiote-<version>.vsix
 ```
 
 ## Escriure i enviar codi
 
-Qualsevol persona pot contribuir amb codi a Roo Code, però us demanem que seguiu aquestes directrius per assegurar que les vostres contribucions puguin ser integrades sense problemes:
+Qualsevol persona pot contribuir amb codi a Symbiote, però us demanem que seguiu aquestes directrius per assegurar que les vostres contribucions puguin ser integrades sense problemes:
 
 1. **Mantingueu les Pull Requests enfocades**
 
@@ -171,3 +176,7 @@ Qualsevol persona pot contribuir amb codi a Roo Code, però us demanem que segui
 ## Acord de contribució
 
 En enviar una pull request, accepteu que les vostres contribucions estaran sota la mateixa llicència que el projecte ([Apache 2.0](../LICENSE)).
+
+## Agraïments
+
+Aquesta guia de contribució és una adaptació de la [guia de contribució de Roo Code](https://github.com/RooVetGit/Roo-Code/blob/main/CONTRIBUTING.md), amb modificacions per reflectir els requisits i processos específics de Symbiote.

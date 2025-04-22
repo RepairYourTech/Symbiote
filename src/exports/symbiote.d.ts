@@ -273,7 +273,7 @@ type GlobalSettings = {
 	soundVolume?: number | undefined
 	maxOpenTabsContext?: number | undefined
 	maxWorkspaceFiles?: number | undefined
-	showRooIgnoredFiles?: boolean | undefined
+	showSymbioteIgnoredFiles?: boolean | undefined
 	maxReadFileLine?: number | undefined
 	terminalOutputLineLimit?: number | undefined
 	terminalShellIntegrationTimeout?: number | undefined
@@ -403,7 +403,7 @@ type ClineMessage = {
 				| "new_task"
 				| "subtask_result"
 				| "checkpoint_saved"
-				| "rooignore_error"
+				| "symbiote_ignore_error"
 				| "diff_error"
 		  )
 		| undefined
@@ -434,7 +434,7 @@ type TokenUsage = {
 	contextTokens: number
 }
 
-type RooCodeEvents = {
+type SymbioteEvents = {
 	message: [
 		{
 			taskId: string
@@ -484,7 +484,7 @@ type RooCodeEvents = {
 							| "new_task"
 							| "subtask_result"
 							| "checkpoint_saved"
-							| "rooignore_error"
+							| "symbiote_ignore_error"
 							| "diff_error"
 					  )
 					| undefined
@@ -546,9 +546,9 @@ type RooCodeEvents = {
 }
 
 /**
- * RooCodeEvent
+ * SymbioteEvent
  */
-declare enum RooCodeEventName {
+declare enum SymbioteEventName {
 	Message = "message",
 	TaskCreated = "taskCreated",
 	TaskStarted = "taskStarted",
@@ -562,8 +562,8 @@ declare enum RooCodeEventName {
 	TaskTokenUsageUpdated = "taskTokenUsageUpdated",
 }
 
-type RooCodeSettings = GlobalSettings & ProviderSettings
-interface RooCodeAPI extends EventEmitter<RooCodeEvents> {
+type SymbioteSettings = GlobalSettings & ProviderSettings
+interface SymbioteAPI extends EventEmitter<SymbioteEvents> {
 	/**
 	 * Starts a new task with an optional initial message and images.
 	 * @param task Optional initial task message.
@@ -576,7 +576,7 @@ interface RooCodeAPI extends EventEmitter<RooCodeEvents> {
 		images,
 		newTab,
 	}: {
-		configuration?: RooCodeSettings
+		configuration?: SymbioteSettings
 		text?: string
 		images?: string[]
 		newTab?: boolean
@@ -624,12 +624,12 @@ interface RooCodeAPI extends EventEmitter<RooCodeEvents> {
 	 * Returns the current configuration.
 	 * @returns The current configuration.
 	 */
-	getConfiguration(): RooCodeSettings
+	getConfiguration(): SymbioteSettings
 	/**
 	 * Sets the configuration for the current task.
 	 * @param values An object containing key-value pairs to set.
 	 */
-	setConfiguration(values: RooCodeSettings): Promise<void>
+	setConfiguration(values: SymbioteSettings): Promise<void>
 	/**
 	 * Creates a new API configuration profile
 	 * @param name The name of the profile
@@ -668,9 +668,9 @@ export {
 	type ClineMessage,
 	type GlobalSettings,
 	type ProviderSettings,
-	type RooCodeAPI,
-	RooCodeEventName,
-	type RooCodeEvents,
-	type RooCodeSettings,
+	type SymbioteAPI,
+	SymbioteEventName,
+	type SymbioteEvents,
+	type SymbioteSettings,
 	type TokenUsage,
 }

@@ -124,3 +124,4 @@ const ModelInfoSupportsItem = ({
 		{isSupported ? supportsLabel : doesNotSupportLabel}
 	</div>
 )
+

@@ -18,3 +18,4 @@ describe("formatLanguage", () => {
 		expect(formatLanguage(undefined as unknown as string)).toBe("en")
 	})
 })
+

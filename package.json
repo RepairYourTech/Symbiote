@@ -30,7 +30,6 @@
 		"Testing"
 	],
 	"keywords": [
-		"cline",
 		"claude",
 		"dev",
 		"mcp",
@@ -115,7 +114,7 @@
 			{
 				"command": "symbiote.helpButtonClicked",
 				"title": "%command.documentation.title%",
-				"icon": "$(question)"
+				"icon": "$(github)"
 			},
 			{
 				"command": "symbiote.openInNewTab",
@@ -506,3 +505,4 @@
 		]
 	}
 }
+

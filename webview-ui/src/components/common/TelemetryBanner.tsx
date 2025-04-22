@@ -69,3 +69,4 @@ const TelemetryBanner = () => {
 }
 
 export default memo(TelemetryBanner)
+

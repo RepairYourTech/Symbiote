@@ -3,7 +3,7 @@ import { useAppTranslation } from "@/i18n/TranslationContext"
 import { Trans } from "react-i18next"
 import { Info, Download, Upload, TriangleAlert } from "lucide-react"
 
-import { VSCodeCheckbox, VSCodeLink } from "@vscode/webview-ui-toolkit/react"
+import { VSCodeLink } from "@vscode/webview-ui-toolkit/react"
 
 import { TelemetrySetting } from "../../../../src/shared/TelemetrySetting"
 
@@ -44,7 +44,7 @@ export const About = ({ version, telemetrySetting, setTelemetrySetting, classNam
 					<Trans
 						i18nKey="settings:footer.feedback"
 						components={{
-							githubLink: <VSCodeLink href="https://github.com/mayphilc/Symbiote" />,
+							githubLink: <VSCodeLink href="https://github.com/RepairYourTech/Symbiote" />,
 						}}
 					/>
 				</div>
@@ -67,3 +67,4 @@ export const About = ({ version, telemetrySetting, setTelemetrySetting, classNam
 		</div>
 	)
 }
+

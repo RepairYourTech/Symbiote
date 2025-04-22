@@ -40,7 +40,7 @@ export class API extends EventEmitter<SymbioteEvents> implements SymbioteAPI {
 				console.log(args)
 			}
 
-			this.logfile = path.join(getWorkspacePath(), "roo-code-messages.log")
+			this.logfile = path.join(getWorkspacePath(), "symbiote-messages.log")
 		} else {
 			this.log = () => {}
 		}
@@ -325,3 +325,4 @@ export class API extends EventEmitter<SymbioteEvents> implements SymbioteAPI {
 		}
 	}
 }
+

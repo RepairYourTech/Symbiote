@@ -17,3 +17,4 @@ export const VSCodeButtonLink = ({ href, children, ...props }: VSCodeButtonLinkP
 		<VSCodeButton {...props}>{children}</VSCodeButton>
 	</a>
 )
+

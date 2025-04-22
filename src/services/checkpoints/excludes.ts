@@ -211,3 +211,4 @@ export const getExcludePatterns = async (workspacePath: string) => [
 	...getLogFilePatterns(),
 	...(await getLfsPatterns(workspacePath)),
 ]
+

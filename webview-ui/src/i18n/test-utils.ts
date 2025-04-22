@@ -35,3 +35,4 @@ export const setupI18nForTests = () => {
 
 	return i18next
 }
+

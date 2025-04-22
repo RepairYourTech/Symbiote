@@ -52,3 +52,4 @@ export function loadTranslations() {
 }
 
 export default i18next
+

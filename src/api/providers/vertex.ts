@@ -497,3 +497,4 @@ export class VertexHandler extends BaseProvider implements SingleCompletionHandl
 		}
 	}
 }
+

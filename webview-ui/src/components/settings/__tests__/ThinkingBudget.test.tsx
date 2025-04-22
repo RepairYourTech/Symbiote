@@ -122,3 +122,4 @@ describe("ThinkingBudget", () => {
 		expect(setApiConfigurationField).toHaveBeenCalledWith("modelMaxTokens", 12000)
 	})
 })
+

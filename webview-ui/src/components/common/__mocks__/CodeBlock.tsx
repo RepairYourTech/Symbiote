@@ -8,3 +8,4 @@ interface CodeBlockProps {
 const CodeBlock: React.FC<CodeBlockProps> = () => <div data-testid="mock-code-block">Mocked Code Block</div>
 
 export default CodeBlock
+

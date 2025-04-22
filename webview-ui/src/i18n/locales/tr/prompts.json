@@ -6,8 +6,8 @@
 		"createNewMode": "Yeni mod oluştur",
 		"editModesConfig": "Mod yapılandırmasını düzenle",
 		"editGlobalModes": "Global modları düzenle",
-		"editProjectModes": "Proje modlarını düzenle (.roomodes)",
-		"createModeHelpText": "Yeni bir özel mod oluşturmak için + düğmesine tıklayın veya sohbette Roo'dan sizin için bir tane oluşturmasını isteyin!"
+		"editProjectModes": "Proje modlarını düzenle (.symbiotemodes)",
+		"createModeHelpText": "Yeni bir özel mod oluşturmak için + düğmesine tıklayın veya sohbette Symbiote'dan sizin için bir tane oluşturmasını isteyin!"
 	},
 	"apiConfiguration": {
 		"title": "API Yapılandırması",
@@ -30,18 +30,18 @@
 	"roleDefinition": {
 		"title": "Rol Tanımı",
 		"resetToDefault": "Varsayılana sıfırla",
-		"description": "Bu mod için Roo'nun uzmanlığını ve kişiliğini tanımlayın. Bu açıklama, Roo'nun kendini nasıl sunduğunu ve görevlere nasıl yaklaştığını şekillendirir."
+		"description": "Bu mod için Symbiote'nun uzmanlığını ve kişiliğini tanımlayın. Bu açıklama, Symbiote'nun kendini nasıl sunduğunu ve görevlere nasıl yaklaştığını şekillendirir."
 	},
 	"customInstructions": {
 		"title": "Moda özgü özel talimatlar (isteğe bağlı)",
 		"resetToDefault": "Varsayılana sıfırla",
 		"description": "{{modeName}} modu için özel davranış yönergeleri ekleyin.",
-		"loadFromFile": "{{mode}} moduna özgü özel talimatlar ayrıca çalışma alanınızdaki <span>.roo/rules-{{slug}}/</span> klasöründen yüklenebilir (.roorules-{{slug}} ve .clinerules-{{slug}} kullanımdan kaldırılmıştır ve yakında çalışmayı durduracaklardır)."
+		"loadFromFile": "{{mode}} moduna özgü özel talimatlar ayrıca çalışma alanınızdaki <span>.symbiote/rules-{{slug}}/</span> klasöründen yüklenebilir (.symbioterules-{{slug}} ve .clinerules-{{slug}} kullanımdan kaldırılmıştır ve yakında çalışmayı durduracaklardır)."
 	},
 	"globalCustomInstructions": {
 		"title": "Tüm Modlar için Özel Talimatlar",
-		"description": "Bu talimatlar tüm modlara uygulanır. Aşağıdaki moda özgü talimatlarla geliştirilebilen temel davranış seti sağlarlar.\nRoo'nun editörünüzün görüntüleme dilinden ({{language}}) farklı bir dilde düşünmesini ve konuşmasını istiyorsanız, burada belirtebilirsiniz.",
-		"loadFromFile": "Talimatlar ayrıca çalışma alanınızdaki <span>.roo/rules/</span> klasöründen de yüklenebilir (.roorules ve .clinerules kullanımdan kaldırılmıştır ve yakında çalışmayı durduracaklardır)."
+		"description": "Bu talimatlar tüm modlara uygulanır. Aşağıdaki moda özgü talimatlarla geliştirilebilen temel davranış seti sağlarlar.\nSymbiote'nun editörünüzün görüntüleme dilinden ({{language}}) farklı bir dilde düşünmesini ve konuşmasını istiyorsanız, burada belirtebilirsiniz.",
+		"loadFromFile": "Talimatlar ayrıca çalışma alanınızdaki <span>.symbiote/rules/</span> klasöründen de yüklenebilir (.symbioterules ve .clinerules kullanımdan kaldırılmıştır ve yakında çalışmayı durduracaklardır)."
 	},
 	"systemPrompt": {
 		"preview": "Sistem promptunu önizle",
@@ -62,7 +62,7 @@
 		"types": {
 			"ENHANCE": {
 				"label": "Promptu Geliştir",
-				"description": "Girdileriniz için özel öneriler veya iyileştirmeler almak için prompt geliştirmeyi kullanın. Bu, Roo'nun niyetinizi anlamasını ve mümkün olan en iyi yanıtları sağlamasını garanti eder. Sohbetteki ✨ simgesi aracılığıyla kullanılabilir."
+				"description": "Girdileriniz için özel öneriler veya iyileştirmeler almak için prompt geliştirmeyi kullanın. Bu, Symbiote'nun niyetinizi anlamasını ve mümkün olan en iyi yanıtları sağlamasını garanti eder. Sohbetteki ✨ simgesi aracılığıyla kullanılabilir."
 			},
 			"EXPLAIN": {
 				"label": "Kodu Açıkla",
@@ -100,7 +100,7 @@
 	},
 	"advancedSystemPrompt": {
 		"title": "Gelişmiş: Sistem Promptunu Geçersiz Kıl",
-		"description": "Çalışma alanınızda <span>.roo/system-prompt-{{slug}}</span> adresinde bir dosya oluşturarak bu mod için sistem istemini tamamen değiştirebilirsiniz (rol tanımı ve özel talimatlar hariç). Bu, yerleşik güvenlik önlemlerini ve tutarlılık kontrollerini (özellikle araç kullanımıyla ilgili) aşan çok gelişmiş bir özelliktir, bu yüzden dikkatli olun!"
+		"description": "Çalışma alanınızda <span>.symbiote/system-prompt-{{slug}}</span> adresinde bir dosya oluşturarak bu mod için sistem istemini tamamen değiştirebilirsiniz (rol tanımı ve özel talimatlar hariç). Bu, yerleşik güvenlik önlemlerini ve tutarlılık kontrollerini (özellikle araç kullanımıyla ilgili) aşan çok gelişmiş bir özelliktir, bu yüzden dikkatli olun!"
 	},
 	"createModeDialog": {
 		"title": "Yeni Mod Oluştur",
@@ -121,13 +121,13 @@
 				"description": "Tüm çalışma alanlarında kullanılabilir"
 			},
 			"project": {
-				"label": "Projeye özgü (.roomodes)",
+				"label": "Projeye özgü (.symbiotemodes)",
 				"description": "Yalnızca bu çalışma alanında kullanılabilir, globale göre önceliklidir"
 			}
 		},
 		"roleDefinition": {
 			"label": "Rol Tanımı",
-			"description": "Bu mod için Roo'nun uzmanlığını ve kişiliğini tanımlayın."
+			"description": "Bu mod için Symbiote'nun uzmanlığını ve kişiliğini tanımlayın."
 		},
 		"tools": {
 			"label": "Kullanılabilir Araçlar",
@@ -145,3 +145,6 @@
 	},
 	"allFiles": "tüm dosyalar"
 }
+
+
+

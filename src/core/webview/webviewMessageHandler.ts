@@ -492,7 +492,7 @@ export const webviewMessageHandler = async (provider: ClineProvider, message: We
 			await provider.context.globalState.update("allowedCommands", message.commands)
 			// Also update workspace settings
 			await vscode.workspace
-				.getConfiguration("roo-cline")
+				.getConfiguration("symbiote")
 				.update("allowedCommands", message.commands, vscode.ConfigurationTarget.Global)
 			break
 		case "openMcpSettings": {
@@ -509,11 +509,11 @@ export const webviewMessageHandler = async (provider: ClineProvider, message: We
 			}
 
 			const workspaceFolder = vscode.workspace.workspaceFolders[0]
-			const rooDir = path.join(workspaceFolder.uri.fsPath, ".roo")
-			const mcpPath = path.join(rooDir, "mcp.json")
+			const symbioteDir = path.join(workspaceFolder.uri.fsPath, ".symbiote")
+			const mcpPath = path.join(symbioteDir, "mcp.json")
 
 			try {
-				await fs.mkdir(rooDir, { recursive: true })
+				await fs.mkdir(symbioteDir, { recursive: true })
 				const exists = await fileExistsAtPath(mcpPath)
 				if (!exists) {
 					await fs.writeFile(mcpPath, JSON.stringify({ mcpServers: {} }, null, 2))
@@ -1329,7 +1329,7 @@ export const webviewMessageHandler = async (provider: ClineProvider, message: We
 			break
 		case "humanRelayResponse":
 			if (message.requestId && message.text) {
-				vscode.commands.executeCommand("roo-cline.handleHumanRelayResponse", {
+				vscode.commands.executeCommand("symbiote.handleHumanRelayResponse", {
 					requestId: message.requestId,
 					text: message.text,
 					cancelled: false,
@@ -1339,7 +1339,7 @@ export const webviewMessageHandler = async (provider: ClineProvider, message: We
 
 		case "humanRelayCancel":
 			if (message.requestId) {
-				vscode.commands.executeCommand("roo-cline.handleHumanRelayResponse", {
+				vscode.commands.executeCommand("symbiote.handleHumanRelayResponse", {
 					requestId: message.requestId,
 					cancelled: true,
 				})
@@ -1420,3 +1420,5 @@ const generateSystemPrompt = async (provider: ClineProvider, message: WebviewMes
 	)
 	return systemPrompt
 }
+
+

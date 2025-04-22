@@ -325,3 +325,4 @@ describe("OpenRouterHandler", () => {
 		await expect(handler.completePrompt("test prompt")).rejects.toThrow("Unexpected error")
 	})
 })
+

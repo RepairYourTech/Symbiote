@@ -8,7 +8,7 @@ import { arePathsEqual, getWorkspacePath } from "../../utils/path"
 import { logger } from "../../utils/logging"
 import { GlobalFileNames } from "../../shared/globalFileNames"
 
-const ROOMODES_FILENAME = ".roomodes"
+const SYMBIOTE_MODES_FILENAME = ".symbiote-modes"
 
 export class CustomModesManager {
 	private disposables: vscode.Disposable[] = []
@@ -48,16 +48,18 @@ export class CustomModesManager {
 		}
 	}
 
-	private async getWorkspaceRoomodes(): Promise<string | undefined> {
+	private async getWorkspaceSymbioteModes(): Promise<string | undefined> {
 		const workspaceFolders = vscode.workspace.workspaceFolders
 		if (!workspaceFolders || workspaceFolders.length === 0) {
 			return undefined
 		}
 		const workspaceRoot = getWorkspacePath()
-		const roomodesPath = path.join(workspaceRoot, ROOMODES_FILENAME)
-		const exists = await fileExistsAtPath(roomodesPath)
-		return exists ? roomodesPath : undefined
+		const symbioteModesPath = path.join(workspaceRoot, SYMBIOTE_MODES_FILENAME)
+		const exists = await fileExistsAtPath(symbioteModesPath)
+		return exists ? symbioteModesPath : undefined
 	}
+
+	// For backward compatibility - will be removed in future versions\r\n\tprivate async getWorkspaceRoomodes\(\): Promise<string \| undefined> \{\r\n\t\t// Just redirect to the new method\r\n\t\treturn this.getWorkspaceSymbioteModes\(\)\r\n\t\}
 
 	private async loadModesFromFile(filePath: string): Promise<ModeConfig[]> {
 		try {
@@ -69,8 +71,8 @@ export class CustomModesManager {
 			}
 
 			// Determine source based on file path
-			const isRoomodes = filePath.endsWith(ROOMODES_FILENAME)
-			const source = isRoomodes ? ("project" as const) : ("global" as const)
+			const isSymbioteModes = filePath.endsWith(SYMBIOTE_MODES_FILENAME)
+			const source = isSymbioteModes ? ("project" as const) : ("global" as const)
 
 			// Add source to each mode
 			return result.data.customModes.map((mode) => ({
@@ -152,28 +154,28 @@ export class CustomModesManager {
 						return
 					}
 
-					// Get modes from .roomodes if it exists (takes precedence)
-					const roomodesPath = await this.getWorkspaceRoomodes()
-					const roomodesModes = roomodesPath ? await this.loadModesFromFile(roomodesPath) : []
+					// Get modes from .symbiote-modes if it exists (takes precedence)
+					const symbioteModesPath = await this.getWorkspaceSymbioteModes()
+					const symbioteModesData = symbioteModesPath ? await this.loadModesFromFile(symbioteModesPath) : []
 
-					// Merge modes from both sources (.roomodes takes precedence)
-					const mergedModes = await this.mergeCustomModes(roomodesModes, result.data.customModes)
+					// Merge modes from both sources (.symbiote-modes takes precedence)
+					const mergedModes = await this.mergeCustomModes(symbioteModesData, result.data.customModes)
 					await this.context.globalState.update("customModes", mergedModes)
 					await this.onUpdate()
 				}
 			}),
 		)
 
-		// Watch .roomodes file if it exists
-		const roomodesPath = await this.getWorkspaceRoomodes()
-		if (roomodesPath) {
+		// Watch .symbiote-modes file if it exists
+		const symbioteModesPath = await this.getWorkspaceSymbioteModes()
+		if (symbioteModesPath) {
 			this.disposables.push(
 				vscode.workspace.onDidSaveTextDocument(async (document) => {
-					if (arePathsEqual(document.uri.fsPath, roomodesPath)) {
+					if (arePathsEqual(document.uri.fsPath, symbioteModesPath)) {
 						const settingsModes = await this.loadModesFromFile(settingsPath)
-						const roomodesModes = await this.loadModesFromFile(roomodesPath)
-						// .roomodes takes precedence
-						const mergedModes = await this.mergeCustomModes(roomodesModes, settingsModes)
+						const symbioteModesData = await this.loadModesFromFile(symbioteModesPath)
+						// .symbiote-modes takes precedence
+						const mergedModes = await this.mergeCustomModes(symbioteModesData, settingsModes)
 						await this.context.globalState.update("customModes", mergedModes)
 						await this.onUpdate()
 					}
@@ -187,16 +189,16 @@ export class CustomModesManager {
 		const settingsPath = await this.getCustomModesFilePath()
 		const settingsModes = await this.loadModesFromFile(settingsPath)
 
-		// Get modes from .roomodes if it exists
-		const roomodesPath = await this.getWorkspaceRoomodes()
-		const roomodesModes = roomodesPath ? await this.loadModesFromFile(roomodesPath) : []
+		// Get modes from .symbiote-modes if it exists
+		const symbioteModesPath = await this.getWorkspaceSymbioteModes()
+		const symbioteModesData = symbioteModesPath ? await this.loadModesFromFile(symbioteModesPath) : []
 
 		// Create maps to store modes by source
 		const projectModes = new Map<string, ModeConfig>()
 		const globalModes = new Map<string, ModeConfig>()
 
 		// Add project modes (they take precedence)
-		for (const mode of roomodesModes) {
+		for (const mode of symbioteModesData) {
 			projectModes.set(mode.slug, { ...mode, source: "project" as const })
 		}
 
@@ -209,7 +211,7 @@ export class CustomModesManager {
 
 		// Combine modes in the correct order: project modes first, then global modes
 		const mergedModes = [
-			...roomodesModes.map((mode) => ({ ...mode, source: "project" as const })),
+			...symbioteModesData.map((mode) => ({ ...mode, source: "project" as const })),
 			...settingsModes
 				.filter((mode) => !projectModes.has(mode.slug))
 				.map((mode) => ({ ...mode, source: "global" as const })),
@@ -230,9 +232,9 @@ export class CustomModesManager {
 					throw new Error("No workspace folder found for project-specific mode")
 				}
 				const workspaceRoot = getWorkspacePath()
-				targetPath = path.join(workspaceRoot, ROOMODES_FILENAME)
+				targetPath = path.join(workspaceRoot, SYMBIOTE_MODES_FILENAME)
 				const exists = await fileExistsAtPath(targetPath)
-				logger.info(`${exists ? "Updating" : "Creating"} project mode in ${ROOMODES_FILENAME}`, {
+				logger.info(`${exists ? "Updating" : "Creating"} project mode in ${SYMBIOTE_MODES_FILENAME}`, {
 					slug,
 					workspace: workspaceRoot,
 				})
@@ -283,11 +285,11 @@ export class CustomModesManager {
 
 	private async refreshMergedState(): Promise<void> {
 		const settingsPath = await this.getCustomModesFilePath()
-		const roomodesPath = await this.getWorkspaceRoomodes()
+		const symbioteModesPath = await this.getWorkspaceSymbioteModes()
 
 		const settingsModes = await this.loadModesFromFile(settingsPath)
-		const roomodesModes = roomodesPath ? await this.loadModesFromFile(roomodesPath) : []
-		const mergedModes = await this.mergeCustomModes(roomodesModes, settingsModes)
+		const symbioteModesData = symbioteModesPath ? await this.loadModesFromFile(symbioteModesPath) : []
+		const mergedModes = await this.mergeCustomModes(symbioteModesData, settingsModes)
 
 		await this.context.globalState.update("customModes", mergedModes)
 		await this.onUpdate()
@@ -296,13 +298,13 @@ export class CustomModesManager {
 	async deleteCustomMode(slug: string): Promise<void> {
 		try {
 			const settingsPath = await this.getCustomModesFilePath()
-			const roomodesPath = await this.getWorkspaceRoomodes()
+			const symbioteModesPath = await this.getWorkspaceSymbioteModes()
 
 			const settingsModes = await this.loadModesFromFile(settingsPath)
-			const roomodesModes = roomodesPath ? await this.loadModesFromFile(roomodesPath) : []
+			const symbioteModesData = symbioteModesPath ? await this.loadModesFromFile(symbioteModesPath) : []
 
 			// Find the mode in either file
-			const projectMode = roomodesModes.find((m) => m.slug === slug)
+			const projectMode = symbioteModesData.find((m) => m.slug === slug)
 			const globalMode = settingsModes.find((m) => m.slug === slug)
 
 			if (!projectMode && !globalMode) {
@@ -311,8 +313,8 @@ export class CustomModesManager {
 
 			await this.queueWrite(async () => {
 				// Delete from project first if it exists there
-				if (projectMode && roomodesPath) {
-					await this.updateModesInFile(roomodesPath, (modes) => modes.filter((m) => m.slug !== slug))
+				if (projectMode && symbioteModesPath) {
+					await this.updateModesInFile(symbioteModesPath, (modes) => modes.filter((m) => m.slug !== slug))
 				}
 
 				// Delete from global settings if it exists there
@@ -355,3 +357,5 @@ export class CustomModesManager {
 		this.disposables = []
 	}
 }
+
+

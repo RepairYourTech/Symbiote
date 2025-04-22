@@ -20,3 +20,4 @@ export const SectionHeader = ({ description, children, className, ...props }: Se
 		</div>
 	)
 }
+

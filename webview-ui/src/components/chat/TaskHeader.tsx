@@ -331,3 +331,4 @@ const ContextWindowProgress = ({ contextWindow, contextTokens, maxTokens }: Cont
 }
 
 export default memo(TaskHeader)
+

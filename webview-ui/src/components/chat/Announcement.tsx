@@ -80,8 +80,8 @@ const Announcement = ({ version, hideAnnouncement }: AnnouncementProps) => {
 				</li>
 			</ul>
 
-			{/* Roo Code Section */}
-			<h3 style={{ margin: "12px 0 5px", fontSize: "14px" }}>{t("chat:announcement.rooSection")}</h3>
+			{/* Symbiote Section */}
+			<h3 style={{ margin: "12px 0 5px", fontSize: "14px" }}>{t("chat:announcement.SymbioteSection")}</h3>
 			<ul style={{ margin: "5px 0" }}>
 				<li>
 					•{" "}
@@ -125,3 +125,4 @@ const Announcement = ({ version, hideAnnouncement }: AnnouncementProps) => {
 }
 
 export default memo(Announcement)
+

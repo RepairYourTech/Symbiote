@@ -1,6 +1,6 @@
 {
 	"extension": {
-		"name": "Roo Code",
+		"name": "Symbiote",
 		"description": "Un intero team di sviluppatori AI nel tuo editor."
 	},
 	"number_format": {
@@ -45,7 +45,7 @@
 		"list_api_config": "Errore durante l'ottenimento dell'elenco delle configurazioni API",
 		"update_server_timeout": "Errore durante l'aggiornamento del timeout del server",
 		"failed_update_project_mcp": "Errore durante l'aggiornamento dei server MCP del progetto",
-		"create_mcp_json": "Impossibile creare o aprire .roo/mcp.json: {{error}}",
+		"create_mcp_json": "Impossibile creare o aprire .symbiote/mcp.json: {{error}}",
 		"hmr_not_running": "Il server di sviluppo locale non è in esecuzione, l'HMR non funzionerà. Esegui 'npm run dev' prima di avviare l'estensione per abilitare l'HMR.",
 		"retrieve_current_mode": "Errore durante il recupero della modalità corrente dallo stato.",
 		"failed_delete_repo": "Impossibile eliminare il repository o il ramo associato: {{error}}",
@@ -82,12 +82,13 @@
 	},
 	"storage": {
 		"prompt_custom_path": "Inserisci il percorso di archiviazione personalizzato per la cronologia delle conversazioni, lascia vuoto per utilizzare la posizione predefinita",
-		"path_placeholder": "D:\\RooCodeStorage",
-		"enter_absolute_path": "Inserisci un percorso assoluto (ad esempio D:\\RooCodeStorage o /home/user/storage)",
+		"path_placeholder": "D:\\SymbioteStorage",
+		"enter_absolute_path": "Inserisci un percorso assoluto (ad esempio D:\\SymbioteStorage o /home/user/storage)",
 		"enter_valid_path": "Inserisci un percorso valido"
 	},
 	"input": {
-		"task_prompt": "Cosa deve fare Roo?",
+		"task_prompt": "Cosa deve fare Symbiote?",
 		"task_placeholder": "Scrivi il tuo compito qui"
 	}
 }
+

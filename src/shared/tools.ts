@@ -245,3 +245,4 @@ export interface DiffStrategy {
 
 	getProgressStatus?(toolUse: ToolUse, result?: any): ToolProgressStatus
 }
+

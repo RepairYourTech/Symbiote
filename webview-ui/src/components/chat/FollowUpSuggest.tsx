@@ -53,3 +53,4 @@ export const FollowUpSuggest = ({ suggestions = [], onSuggestionClick, ts = 1 }:
 		</div>
 	)
 }
+

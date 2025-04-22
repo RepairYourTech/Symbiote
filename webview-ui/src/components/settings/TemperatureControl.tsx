@@ -69,3 +69,4 @@ export const TemperatureControl = ({ value, onChange, maxValue = 1 }: Temperatur
 		</>
 	)
 }
+

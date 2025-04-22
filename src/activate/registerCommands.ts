@@ -172,3 +172,5 @@ export const openClineInNewTab = async ({ context, outputChannel }: Omit<Registe
 
 	return tabProvider
 }
+
+

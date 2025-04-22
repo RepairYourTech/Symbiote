@@ -119,3 +119,4 @@ describe("ContextWindowProgress Logic", () => {
 		expect(result.currentPercent + result.reservedPercent + result.availablePercent).toBeCloseTo(100)
 	})
 })
+

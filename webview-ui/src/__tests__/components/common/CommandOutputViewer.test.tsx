@@ -61,3 +61,4 @@ describe("CommandOutputViewer", () => {
 		expect(screen.getByText("Line 1000")).toBeInTheDocument()
 	})
 })
+

@@ -1,5 +1,5 @@
 {
-	"greeting": "欢迎使用 Roo Code",
+	"greeting": "欢迎使用 Symbiote",
 	"task": {
 		"title": "任务",
 		"seeMore": "展开",
@@ -65,7 +65,7 @@
 		"tooltip": "取消当前操作"
 	},
 	"scrollToBottom": "滚动到聊天底部",
-	"onboarding": "<strong>此工作区中的任务列表为空。</strong> 请在下方输入任务开始。 不确定如何开始？ 在 <DocsLink>文档</DocsLink> 中阅读更多关于 Roo 可以为您做什么的信息。",
+	"onboarding": "<strong>此工作区中的任务列表为空。</strong> 请在下方输入任务开始。 不确定如何开始？ 在 <DocsLink>文档</DocsLink> 中阅读更多关于 Symbiote 可以为您做什么的信息。",
 	"selectMode": "选择交互模式",
 	"selectApiConfig": "选择API配置",
 	"enhancePrompt": "增强提示词",
@@ -86,7 +86,7 @@
 	"diffError": {
 		"title": "编辑失败"
 	},
-	"troubleMessage": "Roo遇到问题...",
+	"troubleMessage": "Symbiote��到问题...",
 	"apiRequest": {
 		"title": "API请求",
 		"failed": "API请求失败",
@@ -112,7 +112,7 @@
 		"current": "当前"
 	},
 	"instructions": {
-		"wantsToFetch": "Roo 想要获取详细指示以协助当前任务"
+		"wantsToFetch": "Symbiote 想要获取详细指示以协助当前任务"
 	},
 	"fileOperations": {
 		"wantsToRead": "需要读取文件:",
@@ -127,8 +127,8 @@
 		"didViewTopLevel": "已查看目录文件列表:",
 		"wantsToViewRecursive": "需要查看目录所有文件:",
 		"didViewRecursive": "已查看目录所有文件:",
-		"wantsToViewDefinitions": "Roo想查看此目录中使用的源代码定义名称:",
-		"didViewDefinitions": "Roo已查看此目录中使用的源代码定义名称:",
+		"wantsToViewDefinitions": "Symbiote��查看此目录中使用的源代码定义名称:",
+		"didViewDefinitions": "Symbiote��查看此目录中使用的源代码定义名称:",
 		"wantsToSearch": "需要搜索内容: {{regex}}",
 		"didSearch": "已完成内容搜索: {{regex}}"
 	},
@@ -136,8 +136,8 @@
 	"response": "响应",
 	"arguments": "参数",
 	"mcp": {
-		"wantsToUseTool": "Roo想在{{serverName}} MCP上使用工具:",
-		"wantsToAccessResource": "Roo想访问{{serverName}} MCP服务上的资源:"
+		"wantsToUseTool": "Symbiote��在{{serverName}} MCP上使用工具:",
+		"wantsToAccessResource": "Symbiote��访问{{serverName}} MCP服务上的资源:"
 	},
 	"modes": {
 		"wantsToSwitch": "即将切换至{{mode}}模式",
@@ -146,8 +146,8 @@
 		"didSwitchWithReason": "已切换至{{mode}}模式（原因：{{reason}}）"
 	},
 	"subtasks": {
-		"wantsToCreate": "Roo想在<code>{{mode}}</code>模式下创建新子任务:",
-		"wantsToFinish": "Roo想完成此子任务",
+		"wantsToCreate": "Symbiote��在<code>{{mode}}</code>模式下创建新子任务:",
+		"wantsToFinish": "Symbiote��完成此子任务",
 		"newTaskContent": "子任务说明",
 		"completionContent": "子任务已完成",
 		"resultContent": "子任务结果",
@@ -155,7 +155,7 @@
 		"completionInstructions": "子任务已完成！您可以查看结果并提出修改或下一步建议。如果一切正常，请确认以将结果返回给主任务。"
 	},
 	"questions": {
-		"hasQuestion": "Roo有一个问题:"
+		"hasQuestion": "Symbiote��一个问题:"
 	},
 	"taskCompleted": "任务完成",
 	"shellIntegration": {
@@ -182,12 +182,12 @@
 	},
 	"announcement": {
 		"title": "🎉 Symbiote v1.0.0 已发布",
-		"description": "Symbiote 是 Roo Code 的一个分支，具有简化安装和无遥测特点。",
+		"description": "Symbiote 是 Symbiote 的一个分支，具有增强隐私和无遥测特点。",
 		"symbioteSection": "Symbiote 功能",
 		"symbioteFeature1": "<bold>无遥测</bold>：Symbiote 通过完全移除所有遥测来尊重您的隐私",
-		"symbioteFeature2": "<bold>简化安装</bold>：适用于所有 VS Code 用户，无需 Qdrant 或 Mem0",
-		"symbioteFeature3": "<bold>独立开发</bold>：Symbiote 将独立开发，同时合并 Roo Code 的更新",
-		"rooSection": "最新 Roo Code 更新",
+		"symbioteFeature2": "<bold>增强上下文</bold>：支持 Qdrant 和 Mem0 以实现高级上下文感知（可选）",
+		"symbioteFeature3": "<bold>独立开发</bold>：Symbiote 将独立开发，同时合并 Symbiote 的更新",
+		"symbioteSection": "最新 Symbiote 更新",
 		"feature1": "<bold>Gemini 2.5 Flash Thinking</bold>: 现在可以使用 Gemini 2.5 Flash 的 thinking 变体并指定 thinking Token 预算",
 		"feature2": "<bold>UI 改进</bold>: 任务标题、聊天视图、历史预览和欢迎视图已进行视觉升级",
 		"feature3": "<bold>错误修复</bold>: 更可靠的差异编辑等功能",
@@ -195,7 +195,7 @@
 		"detailsDiscussLinks": "在 <githubLink>GitHub</githubLink> 获取更多详情 🚀"
 	},
 	"browser": {
-		"rooWantsToUse": "Roo想使用浏览器:",
+		"symbioteWantsToUse": "Symbiote��使用浏览器:",
 		"consoleLogs": "控制台日志",
 		"noNewLogs": "(没有新日志)",
 		"screenshot": "浏览器截图",
@@ -217,3 +217,7 @@
 		}
 	}
 }
+
+
+
+

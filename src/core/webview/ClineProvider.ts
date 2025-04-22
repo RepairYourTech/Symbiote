@@ -78,7 +78,7 @@ export class ClineProvider extends EventEmitter<ClineProviderEvents> implements 
 
 	public isViewLaunched = false
 	public settingsImportedAt?: number
-	public readonly latestAnnouncementId = "may-30-2024-1-0" // Update for Symbiote v1.0.0 announcement
+	public readonly latestAnnouncementId = "june-15-2024-1-0-1" // Updated Symbiote v1.0.0 announcement with corrected features
 	public readonly contextProxy: ContextProxy
 	public readonly providerSettingsManager: ProviderSettingsManager
 	public readonly customModesManager: CustomModesManager
@@ -1529,3 +1529,4 @@ export class ClineProvider extends EventEmitter<ClineProviderEvents> implements 
 		return properties
 	}
 }
+

@@ -1,4 +1,4 @@
-// npx jest src/core/prompts/__tests__/responses-rooignore.test.ts
+// npx jest src/core/prompts/__tests__/responses-symbiote-ignore.test.ts
 
 import { formatResponse } from "../responses"
 import { SymbioteIgnoreController, LOCK_TEXT_SYMBOL } from "../../ignore/SymbioteIgnoreController"
@@ -71,7 +71,7 @@ describe("SymbioteIgnore Response Formatting", () => {
 
 	describe("formatResponse.formatFilesList with SymbioteIgnoreController", () => {
 		/**
-		 * Tests file listing with rooignore controller
+		 * Tests file listing with symbioteIgnore controller
 		 */
 		it("should format files list with lock symbols for ignored files", async () => {
 			// Create controller
@@ -115,7 +115,7 @@ describe("SymbioteIgnore Response Formatting", () => {
 		})
 
 		/**
-		 * Tests formatFilesList when showRooIgnoredFiles is set to false
+		 * Tests formatFilesList when showSymbioteIgnoredFiles is set to false
 		 */
 		it("should hide ignored files when showSymbioteIgnoredFiles is false", async () => {
 			// Create controller
@@ -166,7 +166,7 @@ describe("SymbioteIgnore Response Formatting", () => {
 		})
 
 		/**
-		 * Tests formatFilesList handles truncation correctly with RooIgnoreController
+		 * Tests formatFilesList handles truncation correctly with SymbioteIgnoreController
 		 */
 		it("should handle truncation with SymbioteIgnoreController", async () => {
 			// Create controller

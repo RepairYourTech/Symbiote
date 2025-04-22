@@ -57,3 +57,4 @@ const McpResourceRow = ({ item }: McpResourceRowProps) => {
 }
 
 export default McpResourceRow
+

@@ -408,7 +408,7 @@ type ClineMessage = {
 				| "new_task"
 				| "subtask_result"
 				| "checkpoint_saved"
-				| "rooignore_error"
+				| "symbiote_ignore_error"
 				| "diff_error"
 		  )
 		| undefined
@@ -443,7 +443,7 @@ type TokenUsage = {
 
 export type { TokenUsage }
 
-export type SymbioteEvents = {
+type SymbioteEvents = {
 	message: [
 		{
 			taskId: string
@@ -554,4 +554,4 @@ export type SymbioteEvents = {
 	]
 }
 
-// SymbioteEvents is already exported above
+export type { SymbioteEvents }

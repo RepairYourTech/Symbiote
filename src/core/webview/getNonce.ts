@@ -14,3 +14,4 @@ export function getNonce() {
 	}
 	return text
 }
+

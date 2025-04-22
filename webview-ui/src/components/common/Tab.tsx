@@ -45,3 +45,4 @@ export const TabContent = ({ className, children, ...props }: TabProps) => {
 		</div>
 	)
 }
+

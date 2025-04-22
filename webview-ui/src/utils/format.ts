@@ -33,3 +33,4 @@ export const formatDate = (timestamp: number) => {
 
 	return dateStr.toUpperCase()
 }
+

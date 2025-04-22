@@ -23,7 +23,7 @@ function asObjectSafe(value: any): object {
 
 		return {}
 	} catch (error) {
-		console.warn("Roo Code <Language Model API>: Failed to parse object:", error)
+		console.warn("Symbiote <Language Model API>: Failed to parse object:", error)
 		return {}
 	}
 }
@@ -155,3 +155,5 @@ export function convertToAnthropicRole(vsCodeLmMessageRole: vscode.LanguageModel
 			return null
 	}
 }
+
+

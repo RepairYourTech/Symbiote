@@ -1,4 +1,4 @@
-# Roo Code Changelog
+# Symbiote Changelog
 
 ## [3.13.2] - 2025-04-18
 

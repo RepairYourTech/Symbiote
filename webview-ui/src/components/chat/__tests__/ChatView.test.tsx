@@ -1196,3 +1196,4 @@ describe("ChatView - Focus Grabbing Tests", () => {
 		expect(mockFocus).toHaveBeenCalledTimes(FOCUS_CALLS_ON_INIT)
 	})
 })
+

@@ -1,5 +1,5 @@
 {
-	"greeting": "Willkommen bei Roo Code",
+	"greeting": "Willkommen bei Symbiote",
 	"task": {
 		"title": "Aufgabe",
 		"seeMore": "Mehr anzeigen",
@@ -65,7 +65,7 @@
 		"tooltip": "Aktuelle Operation abbrechen"
 	},
 	"scrollToBottom": "Zum Chat-Ende scrollen",
-	"onboarding": "<strong>Deine Aufgabenliste in diesem Arbeitsbereich ist leer.</strong> Beginne mit der Eingabe einer Aufgabe unten. Du bist dir nicht sicher, wie du anfangen sollst? Lies mehr darüber, was Roo für dich tun kann, in <DocsLink>den Dokumenten</DocsLink>.",
+	"onboarding": "<strong>Deine Aufgabenliste in diesem Arbeitsbereich ist leer.</strong> Beginne mit der Eingabe einer Aufgabe unten. Du bist dir nicht sicher, wie du anfangen sollst? Lies mehr darüber, was Symbiote für dich tun kann, in <DocsLink>den Dokumenten</DocsLink>.",
 	"selectMode": "Interaktionsmodus auswählen",
 	"selectApiConfig": "API-Konfiguration auswählen",
 	"enhancePrompt": "Prompt mit zusätzlichem Kontext verbessern",
@@ -86,7 +86,7 @@
 	"diffError": {
 		"title": "Bearbeitung fehlgeschlagen"
 	},
-	"troubleMessage": "Roo hat Probleme...",
+	"troubleMessage": "Symbiote hat Probleme...",
 	"apiRequest": {
 		"title": "API-Anfrage",
 		"failed": "API-Anfrage fehlgeschlagen",
@@ -112,42 +112,42 @@
 		"current": "Aktuell"
 	},
 	"instructions": {
-		"wantsToFetch": "Roo möchte detaillierte Anweisungen abrufen, um bei der aktuellen Aufgabe zu helfen"
+		"wantsToFetch": "Symbiote möchte detaillierte Anweisungen abrufen, um bei der aktuellen Aufgabe zu helfen"
 	},
 	"fileOperations": {
-		"wantsToRead": "Roo möchte diese Datei lesen:",
-		"wantsToReadOutsideWorkspace": "Roo möchte diese Datei außerhalb des Arbeitsbereichs lesen:",
-		"didRead": "Roo hat diese Datei gelesen:",
-		"wantsToEdit": "Roo möchte diese Datei bearbeiten:",
-		"wantsToEditOutsideWorkspace": "Roo möchte diese Datei außerhalb des Arbeitsbereichs bearbeiten:",
-		"wantsToCreate": "Roo möchte eine neue Datei erstellen:"
+		"wantsToRead": "Symbiote möchte diese Datei lesen:",
+		"wantsToReadOutsideWorkspace": "Symbiote möchte diese Datei außerhalb des Arbeitsbereichs lesen:",
+		"didRead": "Symbiote hat diese Datei gelesen:",
+		"wantsToEdit": "Symbiote möchte diese Datei bearbeiten:",
+		"wantsToEditOutsideWorkspace": "Symbiote möchte diese Datei außerhalb des Arbeitsbereichs bearbeiten:",
+		"wantsToCreate": "Symbiote möchte eine neue Datei erstellen:"
 	},
 	"directoryOperations": {
-		"wantsToViewTopLevel": "Roo möchte die Dateien auf oberster Ebene in diesem Verzeichnis anzeigen:",
-		"didViewTopLevel": "Roo hat die Dateien auf oberster Ebene in diesem Verzeichnis angezeigt:",
-		"wantsToViewRecursive": "Roo möchte rekursiv alle Dateien in diesem Verzeichnis anzeigen:",
-		"didViewRecursive": "Roo hat rekursiv alle Dateien in diesem Verzeichnis angezeigt:",
-		"wantsToViewDefinitions": "Roo möchte Quellcode-Definitionsnamen in diesem Verzeichnis anzeigen:",
-		"didViewDefinitions": "Roo hat Quellcode-Definitionsnamen in diesem Verzeichnis angezeigt:",
-		"wantsToSearch": "Roo möchte dieses Verzeichnis nach <code>{{regex}}</code> durchsuchen:",
-		"didSearch": "Roo hat dieses Verzeichnis nach <code>{{regex}}</code> durchsucht:"
+		"wantsToViewTopLevel": "Symbiote möchte die Dateien auf oberster Ebene in diesem Verzeichnis anzeigen:",
+		"didViewTopLevel": "Symbiote hat die Dateien auf oberster Ebene in diesem Verzeichnis angezeigt:",
+		"wantsToViewRecursive": "Symbiote möchte rekursiv alle Dateien in diesem Verzeichnis anzeigen:",
+		"didViewRecursive": "Symbiote hat rekursiv alle Dateien in diesem Verzeichnis angezeigt:",
+		"wantsToViewDefinitions": "Symbiote möchte Quellcode-Definitionsnamen in diesem Verzeichnis anzeigen:",
+		"didViewDefinitions": "Symbiote hat Quellcode-Definitionsnamen in diesem Verzeichnis angezeigt:",
+		"wantsToSearch": "Symbiote möchte dieses Verzeichnis nach <code>{{regex}}</code> durchsuchen:",
+		"didSearch": "Symbiote hat dieses Verzeichnis nach <code>{{regex}}</code> durchsucht:"
 	},
 	"commandOutput": "Befehlsausgabe",
 	"response": "Antwort",
 	"arguments": "Argumente",
 	"mcp": {
-		"wantsToUseTool": "Roo möchte ein Tool auf dem {{serverName}} MCP-Server verwenden:",
-		"wantsToAccessResource": "Roo möchte auf eine Ressource auf dem {{serverName}} MCP-Server zugreifen:"
+		"wantsToUseTool": "Symbiote möchte ein Tool auf dem {{serverName}} MCP-Server verwenden:",
+		"wantsToAccessResource": "Symbiote möchte auf eine Ressource auf dem {{serverName}} MCP-Server zugreifen:"
 	},
 	"modes": {
-		"wantsToSwitch": "Roo möchte zum <code>{{mode}}</code>-Modus wechseln",
-		"wantsToSwitchWithReason": "Roo möchte zum <code>{{mode}}</code>-Modus wechseln, weil: {{reason}}",
-		"didSwitch": "Roo hat zum <code>{{mode}}</code>-Modus gewechselt",
-		"didSwitchWithReason": "Roo hat zum <code>{{mode}}</code>-Modus gewechselt, weil: {{reason}}"
+		"wantsToSwitch": "Symbiote möchte zum <code>{{mode}}</code>-Modus wechseln",
+		"wantsToSwitchWithReason": "Symbiote möchte zum <code>{{mode}}</code>-Modus wechseln, weil: {{reason}}",
+		"didSwitch": "Symbiote hat zum <code>{{mode}}</code>-Modus gewechselt",
+		"didSwitchWithReason": "Symbiote hat zum <code>{{mode}}</code>-Modus gewechselt, weil: {{reason}}"
 	},
 	"subtasks": {
-		"wantsToCreate": "Roo möchte eine neue Teilaufgabe im <code>{{mode}}</code>-Modus erstellen:",
-		"wantsToFinish": "Roo möchte diese Teilaufgabe abschließen",
+		"wantsToCreate": "Symbiote möchte eine neue Teilaufgabe im <code>{{mode}}</code>-Modus erstellen:",
+		"wantsToFinish": "Symbiote möchte diese Teilaufgabe abschließen",
 		"newTaskContent": "Teilaufgabenanweisungen",
 		"completionContent": "Teilaufgabe abgeschlossen",
 		"resultContent": "Teilaufgabenergebnisse",
@@ -155,7 +155,7 @@
 		"completionInstructions": "Teilaufgabe abgeschlossen! Du kannst die Ergebnisse überprüfen und Korrekturen oder nächste Schritte vorschlagen. Wenn alles gut aussieht, bestätige, um das Ergebnis an die übergeordnete Aufgabe zurückzugeben."
 	},
 	"questions": {
-		"hasQuestion": "Roo hat eine Frage:"
+		"hasQuestion": "Symbiote hat eine Frage:"
 	},
 	"taskCompleted": "Aufgabe abgeschlossen",
 	"shellIntegration": {
@@ -171,7 +171,7 @@
 	"autoApprove": {
 		"title": "Automatische Genehmigung:",
 		"none": "Keine",
-		"description": "Automatische Genehmigung erlaubt Roo Code, Aktionen ohne Nachfrage auszuführen. Aktiviere dies nur für Aktionen, denen du vollständig vertraust. Detailliertere Konfiguration verfügbar in den <settingsLink>Einstellungen</settingsLink>."
+		"description": "Automatische Genehmigung erlaubt Symbiote, Aktionen ohne Nachfrage auszuführen. Aktiviere dies nur für Aktionen, denen du vollständig vertraust. Detailliertere Konfiguration verfügbar in den <settingsLink>Einstellungen</settingsLink>."
 	},
 	"reasoning": {
 		"thinking": "Denke nach",
@@ -182,12 +182,12 @@
 	},
 	"announcement": {
 		"title": "🎉 Symbiote v1.0.0 veröffentlicht",
-		"description": "Symbiote ist ein Fork von Roo Code mit vereinfachter Installation und ohne Telemetrie.",
+		"description": "Symbiote ist ein Fork von Symbiote mit verbessertem Datenschutz und ohne Telemetrie.",
 		"symbioteSection": "Symbiote-Funktionen",
 		"symbioteFeature1": "<bold>Keine Telemetrie</bold>: Symbiote respektiert Ihre Privatsphäre, indem alle Telemetrie vollständig entfernt wird",
-		"symbioteFeature2": "<bold>Vereinfachte Installation</bold>: Funktioniert für alle VS Code-Benutzer ohne Qdrant oder Mem0",
-		"symbioteFeature3": "<bold>Unabhängige Entwicklung</bold>: Symbiote wird sich unabhängig weiterentwickeln und gleichzeitig Updates von Roo Code integrieren",
-		"rooSection": "Neueste Roo Code-Updates",
+		"symbioteFeature2": "<bold>Erweiterter Kontext</bold>: Unterstützung für Qdrant und Mem0 für fortschrittliches Kontextbewusstsein (optional)",
+		"symbioteFeature3": "<bold>Unabhängige Entwicklung</bold>: Symbiote wird sich unabhängig weiterentwickeln und gleichzeitig Updates von Symbiote integrieren",
+		"symbioteSection": "Neueste Symbiote-Updates",
 		"feature1": "<bold>Gemini 2.5 Flash Thinking</bold>: Du kannst jetzt die Thinking-Variante von Gemini 2.5 Flash verwenden und ein Thinking-Token-Budget festlegen",
 		"feature2": "<bold>UI-Verbesserungen</bold>: Die Aufgabenüberschrift, Chat-Ansicht, Verlaufsvorschau und Willkommensansicht wurden visuell verbessert",
 		"feature3": "<bold>Fehlerbehebungen</bold>: Zuverlässigere Diff-Bearbeitungen & mehr",
@@ -195,7 +195,7 @@
 		"detailsDiscussLinks": "Erhalte mehr Details auf <githubLink>GitHub</githubLink> 🚀"
 	},
 	"browser": {
-		"rooWantsToUse": "Roo möchte den Browser verwenden:",
+		"symbioteWantsToUse": "Symbiote möchte den Browser verwenden:",
 		"consoleLogs": "Konsolenprotokolle",
 		"noNewLogs": "(Keine neuen Protokolle)",
 		"screenshot": "Browser-Screenshot",
@@ -217,3 +217,6 @@
 		}
 	}
 }
+
+
+

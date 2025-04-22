@@ -152,7 +152,7 @@ describe("appendToFileTool", () => {
 			expect(mockDiffViewProvider.open).toHaveBeenCalledWith("test.txt")
 			expect(mockDiffViewProvider.update).toHaveBeenCalledWith("test content", true)
 			expect(mockAskApproval).toHaveBeenCalled()
-			expect(mockFileContextTracker.trackFileContext).toHaveBeenCalledWith("test.txt", "roo_edited")
+			expect(mockFileContextTracker.trackFileContext).toHaveBeenCalledWith("test.txt", "symbiote_edited")
 			expect(mockCline.didEditFile).toBe(true)
 		})
 
@@ -176,7 +176,7 @@ describe("appendToFileTool", () => {
 			expect(mockDiffViewProvider.update).toHaveBeenCalledWith("existing content\ntest content", true)
 			// The tool adds its own newline between existing and new content
 			expect(mockAskApproval).toHaveBeenCalled()
-			expect(mockFileContextTracker.trackFileContext).toHaveBeenCalledWith("test.txt", "roo_edited")
+			expect(mockFileContextTracker.trackFileContext).toHaveBeenCalledWith("test.txt", "symbiote_edited")
 		})
 	})
 
@@ -328,3 +328,4 @@ describe("appendToFileTool", () => {
 		})
 	})
 })
+

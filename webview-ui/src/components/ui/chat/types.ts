@@ -37,3 +37,4 @@ export type MessageAnnotation = {
 	type: MessageAnnotationType
 	data: AnnotationData
 }
+

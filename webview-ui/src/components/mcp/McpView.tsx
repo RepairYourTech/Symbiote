@@ -460,3 +460,4 @@ const ServerRow = ({ server, alwaysAllowMcp }: { server: McpServer; alwaysAllowM
 }
 
 export default McpView
+

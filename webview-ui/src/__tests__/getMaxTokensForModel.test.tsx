@@ -79,3 +79,4 @@ describe("getMaxTokensForModel utility from model-utils", () => {
 		expect(getMaxTokensForModel(modelInfoWithoutThinking, apiConfig)).toBe(2048)
 	})
 })
+

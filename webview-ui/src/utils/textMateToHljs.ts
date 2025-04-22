@@ -154,3 +154,4 @@ function parseHexColor(hexColor: string): {
 
 	return { r, g, b }
 }
+

@@ -362,3 +362,4 @@ describe("AwsBedrockHandler with invokedModelId", () => {
 		expect(costModel.id).toBe("anthropic.claude-3-5-sonnet-20241022-v2:0")
 	})
 })
+

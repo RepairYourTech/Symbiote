@@ -79,3 +79,4 @@ export async function listFilesTool(
 		await handleError("listing files", error)
 	}
 }
+

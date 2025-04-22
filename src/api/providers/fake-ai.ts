@@ -37,3 +37,4 @@ export class FakeAIHandler implements ApiHandler, SingleCompletionHandler {
 		return this.ai.completePrompt(prompt)
 	}
 }
+

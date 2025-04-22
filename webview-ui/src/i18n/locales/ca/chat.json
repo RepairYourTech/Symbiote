@@ -1,5 +1,5 @@
 {
-	"greeting": "Benvingut a Roo Code",
+	"greeting": "Benvingut a Symbiote",
 	"task": {
 		"title": "Tasca",
 		"seeMore": "Veure més",
@@ -65,7 +65,7 @@
 		"tooltip": "Cancel·la l'operació actual"
 	},
 	"scrollToBottom": "Desplaça't al final del xat",
-	"onboarding": "<strong> La vostra llista de tasques en aquest espai de treball està buida. </strong> Comença escrivint una tasca a continuació. \nNo esteu segur per on començar? \nMés informació sobre què pot fer Roo als documents.",
+	"onboarding": "<strong> La vostra llista de tasques en aquest espai de treball està buida. </strong> Comença escrivint una tasca a continuació. \nNo esteu segur per on començar? \nMés informació sobre què pot fer Symbiote als documents.",
 	"selectMode": "Selecciona el mode d'interacció",
 	"selectApiConfig": "Selecciona la configuració de l'API",
 	"enhancePrompt": "Millora la sol·licitud amb context addicional",
@@ -86,7 +86,7 @@
 	"diffError": {
 		"title": "Edició fallida"
 	},
-	"troubleMessage": "Roo està tenint problemes...",
+	"troubleMessage": "Symbiote està tenint problemes...",
 	"apiRequest": {
 		"title": "Sol·licitud API",
 		"failed": "Sol·licitud API ha fallat",
@@ -112,42 +112,42 @@
 		"current": "Actual"
 	},
 	"instructions": {
-		"wantsToFetch": "Roo vol obtenir instruccions detallades per ajudar amb la tasca actual."
+		"wantsToFetch": "Symbiote vol obtenir instruccions detallades per ajudar amb la tasca actual."
 	},
 	"fileOperations": {
-		"wantsToRead": "Roo vol llegir aquest fitxer:",
-		"wantsToReadOutsideWorkspace": "Roo vol llegir aquest fitxer fora de l'espai de treball:",
-		"didRead": "Roo ha llegit aquest fitxer:",
-		"wantsToEdit": "Roo vol editar aquest fitxer:",
-		"wantsToEditOutsideWorkspace": "Roo vol editar aquest fitxer fora de l'espai de treball:",
-		"wantsToCreate": "Roo vol crear un nou fitxer:"
+		"wantsToRead": "Symbiote vol llegir aquest fitxer:",
+		"wantsToReadOutsideWorkspace": "Symbiote vol llegir aquest fitxer fora de l'espai de treball:",
+		"didRead": "Symbiote ha llegit aquest fitxer:",
+		"wantsToEdit": "Symbiote vol editar aquest fitxer:",
+		"wantsToEditOutsideWorkspace": "Symbiote vol editar aquest fitxer fora de l'espai de treball:",
+		"wantsToCreate": "Symbiote vol crear un nou fitxer:"
 	},
 	"directoryOperations": {
-		"wantsToViewTopLevel": "Roo vol veure els fitxers de nivell superior en aquest directori:",
-		"didViewTopLevel": "Roo ha vist els fitxers de nivell superior en aquest directori:",
-		"wantsToViewRecursive": "Roo vol veure recursivament tots els fitxers en aquest directori:",
-		"didViewRecursive": "Roo ha vist recursivament tots els fitxers en aquest directori:",
-		"wantsToViewDefinitions": "Roo vol veure noms de definicions de codi font utilitzats en aquest directori:",
-		"didViewDefinitions": "Roo ha vist noms de definicions de codi font utilitzats en aquest directori:",
-		"wantsToSearch": "Roo vol cercar en aquest directori <code>{{regex}}</code>:",
-		"didSearch": "Roo ha cercat en aquest directori <code>{{regex}}</code>:"
+		"wantsToViewTopLevel": "Symbiote vol veure els fitxers de nivell superior en aquest directori:",
+		"didViewTopLevel": "Symbiote ha vist els fitxers de nivell superior en aquest directori:",
+		"wantsToViewRecursive": "Symbiote vol veure recursivament tots els fitxers en aquest directori:",
+		"didViewRecursive": "Symbiote ha vist recursivament tots els fitxers en aquest directori:",
+		"wantsToViewDefinitions": "Symbiote vol veure noms de definicions de codi font utilitzats en aquest directori:",
+		"didViewDefinitions": "Symbiote ha vist noms de definicions de codi font utilitzats en aquest directori:",
+		"wantsToSearch": "Symbiote vol cercar en aquest directori <code>{{regex}}</code>:",
+		"didSearch": "Symbiote ha cercat en aquest directori <code>{{regex}}</code>:"
 	},
 	"commandOutput": "Sortida de l'ordre",
 	"response": "Resposta",
 	"arguments": "Arguments",
 	"mcp": {
-		"wantsToUseTool": "Roo vol utilitzar una eina al servidor MCP {{serverName}}:",
-		"wantsToAccessResource": "Roo vol accedir a un recurs al servidor MCP {{serverName}}:"
+		"wantsToUseTool": "Symbiote vol utilitzar una eina al servidor MCP {{serverName}}:",
+		"wantsToAccessResource": "Symbiote vol accedir a un recurs al servidor MCP {{serverName}}:"
 	},
 	"modes": {
-		"wantsToSwitch": "Roo vol canviar a mode <code>{{mode}}</code>",
-		"wantsToSwitchWithReason": "Roo vol canviar a mode <code>{{mode}}</code> perquè: {{reason}}",
-		"didSwitch": "Roo ha canviat a mode <code>{{mode}}</code>",
-		"didSwitchWithReason": "Roo ha canviat a mode <code>{{mode}}</code> perquè: {{reason}}"
+		"wantsToSwitch": "Symbiote vol canviar a mode <code>{{mode}}</code>",
+		"wantsToSwitchWithReason": "Symbiote vol canviar a mode <code>{{mode}}</code> perquè: {{reason}}",
+		"didSwitch": "Symbiote ha canviat a mode <code>{{mode}}</code>",
+		"didSwitchWithReason": "Symbiote ha canviat a mode <code>{{mode}}</code> perquè: {{reason}}"
 	},
 	"subtasks": {
-		"wantsToCreate": "Roo vol crear una nova subtasca en mode <code>{{mode}}</code>:",
-		"wantsToFinish": "Roo vol finalitzar aquesta subtasca",
+		"wantsToCreate": "Symbiote vol crear una nova subtasca en mode <code>{{mode}}</code>:",
+		"wantsToFinish": "Symbiote vol finalitzar aquesta subtasca",
 		"newTaskContent": "Instruccions de la subtasca",
 		"completionContent": "Subtasca completada",
 		"resultContent": "Resultats de la subtasca",
@@ -155,7 +155,7 @@
 		"completionInstructions": "Subtasca completada! Pots revisar els resultats i suggerir correccions o següents passos. Si tot sembla correcte, confirma per tornar el resultat a la tasca principal."
 	},
 	"questions": {
-		"hasQuestion": "Roo té una pregunta:"
+		"hasQuestion": "Symbiote té una pregunta:"
 	},
 	"taskCompleted": "Tasca completada",
 	"shellIntegration": {
@@ -171,7 +171,7 @@
 	"autoApprove": {
 		"title": "Aprovació automàtica:",
 		"none": "Cap",
-		"description": "L'aprovació automàtica permet a Roo Code realitzar accions sense demanar permís. Activa-la només per a accions en les que confies plenament. Configuració més detallada disponible a la <settingsLink>Configuració</settingsLink>."
+		"description": "L'aprovació automàtica permet a Symbiote realitzar accions sense demanar permís. Activa-la només per a accions en les que confies plenament. Configuració més detallada disponible a la <settingsLink>Configuració</settingsLink>."
 	},
 	"reasoning": {
 		"thinking": "Pensant",
@@ -182,12 +182,12 @@
 	},
 	"announcement": {
 		"title": "🎉 Symbiote v1.0.0 publicat",
-		"description": "Symbiote és un fork de Roo Code amb instal·lació simplificada i sense telemetria.",
+		"description": "Symbiote és un fork de Symbiote amb privacitat millorada i sense telemetria.",
 		"symbioteSection": "Característiques de Symbiote",
 		"symbioteFeature1": "<bold>Sense telemetria</bold>: Symbiote respecta la teva privacitat eliminant completament tota la telemetria",
-		"symbioteFeature2": "<bold>Instal·lació simplificada</bold>: Funciona per a tots els usuaris de VS Code sense necessitat de Qdrant o Mem0",
-		"symbioteFeature3": "<bold>Desenvolupament independent</bold>: Symbiote es desenvoluparà independentment mentre fusiona actualitzacions de Roo Code",
-		"rooSection": "Últimes actualitzacions de Roo Code",
+		"symbioteFeature2": "<bold>Context millorat</bold>: Suport per a Qdrant i Mem0 per a una consciència de context avançada (opcional)",
+		"symbioteFeature3": "<bold>Desenvolupament independent</bold>: Symbiote es desenvoluparà independentment mentre fusiona actualitzacions de Symbiote",
+		"symbioteSection": "Últimes actualitzacions de Symbiote",
 		"feature1": "<bold>Gemini 2.5 Flash Thinking</bold>: Ara pots utilitzar la variant thinking de Gemini 2.5 Flash i especificar un pressupost de tokens per a thinking",
 		"feature2": "<bold>Millores d'interfície</bold>: La capçalera de tasques, la vista de xat, la previsualització d'historial i la vista de benvinguda han estat visualment millorades",
 		"feature3": "<bold>Correccions d'errors</bold>: Edicions de diferències més fiables i més",
@@ -195,7 +195,7 @@
 		"detailsDiscussLinks": "Obtingues més detalls a <githubLink>GitHub</githubLink> 🚀"
 	},
 	"browser": {
-		"rooWantsToUse": "Roo vol utilitzar el navegador:",
+		"symbioteWantsToUse": "Symbiote vol utilitzar el navegador:",
 		"consoleLogs": "Registres de consola",
 		"noNewLogs": "(Cap registre nou)",
 		"screenshot": "Captura de pantalla del navegador",
@@ -217,3 +217,6 @@
 		}
 	}
 }
+
+
+

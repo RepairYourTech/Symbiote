@@ -1,5 +1,5 @@
 {
-	"greeting": "Bienvenue sur Roo Code",
+	"greeting": "Bienvenue sur Symbiote",
 	"task": {
 		"title": "Tâche",
 		"seeMore": "Voir plus",
@@ -86,7 +86,7 @@
 	"diffError": {
 		"title": "Modification échouée"
 	},
-	"troubleMessage": "Roo rencontre des difficultés...",
+	"troubleMessage": "Symbiote rencontre des difficultés...",
 	"apiRequest": {
 		"title": "Requête API",
 		"failed": "Échec de la requête API",
@@ -112,42 +112,42 @@
 		"current": "Actuel"
 	},
 	"fileOperations": {
-		"wantsToRead": "Roo veut lire ce fichier :",
-		"wantsToReadOutsideWorkspace": "Roo veut lire ce fichier en dehors de l'espace de travail :",
-		"didRead": "Roo a lu ce fichier :",
-		"wantsToEdit": "Roo veut éditer ce fichier :",
-		"wantsToEditOutsideWorkspace": "Roo veut éditer ce fichier en dehors de l'espace de travail :",
-		"wantsToCreate": "Roo veut créer un nouveau fichier :"
+		"wantsToRead": "Symbiote veut lire ce fichier :",
+		"wantsToReadOutsideWorkspace": "Symbiote veut lire ce fichier en dehors de l'espace de travail :",
+		"didRead": "Symbiote a lu ce fichier :",
+		"wantsToEdit": "Symbiote veut éditer ce fichier :",
+		"wantsToEditOutsideWorkspace": "Symbiote veut éditer ce fichier en dehors de l'espace de travail :",
+		"wantsToCreate": "Symbiote veut créer un nouveau fichier :"
 	},
 	"instructions": {
-		"wantsToFetch": "Roo veut récupérer des instructions détaillées pour aider à la tâche actuelle"
+		"wantsToFetch": "Symbiote veut récupérer des instructions détaillées pour aider à la tâche actuelle"
 	},
 	"directoryOperations": {
-		"wantsToViewTopLevel": "Roo veut voir les fichiers de premier niveau dans ce répertoire :",
-		"didViewTopLevel": "Roo a vu les fichiers de premier niveau dans ce répertoire :",
-		"wantsToViewRecursive": "Roo veut voir récursivement tous les fichiers dans ce répertoire :",
-		"didViewRecursive": "Roo a vu récursivement tous les fichiers dans ce répertoire :",
-		"wantsToViewDefinitions": "Roo veut voir les noms de définitions de code source utilisés dans ce répertoire :",
-		"didViewDefinitions": "Roo a vu les noms de définitions de code source utilisés dans ce répertoire :",
-		"wantsToSearch": "Roo veut rechercher dans ce répertoire <code>{{regex}}</code> :",
-		"didSearch": "Roo a recherché dans ce répertoire <code>{{regex}}</code> :"
+		"wantsToViewTopLevel": "Symbiote veut voir les fichiers de premier niveau dans ce répertoire :",
+		"didViewTopLevel": "Symbiote a vu les fichiers de premier niveau dans ce répertoire :",
+		"wantsToViewRecursive": "Symbiote veut voir récursivement tous les fichiers dans ce répertoire :",
+		"didViewRecursive": "Symbiote a vu récursivement tous les fichiers dans ce répertoire :",
+		"wantsToViewDefinitions": "Symbiote veut voir les noms de définitions de code source utilisés dans ce répertoire :",
+		"didViewDefinitions": "Symbiote a vu les noms de définitions de code source utilisés dans ce répertoire :",
+		"wantsToSearch": "Symbiote veut rechercher dans ce répertoire <code>{{regex}}</code> :",
+		"didSearch": "Symbiote a recherché dans ce répertoire <code>{{regex}}</code> :"
 	},
 	"commandOutput": "Sortie de commande",
 	"response": "Réponse",
 	"arguments": "Arguments",
 	"mcp": {
-		"wantsToUseTool": "Roo veut utiliser un outil sur le serveur MCP {{serverName}} :",
-		"wantsToAccessResource": "Roo veut accéder à une ressource sur le serveur MCP {{serverName}} :"
+		"wantsToUseTool": "Symbiote veut utiliser un outil sur le serveur MCP {{serverName}} :",
+		"wantsToAccessResource": "Symbiote veut accéder à une ressource sur le serveur MCP {{serverName}} :"
 	},
 	"modes": {
-		"wantsToSwitch": "Roo veut passer au mode <code>{{mode}}</code>",
-		"wantsToSwitchWithReason": "Roo veut passer au mode <code>{{mode}}</code> car : {{reason}}",
-		"didSwitch": "Roo est passé au mode <code>{{mode}}</code>",
-		"didSwitchWithReason": "Roo est passé au mode <code>{{mode}}</code> car : {{reason}}"
+		"wantsToSwitch": "Symbiote veut passer au mode <code>{{mode}}</code>",
+		"wantsToSwitchWithReason": "Symbiote veut passer au mode <code>{{mode}}</code> car : {{reason}}",
+		"didSwitch": "Symbiote est passé au mode <code>{{mode}}</code>",
+		"didSwitchWithReason": "Symbiote est passé au mode <code>{{mode}}</code> car : {{reason}}"
 	},
 	"subtasks": {
-		"wantsToCreate": "Roo veut créer une nouvelle sous-tâche en mode <code>{{mode}}</code> :",
-		"wantsToFinish": "Roo veut terminer cette sous-tâche",
+		"wantsToCreate": "Symbiote veut créer une nouvelle sous-tâche en mode <code>{{mode}}</code> :",
+		"wantsToFinish": "Symbiote veut terminer cette sous-tâche",
 		"newTaskContent": "Instructions de la sous-tâche",
 		"completionContent": "Sous-tâche terminée",
 		"resultContent": "Résultats de la sous-tâche",
@@ -155,7 +155,7 @@
 		"completionInstructions": "Sous-tâche terminée ! Vous pouvez examiner les résultats et suggérer des corrections ou les prochaines étapes. Si tout semble bon, confirmez pour retourner le résultat à la tâche parente."
 	},
 	"questions": {
-		"hasQuestion": "Roo a une question :"
+		"hasQuestion": "Symbiote a une question :"
 	},
 	"taskCompleted": "Tâche terminée",
 	"shellIntegration": {
@@ -171,7 +171,7 @@
 	"autoApprove": {
 		"title": "Auto-approbation :",
 		"none": "Aucune",
-		"description": "L'auto-approbation permet à Roo Code d'effectuer des actions sans demander d'autorisation. Activez-la uniquement pour les actions auxquelles vous faites entièrement confiance. Configuration plus détaillée disponible dans les <settingsLink>Paramètres</settingsLink>."
+		"description": "L'auto-approbation permet à Symbiote d'effectuer des actions sans demander d'autorisation. Activez-la uniquement pour les actions auxquelles vous faites entièrement confiance. Configuration plus détaillée disponible dans les <settingsLink>Paramètres</settingsLink>."
 	},
 	"reasoning": {
 		"thinking": "Réflexion",
@@ -182,12 +182,12 @@
 	},
 	"announcement": {
 		"title": "🎉 Symbiote v1.0.0 est sortie",
-		"description": "Symbiote est un fork de Roo Code avec une installation simplifiée et sans télémétrie.",
+		"description": "Symbiote est un fork de Symbiote avec une confidentialité améliorée et sans télémétrie.",
 		"symbioteSection": "Fonctionnalités de Symbiote",
 		"symbioteFeature1": "<bold>Pas de télémétrie</bold> : Symbiote respecte votre vie privée en supprimant complètement toute télémétrie",
-		"symbioteFeature2": "<bold>Installation simplifiée</bold> : Fonctionne pour tous les utilisateurs de VS Code sans nécessiter Qdrant ou Mem0",
-		"symbioteFeature3": "<bold>Développement indépendant</bold> : Symbiote se développera indépendamment tout en fusionnant les mises à jour de Roo Code",
-		"rooSection": "Dernières mises à jour de Roo Code",
+		"symbioteFeature2": "<bold>Contexte amélioré</bold> : Support pour Qdrant et Mem0 pour une conscience contextuelle avancée (optionnel)",
+		"symbioteFeature3": "<bold>Développement indépendant</bold> : Symbiote se développera indépendamment tout en fusionnant les mises à jour de Symbiote",
+		"symbioteSection": "Dernières mises à jour de Symbiote",
 		"feature1": "<bold>Gemini 2.5 Flash Thinking</bold> : Tu peux maintenant utiliser la variante thinking de Gemini 2.5 Flash et spécifier un budget de tokens pour thinking",
 		"feature2": "<bold>Améliorations de l'interface</bold> : L'en-tête des tâches, la vue de chat, l'aperçu de l'historique et la vue d'accueil ont été visuellement améliorés",
 		"feature3": "<bold>Corrections de bugs</bold> : Éditions de différences plus fiables et plus",
@@ -195,7 +195,7 @@
 		"detailsDiscussLinks": "Obtenez plus de détails sur <githubLink>GitHub</githubLink> 🚀"
 	},
 	"browser": {
-		"rooWantsToUse": "Roo veut utiliser le navigateur :",
+		"symbioteWantsToUse": "Symbiote veut utiliser le navigateur :",
 		"consoleLogs": "Journaux de console",
 		"noNewLogs": "(Pas de nouveaux journaux)",
 		"screenshot": "Capture d'écran du navigateur",
@@ -217,3 +217,6 @@
 		}
 	}
 }
+
+
+

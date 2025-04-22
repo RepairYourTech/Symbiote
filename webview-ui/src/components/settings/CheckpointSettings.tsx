@@ -40,3 +40,4 @@ export const CheckpointSettings = ({ enableCheckpoints, setCachedStateField, ...
 		</div>
 	)
 }
+

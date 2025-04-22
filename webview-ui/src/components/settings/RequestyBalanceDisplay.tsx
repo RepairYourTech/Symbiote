@@ -19,3 +19,4 @@ export const RequestyBalanceDisplay = ({ apiKey }: { apiKey: string }) => {
 		</VSCodeLink>
 	)
 }
+

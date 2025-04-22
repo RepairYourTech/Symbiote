@@ -1,62 +1,68 @@
-# Contribuire a Roo Code
+# Contribuire a Symbiote
 
-Siamo entusiasti che tu sia interessato a contribuire a Roo Code. Che tu stia correggendo un bug, aggiungendo una funzionalità o migliorando la nostra documentazione, ogni contributo rende Roo Code più intelligente! Per mantenere la nostra comunità vivace e accogliente, tutti i membri devono aderire al nostro [Codice di Condotta](CODE_OF_CONDUCT.md).
+<div align="center">
+  <p style="font-size: 1.1em; margin-top: 15px;"><strong>Basato su <a href="https://github.com/RooVetGit/Roo-Code" target="_blank">Roo Code</a></strong></p>
+  <a href="https://github.com/RooVetGit/Roo-Code" target="_blank">
+    <img src="https://img.shields.io/badge/Fork%20di-Roo%20Code-6F42C1?style=for-the-badge&logo=github&logoColor=white" alt="Fork di Roo Code">
+  </a>
+</div>
 
-## Unisciti alla Nostra Comunità
+Siamo entusiasti che tu sia interessato a contribuire a Symbiote. Che tu stia correggendo un bug, aggiungendo una funzionalità o migliorando la nostra documentazione, ogni contributo rende Symbiote più intelligente! Per mantenere la nostra comunità vivace e accogliente, tutti i membri devono aderire al nostro [Codice di Condotta](CODE_OF_CONDUCT.md).
 
-Incoraggiamo fortemente tutti i contributori a unirsi alla nostra [comunità Discord](https://discord.gg/roocode)! Far parte del nostro server Discord ti aiuta a:
+## Partecipazione alla Comunità
 
-- Ottenere aiuto e guida in tempo reale sui tuoi contributi
-- Connetterti con altri contributori e membri del team principale
-- Rimanere aggiornato sugli sviluppi e le priorità del progetto
-- Partecipare a discussioni che modellano il futuro di Roo Code
-- Trovare opportunità di collaborazione con altri sviluppatori
+Incoraggiamo tutti i contributori a partecipare alla comunità di Symbiote tramite GitHub:
+
+- Utilizza GitHub Discussions per domande e idee
+- Partecipa alle discussioni sulle issue per fornire feedback
+- Revisiona le pull request di altri contributori
+- Condividi le tue esperienze usando Symbiote
+- Connettiti con altri sviluppatori che lavorano su progetti simili
 
 ## Segnalare Bug o Problemi
 
-Le segnalazioni di bug aiutano a migliorare Roo Code per tutti! Prima di creare un nuovo problema, per favore [cerca tra quelli esistenti](https://github.com/RooVetGit/Roo-Code/issues) per evitare duplicati. Quando sei pronto a segnalare un bug, vai alla nostra [pagina dei problemi](https://github.com/RooVetGit/Roo-Code/issues/new/choose) dove troverai un modello per aiutarti a compilare le informazioni rilevanti.
+Le segnalazioni di bug aiutano a migliorare Symbiote per tutti! Prima di creare un nuovo problema, per favore [cerca tra quelli esistenti](https://github.com/RepairYourTech/Symbiote/issues) per evitare duplicati. Quando sei pronto a segnalare un bug, vai alla nostra [pagina dei problemi](https://github.com/RepairYourTech/Symbiote/issues/new/choose) dove troverai un modello per aiutarti a compilare le informazioni rilevanti.
 
-<blockquote class='warning-note'>
-     🔐 <b>Importante:</b> Se scopri una vulnerabilità di sicurezza, utilizza lo <a href="https://github.com/RooVetGit/Roo-Code/security/advisories/new">strumento di sicurezza Github per segnalarla privatamente</a>.
-</blockquote>
+> **Importante:** Se scopri una vulnerabilità di sicurezza, utilizza lo [strumento di sicurezza Github per segnalarla privatamente](https://github.com/RepairYourTech/Symbiote/security/advisories/new).
 
 ## Decidere Su Cosa Lavorare
 
-Cerchi un buon primo contributo? Controlla i problemi nella sezione "Issue [Unassigned]" del nostro [Progetto Github di Roo Code](https://github.com/orgs/RooVetGit/projects/1). Questi sono specificamente selezionati per nuovi contributori e aree in cui ci piacerebbe avere un po' di aiuto!
+Cerchi un buon primo contributo? Controlla i problemi etichettati con "good first issue" nella nostra [pagina delle Issues di Symbiote](https://github.com/RepairYourTech/Symbiote/issues). Questi sono specificamente selezionati per nuovi contributori e aree in cui ci piacerebbe avere un po' di aiuto!
 
-Accogliamo anche contributi alla nostra [documentazione](https://docs.roocode.com/)! Che si tratti di correggere errori di battitura, migliorare guide esistenti o creare nuovi contenuti educativi - ci piacerebbe costruire un repository di risorse guidato dalla comunità che aiuti tutti a ottenere il massimo da Roo Code. Puoi cliccare su "Edit this page" su qualsiasi pagina per arrivare rapidamente al punto giusto in Github per modificare il file, oppure puoi andare direttamente a https://github.com/RooVetGit/Roo-Code-Docs.
+Accogliamo anche contributi alla nostra documentazione! Che si tratti di correggere errori di battitura, migliorare guide esistenti o creare nuovi contenuti educativi - ci piacerebbe costruire un repository di risorse guidato dalla comunità che aiuti tutti a ottenere il massimo da Symbiote.
 
-Se stai pianificando di lavorare su una funzionalità più grande, per favore crea prima una [richiesta di funzionalità](https://github.com/RooVetGit/Roo-Code/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop) così possiamo discutere se si allinea con la visione di Roo Code. Puoi anche consultare la nostra [Roadmap del Progetto](#roadmap-del-progetto) qui sotto per vedere se la tua idea si adatta alla nostra direzione strategica.
+Se stai pianificando di lavorare su una funzionalità più grande, per favore crea prima una [richiesta di funzionalità](https://github.com/RepairYourTech/Symbiote/discussions/categories/feature-requests) così possiamo discutere se si allinea con la visione di Symbiote. Puoi anche consultare la nostra [Roadmap del Progetto](#roadmap-del-progetto) qui sotto per vedere se la tua idea si adatta alla nostra direzione strategica.
 
 ## Roadmap del Progetto
 
-Roo Code ha una chiara roadmap di sviluppo che guida le nostre priorità e la direzione futura. Comprendere la nostra roadmap può aiutarti a:
+Symbiote ha una roadmap di sviluppo che guida le nostre priorità e la direzione futura. Comprendere la nostra roadmap può aiutarti a:
 
 - Allineare i tuoi contributi con gli obiettivi del progetto
 - Identificare aree in cui la tua esperienza sarebbe più preziosa
 - Comprendere il contesto dietro certe decisioni di design
 - Trovare ispirazione per nuove funzionalità che supportino la nostra visione
 
-La nostra roadmap attuale si concentra su sei pilastri chiave:
+La nostra roadmap attuale si concentra su questi pilastri chiave:
 
 ### Supporto Provider
 
-Miriamo a supportare quanti più provider possibile:
+Miriamo a supportare quanti più provider di IA possibile:
 
-- Supporto più versatile per "OpenAI Compatible"
-- xAI, Microsoft Azure AI, Alibaba Cloud Qwen, IBM Watsonx, Together AI, DeepInfra, Fireworks AI, Cohere, Perplexity AI, FriendliAI, Replicate
-- Supporto migliorato per Ollama e LM Studio
+- Supporto versatile per "OpenAI Compatible"
+- Supporto per i principali provider di IA, tra cui Anthropic, Google, xAI, Microsoft Azure AI e altri
+- Supporto migliorato per modelli locali tramite Ollama e piattaforme simili
 
-### Supporto Modelli
+### Privacy e Sicurezza
 
-Vogliamo che Roo funzioni al meglio su quanti più modelli possibile, inclusi i modelli locali:
+Prioritizziamo la privacy e la sicurezza degli utenti:
 
-- Supporto per modelli locali attraverso prompt di sistema personalizzati e flussi di lavoro
-- Valutazioni di benchmark e casi di test
+- Nessuna telemetria o raccolta dati
+- Opzioni di elaborazione locale quando possibile
+- Gestione trasparente dei dati degli utenti
 
 ### Supporto Sistemi
 
-Vogliamo che Roo funzioni bene sul computer di tutti:
+Vogliamo che Symbiote funzioni bene sul computer di tutti:
 
 - Integrazione del terminale multipiattaforma
 - Supporto forte e coerente per Mac, Windows e Linux
@@ -69,23 +75,22 @@ Vogliamo una documentazione completa e accessibile per tutti gli utenti e contri
 - Documentazione API chiara
 - Migliore orientamento per i contributori
 - Risorse di documentazione multilingue
-- Esempi interattivi e campioni di codice
 
 ### Stabilità
 
 Vogliamo ridurre significativamente il numero di bug e aumentare i test automatizzati:
 
-- Interruttore di registrazione debug
-- Pulsante di copia "Informazioni Macchina/Attività" per l'invio con richieste di supporto/bug
+- Copertura completa dei test
+- Capacità di registrazione debug
+- Processo semplificato per la segnalazione di bug
 
 ### Internazionalizzazione
 
-Vogliamo che Roo parli la lingua di tutti:
+Vogliamo che Symbiote sia accessibile agli utenti di tutto il mondo:
 
-- 我们希望 Roo Code 说每个人的语言
-- Queremos que Roo Code hable el idioma de todos
-- हम चाहते हैं कि Roo Code हर किसी की भाषा बोले
-- نريد أن يتحدث Roo Code لغة الجميع
+- Supporto per più lingue nell'interfaccia
+- Documentazione localizzata
+- Sforzi di traduzione guidati dalla comunità
 
 Accogliamo particolarmente i contributi che fanno progredire gli obiettivi della nostra roadmap. Se stai lavorando su qualcosa che si allinea con questi pilastri, per favore menzionalo nella descrizione della tua PR.
 
@@ -94,7 +99,7 @@ Accogliamo particolarmente i contributi che fanno progredire gli obiettivi della
 1. **Clona** il repository:
 
 ```sh
-git clone https://github.com/RooVetGit/Roo-Code.git
+git clone https://github.com/RepairYourTech/Symbiote.git
 ```
 
 2. **Installa le dipendenze**:
@@ -110,7 +115,7 @@ npm run dev
 ```
 
 4. **Debug**:
-   Premi `F5` (o **Run** → **Start Debugging**) in VSCode per aprire una nuova sessione con Roo Code caricato.
+   Premi `F5` (o **Run** → **Start Debugging**) in VSCode per aprire una nuova sessione con Symbiote caricato.
 
 Le modifiche alla webview appariranno immediatamente. Le modifiche all'estensione principale richiederanno un riavvio dell'host dell'estensione.
 
@@ -123,12 +128,12 @@ npm run build
 Un file `.vsix` apparirà nella directory `bin/` che può essere installato con:
 
 ```sh
-code --install-extension bin/roo-cline-<version>.vsix
+code --install-extension bin/symbiote-<version>.vsix
 ```
 
 ## Scrivere e Inviare Codice
 
-Chiunque può contribuire con codice a Roo Code, ma ti chiediamo di seguire queste linee guida per assicurare che i tuoi contributi possano essere integrati senza problemi:
+Chiunque può contribuire con codice a Symbiote, ma ti chiediamo di seguire queste linee guida per assicurare che i tuoi contributi possano essere integrati senza problemi:
 
 1. **Mantieni le Pull Request Focalizzate**
 
@@ -171,3 +176,7 @@ Chiunque può contribuire con codice a Roo Code, ma ti chiediamo di seguire ques
 ## Accordo di Contribuzione
 
 Inviando una pull request, accetti che i tuoi contributi saranno concessi in licenza con la stessa licenza del progetto ([Apache 2.0](../LICENSE)).
+
+## Riconoscimenti
+
+Questa guida alla contribuzione è adattata dalla [guida alla contribuzione di Roo Code](https://github.com/RooVetGit/Roo-Code/blob/main/CONTRIBUTING.md), con modifiche per riflettere i requisiti e i processi specifici di Symbiote.

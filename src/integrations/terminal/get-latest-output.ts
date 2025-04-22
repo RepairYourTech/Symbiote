@@ -43,3 +43,4 @@ export async function getLatestTerminalOutput(): Promise<string> {
 		await vscode.env.clipboard.writeText(originalClipboard)
 	}
 }
+
