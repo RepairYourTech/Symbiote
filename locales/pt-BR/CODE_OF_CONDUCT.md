@@ -55,7 +55,7 @@ definida e esclarecida posteriormente pelos mantenedores do projeto.
 ## Aplicação
 
 Instâncias de comportamento abusivo, de assédio ou de outra forma inaceitável podem ser
-relatadas entrando em contato com a equipe do projeto em support@repairmytech.com. Todas as reclamações
+relatadas entrando em contato com a equipe do projeto em support@repairyour.tech. Todas as reclamações
 serão revisadas e investigadas e resultarão em uma resposta que
 é considerada necessária e apropriada às circunstâncias. A equipe do projeto é
 obrigada a manter confidencialidade em relação ao relator de um incidente.
@@ -67,11 +67,14 @@ membros da liderança do projeto.
 
 ## Atribuição
 
-Este Código de Conduta é adaptado da [versão do Roo Code][roo_coc] do [Pacto de Colaboradores][homepage], versão 1.4,
+Este Código de Conduta é adaptado da [versão do Roo Code] do [Pacto de Colaboradores][homepage], versão 1.4,
 disponível em https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
 
-[roo_coc]: https://github.com/RooVetGit/Roo-Code/blob/main/CODE_OF_CONDUCT.md
 [homepage]: https://www.contributor-covenant.org
 
 Para respostas a perguntas comuns sobre este código de conduta, veja
 https://www.contributor-covenant.org/faq
+
+
+
+

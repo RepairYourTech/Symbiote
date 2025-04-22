@@ -54,7 +54,7 @@ von den Projektbetreuern weiter definiert und geklärt werden.
 ## Durchsetzung
 
 Fälle von missbräuchlichem, belästigendem oder anderweitig inakzeptablem Verhalten können
-dem Projektteam unter support@repairmytech.com gemeldet werden. Alle
+dem Projektteam unter support@repairyour.tech gemeldet werden. Alle
 Beschwerden werden überprüft und untersucht und führen zu einer Reaktion, die
 als notwendig und angemessen für die Umstände erachtet wird. Das Projektteam ist
 verpflichtet, die Vertraulichkeit in Bezug auf den Melder eines Vorfalls zu wahren.
@@ -69,8 +69,8 @@ Mitgliedern der Projektleitung bestimmt werden.
 Dieser Verhaltenskodex ist adaptiert von [Roo Codes Version][roo_coc] des [Contributor Covenant][homepage], Version 1.4,
 verfügbar unter https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
 
-[roo_coc]: https://github.com/RooVetGit/Roo-Code/blob/main/CODE_OF_CONDUCT.md
 [homepage]: https://www.contributor-covenant.org
 
 Für Antworten auf häufig gestellte Fragen zu diesem Verhaltenskodex siehe
 https://www.contributor-covenant.org/faq
+
