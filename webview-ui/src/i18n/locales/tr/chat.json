@@ -182,10 +182,10 @@
 	},
 	"announcement": {
 		"title": "🎉 Symbiote v1.0.0 Yayınlandı",
-		"description": "Symbiote, basitleştirilmiş kurulum ve telemetri olmadan çalışan bir Roo Code fork'udur.",
+		"description": "Symbiote, geliştirilmiş gizlilik ve telemetri olmadan çalışan bir Roo Code fork'udur.",
 		"symbioteSection": "Symbiote Özellikleri",
 		"symbioteFeature1": "<bold>Telemetri Yok</bold>: Symbiote, tüm telemetriyi tamamen kaldırarak gizliliğinize saygı gösterir",
-		"symbioteFeature2": "<bold>Basitleştirilmiş Kurulum</bold>: Qdrant veya Mem0 gerektirmeden tüm VS Code kullanıcıları için çalışır",
+		"symbioteFeature2": "<bold>Geliştirilmiş Bağlam</bold>: Gelişmiş bağlam farkındalığı için Qdrant ve Mem0 desteği (isteğe bağlı)",
 		"symbioteFeature3": "<bold>Bağımsız Geliştirme</bold>: Symbiote, Roo Code'dan güncellemeleri birleştirirken bağımsız olarak gelişecektir",
 		"rooSection": "En Son Roo Code Güncellemeleri",
 		"feature1": "<bold>Gemini 2.5 Flash Thinking</bold>: Artık Gemini 2.5 Flash'ın thinking varyantını kullanabilir ve thinking için token bütçesi belirleyebilirsiniz",

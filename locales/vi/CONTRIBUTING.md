@@ -1,62 +1,68 @@
-# Đóng Góp cho Roo Code
+# Đóng Góp cho Symbiote
 
-Chúng tôi rất vui mừng vì bạn quan tâm đến việc đóng góp cho Roo Code. Cho dù bạn đang sửa lỗi, thêm tính năng, hay cải thiện tài liệu của chúng tôi, mỗi đóng góp đều làm cho Roo Code thông minh hơn! Để giữ cho cộng đồng của chúng tôi sôi động và thân thiện, tất cả thành viên phải tuân thủ [Quy Tắc Ứng Xử](CODE_OF_CONDUCT.md) của chúng tôi.
+<div align="center">
+  <p style="font-size: 1.1em; margin-top: 15px;"><strong>Dựa trên <a href="https://github.com/RooVetGit/Roo-Code" target="_blank">Roo Code</a></strong></p>
+  <a href="https://github.com/RooVetGit/Roo-Code" target="_blank">
+    <img src="https://img.shields.io/badge/Fork%20from-Roo%20Code-6F42C1?style=for-the-badge&logo=github&logoColor=white" alt="Fork from Roo Code">
+  </a>
+</div>
 
-## Tham Gia Cộng Đồng của Chúng Tôi
+Chúng tôi rất vui mừng vì bạn quan tâm đến việc đóng góp cho Symbiote. Cho dù bạn đang sửa lỗi, thêm tính năng, hay cải thiện tài liệu của chúng tôi, mỗi đóng góp đều làm cho Symbiote thông minh hơn! Để giữ cho cộng đồng của chúng tôi sôi động và thân thiện, tất cả thành viên phải tuân thủ [Quy Tắc Ứng Xử](CODE_OF_CONDUCT.md) của chúng tôi.
 
-Chúng tôi mạnh mẽ khuyến khích tất cả người đóng góp tham gia [cộng đồng Discord](https://discord.gg/roocode) của chúng tôi! Việc là một phần của máy chủ Discord của chúng tôi giúp bạn:
+## Tham Gia Cộng Đồng
 
-- Nhận hỗ trợ và hướng dẫn thời gian thực về đóng góp của bạn
-- Kết nối với những người đóng góp khác và các thành viên nhóm cốt lõi
-- Cập nhật về sự phát triển và ưu tiên của dự án
-- Tham gia vào các cuộc thảo luận định hình tương lai của Roo Code
-- Tìm cơ hội hợp tác với các nhà phát triển khác
+Chúng tôi khuyến khích tất cả người đóng góp tham gia với cộng đồng Symbiote thông qua GitHub:
+
+- Sử dụng GitHub Discussions cho câu hỏi và ý tưởng
+- Tham gia vào các cuộc thảo luận về vấn đề để cung cấp phản hồi
+- Xem xét pull request từ những người đóng góp khác
+- Chia sẻ trải nghiệm của bạn khi sử dụng Symbiote
+- Kết nối với các nhà phát triển khác làm việc trên các dự án tương tự
 
 ## Báo Cáo Lỗi hoặc Vấn Đề
 
-Báo cáo lỗi giúp cải thiện Roo Code cho mọi người! Trước khi tạo một vấn đề mới, vui lòng [tìm kiếm những vấn đề hiện có](https://github.com/RooVetGit/Roo-Code/issues) để tránh trùng lặp. Khi bạn đã sẵn sàng báo cáo lỗi, hãy truy cập [trang vấn đề](https://github.com/RooVetGit/Roo-Code/issues/new/choose) của chúng tôi, nơi bạn sẽ tìm thấy một mẫu để giúp bạn điền thông tin liên quan.
+Báo cáo lỗi giúp cải thiện Symbiote cho mọi người! Trước khi tạo một vấn đề mới, vui lòng [tìm kiếm những vấn đề hiện có](https://github.com/RepairYourTech/Symbiote/issues) để tránh trùng lặp. Khi bạn đã sẵn sàng báo cáo lỗi, hãy truy cập [trang vấn đề](https://github.com/RepairYourTech/Symbiote/issues/new/choose) của chúng tôi, nơi bạn sẽ tìm thấy một mẫu để giúp bạn điền thông tin liên quan.
 
-<blockquote class='warning-note'>
-     🔐 <b>Quan trọng:</b> Nếu bạn phát hiện lỗ hổng bảo mật, vui lòng sử dụng <a href="https://github.com/RooVetGit/Roo-Code/security/advisories/new">công cụ bảo mật Github để báo cáo riêng tư</a>.
-</blockquote>
+> **Quan trọng:** Nếu bạn phát hiện lỗ hổng bảo mật, vui lòng sử dụng [công cụ bảo mật Github để báo cáo riêng tư](https://github.com/RepairYourTech/Symbiote/security/advisories/new).
 
 ## Quyết Định Làm Việc trên Cái Gì
 
-Tìm kiếm đóng góp đầu tiên tốt? Kiểm tra các vấn đề trong phần "Issue [Unassigned]" của [Dự án Github Roo Code](https://github.com/orgs/RooVetGit/projects/1) của chúng tôi. Những vấn đề này được chọn lọc đặc biệt cho người đóng góp mới và các lĩnh vực mà chúng tôi muốn nhận được sự giúp đỡ!
+Tìm kiếm đóng góp đầu tiên tốt? Kiểm tra các vấn đề được gắn nhãn "good first issue" trên [trang vấn đề Symbiote](https://github.com/RepairYourTech/Symbiote/issues) của chúng tôi. Những vấn đề này được chọn lọc đặc biệt cho người đóng góp mới và các lĩnh vực mà chúng tôi muốn nhận được sự giúp đỡ!
 
-Chúng tôi cũng hoan nghênh đóng góp cho [tài liệu](https://docs.roocode.com/) của chúng tôi! Dù là sửa lỗi chính tả, cải thiện hướng dẫn hiện có, hay tạo nội dung giáo dục mới - chúng tôi muốn xây dựng một kho tài nguyên do cộng đồng thúc đẩy giúp mọi người tận dụng tối đa Roo Code. Bạn có thể nhấp vào "Edit this page" trên bất kỳ trang nào để nhanh chóng đến đúng vị trí trong Github để chỉnh sửa tệp, hoặc bạn có thể đi trực tiếp vào https://github.com/RooVetGit/Roo-Code-Docs.
+Chúng tôi cũng hoan nghênh đóng góp cho tài liệu của chúng tôi! Dù là sửa lỗi chính tả, cải thiện hướng dẫn hiện có, hay tạo nội dung giáo dục mới - chúng tôi muốn xây dựng một kho tài nguyên do cộng đồng thúc đẩy giúp mọi người tận dụng tối đa Symbiote.
 
-Nếu bạn đang lên kế hoạch làm việc trên một tính năng lớn hơn, vui lòng tạo [yêu cầu tính năng](https://github.com/RooVetGit/Roo-Code/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop) trước để chúng tôi có thể thảo luận xem nó có phù hợp với tầm nhìn của Roo Code không. Bạn cũng có thể kiểm tra [Lộ Trình Dự Án](#lộ-trình-dự-án) bên dưới để xem liệu ý tưởng của bạn có phù hợp với định hướng chiến lược của chúng tôi không.
+Nếu bạn đang lên kế hoạch làm việc trên một tính năng lớn hơn, vui lòng tạo [yêu cầu tính năng](https://github.com/RepairYourTech/Symbiote/discussions/categories/feature-requests) trước để chúng tôi có thể thảo luận xem nó có phù hợp với tầm nhìn của Symbiote không. Bạn cũng có thể kiểm tra [Lộ Trình Dự Án](#lộ-trình-dự-án) bên dưới để xem liệu ý tưởng của bạn có phù hợp với định hướng chiến lược của chúng tôi không.
 
 ## Lộ Trình Dự Án
 
-Roo Code có một lộ trình phát triển rõ ràng hướng dẫn các ưu tiên và định hướng tương lai của chúng tôi. Hiểu lộ trình của chúng tôi có thể giúp bạn:
+Symbiote có một lộ trình phát triển hướng dẫn các ưu tiên và định hướng tương lai của chúng tôi. Hiểu lộ trình của chúng tôi có thể giúp bạn:
 
 - Điều chỉnh đóng góp của bạn với mục tiêu của dự án
 - Xác định các lĩnh vực mà chuyên môn của bạn sẽ có giá trị nhất
 - Hiểu bối cảnh đằng sau một số quyết định thiết kế
 - Tìm cảm hứng cho các tính năng mới hỗ trợ tầm nhìn của chúng tôi
 
-Lộ trình hiện tại của chúng tôi tập trung vào sáu trụ cột chính:
+Lộ trình hiện tại của chúng tôi tập trung vào các trụ cột chính sau:
 
 ### Hỗ Trợ Nhà Cung Cấp
 
-Chúng tôi hướng đến việc hỗ trợ càng nhiều nhà cung cấp càng tốt:
+Chúng tôi hướng đến việc hỗ trợ càng nhiều nhà cung cấp AI càng tốt:
 
-- Hỗ trợ "OpenAI Compatible" linh hoạt hơn
-- xAI, Microsoft Azure AI, Alibaba Cloud Qwen, IBM Watsonx, Together AI, DeepInfra, Fireworks AI, Cohere, Perplexity AI, FriendliAI, Replicate
-- Hỗ trợ nâng cao cho Ollama và LM Studio
+- Hỗ trợ "OpenAI Compatible" linh hoạt
+- Hỗ trợ cho các nhà cung cấp AI chính, bao gồm Anthropic, Google, xAI, Microsoft Azure AI và nhiều hơn nữa
+- Hỗ trợ nâng cao cho mô hình cục bộ thông qua Ollama và các nền tảng tương tự
 
-### Hỗ Trợ Mô Hình
+### Quyền Riêng Tư và Bảo Mật
 
-Chúng tôi muốn Roo hoạt động tốt trên càng nhiều mô hình càng tốt, bao gồm cả mô hình cục bộ:
+Chúng tôi ưu tiên quyền riêng tư và bảo mật của người dùng:
 
-- Hỗ trợ mô hình cục bộ thông qua prompting hệ thống tùy chỉnh và quy trình làm việc
-- Đánh giá hiệu suất và các trường hợp thử nghiệm
+- Không có telemetry hoặc thu thập dữ liệu
+- Tùy chọn xử lý cục bộ khi có thể
+- Quản lý dữ liệu người dùng minh bạch
 
 ### Hỗ Trợ Hệ Thống
 
-Chúng tôi muốn Roo chạy tốt trên máy tính của mọi người:
+Chúng tôi muốn Symbiote chạy tốt trên máy tính của mọi người:
 
 - Tích hợp terminal đa nền tảng
 - Hỗ trợ mạnh mẽ và nhất quán cho Mac, Windows và Linux
@@ -69,23 +75,22 @@ Chúng tôi muốn tài liệu toàn diện, dễ tiếp cận cho tất cả ng
 - Tài liệu API rõ ràng
 - Hướng dẫn tốt hơn cho người đóng góp
 - Tài nguyên tài liệu đa ngôn ngữ
-- Ví dụ tương tác và mẫu mã
 
 ### Ổn Định
 
 Chúng tôi muốn giảm đáng kể số lượng lỗi và tăng kiểm tra tự động:
 
-- Công tắc ghi nhật ký gỡ lỗi
-- Nút sao chép "Thông Tin Máy/Nhiệm Vụ" để gửi kèm với yêu cầu hỗ trợ/lỗi
+- Bao phủ kiểm tra toàn diện
+- Khả năng ghi nhật ký gỡ lỗi
+- Quy trình báo cáo lỗi đơn giản hóa
 
 ### Quốc Tế Hóa
 
-Chúng tôi muốn Roo nói ngôn ngữ của mọi người:
+Chúng tôi muốn Symbiote có thể tiếp cận với người dùng trên toàn thế giới:
 
-- 我们希望 Roo Code 说每个人的语言
-- Queremos que Roo Code hable el idioma de todos
-- हम चाहते हैं कि Roo Code हर किसी की भाषा बोले
-- نريد أن يتحدث Roo Code لغة الجميع
+- Hỗ trợ nhiều ngôn ngữ trong giao diện
+- Tài liệu địa phương hóa
+- Nỗ lực dịch thuật do cộng đồng dẫn dắt
 
 Chúng tôi đặc biệt hoan nghênh những đóng góp thúc đẩy mục tiêu lộ trình của chúng tôi. Nếu bạn đang làm việc trên điều gì đó phù hợp với những trụ cột này, vui lòng đề cập đến điều đó trong mô tả PR của bạn.
 
@@ -94,7 +99,7 @@ Chúng tôi đặc biệt hoan nghênh những đóng góp thúc đẩy mục ti
 1. **Clone** kho lưu trữ:
 
 ```sh
-git clone https://github.com/RooVetGit/Roo-Code.git
+git clone https://github.com/RepairYourTech/Symbiote.git
 ```
 
 2. **Cài đặt các phụ thuộc**:
@@ -110,7 +115,7 @@ npm run dev
 ```
 
 4. **Gỡ lỗi**:
-   Nhấn `F5` (hoặc **Run** → **Start Debugging**) trong VSCode để mở phiên mới với Roo Code được tải.
+   Nhấn `F5` (hoặc **Run** → **Start Debugging**) trong VSCode để mở phiên mới với Symbiote được tải.
 
 Các thay đổi đối với webview sẽ xuất hiện ngay lập tức. Các thay đổi đối với phần mở rộng cốt lõi sẽ yêu cầu khởi động lại máy chủ phần mở rộng.
 
@@ -123,12 +128,12 @@ npm run build
 Một tệp `.vsix` sẽ xuất hiện trong thư mục `bin/` có thể được cài đặt bằng:
 
 ```sh
-code --install-extension bin/roo-cline-<version>.vsix
+code --install-extension bin/symbiote-<version>.vsix
 ```
 
 ## Viết và Gửi Mã
 
-Bất kỳ ai cũng có thể đóng góp mã cho Roo Code, nhưng chúng tôi yêu cầu bạn tuân theo những hướng dẫn này để đảm bảo đóng góp của bạn có thể được tích hợp suôn sẻ:
+Bất kỳ ai cũng có thể đóng góp mã cho Symbiote, nhưng chúng tôi yêu cầu bạn tuân theo những hướng dẫn này để đảm bảo đóng góp của bạn có thể được tích hợp suôn sẻ:
 
 1. **Giữ Pull Request Tập Trung**
 
@@ -171,3 +176,7 @@ Bất kỳ ai cũng có thể đóng góp mã cho Roo Code, nhưng chúng tôi y
 ## Thỏa Thuận Đóng Góp
 
 Bằng cách gửi một pull request, bạn đồng ý rằng đóng góp của bạn sẽ được cấp phép theo cùng giấy phép với dự án ([Apache 2.0](../LICENSE)).
+
+## Lời Cảm Ơn
+
+Hướng dẫn đóng góp này được chuyển thể từ [hướng dẫn đóng góp của Roo Code](https://github.com/RooVetGit/Roo-Code/blob/main/CONTRIBUTING.md), với các sửa đổi để phản ánh các yêu cầu và quy trình cụ thể của Symbiote.

@@ -23,7 +23,7 @@
 	"command.history.title": "Historial",
 	"command.openInEditor.title": "Abrir en Editor",
 	"command.settings.title": "Configuración",
-	"command.documentation.title": "Documentación",
+	"command.documentation.title": "GitHub",
 	"configuration.title": "Roo Code",
 	"commands.allowedCommands.description": "Comandos que pueden ejecutarse automáticamente cuando 'Aprobar siempre operaciones de ejecución' está activado",
 	"settings.vsCodeLmModelSelector.description": "Configuración para la API del modelo de lenguaje VSCode",

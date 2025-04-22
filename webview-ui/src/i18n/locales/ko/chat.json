@@ -182,10 +182,10 @@
 	},
 	"announcement": {
 		"title": "🎉 Symbiote v1.0.0 출시",
-		"description": "Symbiote는 단순화된 설치와 원격 측정 없이 작동하는 Roo Code의 포크입니다.",
+		"description": "Symbiote는 개인정보 보호 강화와 원격 측정 없이 작동하는 Roo Code의 포크입니다.",
 		"symbioteSection": "Symbiote 기능",
 		"symbioteFeature1": "<bold>원격 측정 없음</bold>: Symbiote는 모든 원격 측정을 완전히 제거하여 개인 정보를 존중합니다",
-		"symbioteFeature2": "<bold>단순화된 설치</bold>: Qdrant나 Mem0 없이도 모든 VS Code 사용자에게 작동합니다",
+		"symbioteFeature2": "<bold>컨텍스트 강화</bold>: 고급 컨텍스트 인식을 위한 Qdrant와 Mem0 지원 (선택 사항)",
 		"symbioteFeature3": "<bold>독립적인 개발</bold>: Symbiote는 Roo Code의 업데이트를 병합하면서 독립적으로 개발될 것입니다",
 		"rooSection": "최신 Roo Code 업데이트",
 		"feature1": "<bold>Gemini 2.5 Flash Thinking</bold>: 이제 Gemini 2.5 Flash의 thinking 변형을 사용하고 thinking 토큰 예산을 지정할 수 있습니다",

@@ -14,7 +14,10 @@ English • [Català](locales/ca/README.md) • [Deutsch](locales/de/README.md) 
 <div align="center">
   <h1>Symbiote</h1>
   <p>An AI coding assistant that works with your codebase, helping you architect, code, debug, and boost your productivity.</p>
-
+  <p style="font-size: 1.1em; margin-top: 15px;"><strong>Based on <a href="https://github.com/RooVetGit/Roo-Code" target="_blank">Roo Code</a></strong></p>
+  <a href="https://github.com/RooVetGit/Roo-Code" target="_blank">
+    <img src="https://img.shields.io/badge/Forked%20from-Roo%20Code-6F42C1?style=for-the-badge&logo=github&logoColor=white" alt="Forked from Roo Code">
+  </a>
 </div>
 <br>
 <br>
@@ -28,7 +31,7 @@ English • [Català](locales/ca/README.md) • [Deutsch](locales/de/README.md) 
 
 ## What is Symbiote?
 
-**Symbiote** is an AI-powered **autonomous coding agent** that lives in your editor. It's a complete fork of Roo Code, designed to work for all VS Code users with a focus on privacy and customization.
+**Symbiote** is an AI-powered **autonomous coding agent** that lives in your editor. It's a complete fork of [Roo Code](https://github.com/RooVetGit/Roo-Code), designed to work for all VS Code users with a focus on privacy and customization.
 
 Symbiote can:
 
@@ -105,7 +108,7 @@ Make Symbiote work your way with:
 
 ## Disclaimer
 
-Symbiote is a fork of [Roo Code](https://github.com/RooVetGit/Roo-Code), developed independently. While we maintain the core functionality, we've made significant changes, including the complete removal of telemetry and rebranding.
+**Symbiote is a fork of [Roo Code](https://github.com/RooVetGit/Roo-Code)**, developed independently. While we maintain the core functionality, we've made significant changes, including the complete removal of telemetry and rebranding. We are grateful to the Roo Code team for their excellent work on the original project.
 
 **Please note** that we do **not** make any representations or warranties regarding any code, models, or other tools provided or made available in connection with Symbiote, any associated third-party tools, or any resulting outputs. You assume **all risks** associated with the use of any such tools or outputs; such tools are provided on an **"AS IS"** and **"AS AVAILABLE"** basis. Such risks may include, without limitation, intellectual property infringement, cyber vulnerabilities or attacks, bias, inaccuracies, errors, defects, viruses, downtime, property loss or damage, and/or personal injury. You are solely responsible for your use of any such tools or outputs (including, without limitation, the legality, appropriateness, and results thereof).
 

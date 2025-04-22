@@ -23,7 +23,7 @@
 	"command.history.title": "Geçmiş",
 	"command.openInEditor.title": "Düzenleyicide Aç",
 	"command.settings.title": "Ayarlar",
-	"command.documentation.title": "Dokümantasyon",
+	"command.documentation.title": "GitHub",
 	"configuration.title": "Roo Code",
 	"commands.allowedCommands.description": "'Her zaman yürütme işlemlerini onayla' etkinleştirildiğinde otomatik olarak yürütülebilen komutlar",
 	"settings.vsCodeLmModelSelector.description": "VSCode dil modeli API'si için ayarlar",

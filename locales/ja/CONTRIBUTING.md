@@ -1,62 +1,68 @@
-# Roo Codeへの貢献
+# Symbioteへの貢献
 
-Roo Codeへの貢献に興味を持っていただき、ありがとうございます。バグの修正、機能の追加、またはドキュメントの改善など、すべての貢献がRoo Codeをよりスマートにします！コミュニティを活気に満ちた歓迎的なものに保つため、すべてのメンバーは[行動規範](CODE_OF_CONDUCT.md)を順守する必要があります。
+<div align="center">
+  <p style="font-size: 1.1em; margin-top: 15px;"><strong><a href="https://github.com/RooVetGit/Roo-Code" target="_blank">Roo Code</a>をベースにしています</strong></p>
+  <a href="https://github.com/RooVetGit/Roo-Code" target="_blank">
+    <img src="https://img.shields.io/badge/Fork%20from-Roo%20Code-6F42C1?style=for-the-badge&logo=github&logoColor=white" alt="Fork from Roo Code">
+  </a>
+</div>
 
-## コミュニティに参加する
+Symbioteへの貢献に興味を持っていただき、ありがとうございます。バグの修正、機能の追加、またはドキュメントの改善など、すべての貢献がSymbioteをよりスマートにします！コミュニティを活気に満ちた歓迎的なものに保つため、すべてのメンバーは[行動規範](CODE_OF_CONDUCT.md)を順守する必要があります。
 
-すべての貢献者に[Discordコミュニティ](https://discord.gg/roocode)への参加を強く推奨します！Discordサーバーに参加することで以下のメリットがあります：
+## コミュニティへの参加
 
-- 貢献に関するリアルタイムのヘルプとガイダンスを得られる
-- 他の貢献者やコアチームメンバーとつながれる
-- プロジェクトの開発と優先事項について最新情報を得られる
-- Roo Codeの将来を形作るディスカッションに参加できる
-- 他の開発者とのコラボレーションの機会を見つけられる
+すべての貢献者にGitHubを通じてSymbioteコミュニティに参加することを推奨します：
+
+- 質問やアイデアにはGitHub Discussionsを使用する
+- フィードバックを提供するために課題のディスカッションに参加する
+- 他の貢献者のプルリクエストをレビューする
+- Symbioteを使用した経験を共有する
+- 類似のプロジェクトに取り組む他の開発者とつながる
 
 ## バグや問題の報告
 
-バグレポートはRoo Codeをより良くするのに役立ちます！新しい課題を作成する前に、重複を避けるために[既存の課題を検索](https://github.com/RooVetGit/Roo-Code/issues)してください。バグを報告する準備ができたら、関連情報の入力を手助けするテンプレートが用意されている[課題ページ](https://github.com/RooVetGit/Roo-Code/issues/new/choose)にアクセスしてください。
+バグレポートはSymbioteをより良くするのに役立ちます！新しい課題を作成する前に、重複を避けるために[既存の課題を検索](https://github.com/RepairYourTech/Symbiote/issues)してください。バグを報告する準備ができたら、関連情報の入力を手助けするテンプレートが用意されている[課題ページ](https://github.com/RepairYourTech/Symbiote/issues/new/choose)にアクセスしてください。
 
-<blockquote class='warning-note'>
-     🔐 <b>重要：</b> セキュリティ脆弱性を発見した場合は、<a href="https://github.com/RooVetGit/Roo-Code/security/advisories/new">Githubセキュリティツールを使用して非公開で報告</a>してください。
-</blockquote>
+> **重要：** セキュリティ脆弱性を発見した場合は、[Githubセキュリティツールを使用して非公開で報告](https://github.com/RepairYourTech/Symbiote/security/advisories/new)してください。
 
 ## 取り組む内容の決定
 
-良い最初の貢献を探していますか？[Roo Code Issues](https://github.com/orgs/RooVetGit/projects/1) Githubプロジェクトの「Issue [Unassigned]」セクションの課題をチェックしてください。これらは新しい貢献者や私たちが助けを必要としている領域のために特別に選ばれています！
+良い最初の貢献を探していますか？[Symbioteの課題ページ](https://github.com/RepairYourTech/Symbiote/issues)で「good first issue」とラベル付けされた課題をチェックしてください。これらは新しい貢献者や私たちが助けを必要としている領域のために特別に選ばれています！
 
-また、[ドキュメント](https://docs.roocode.com/)への貢献も歓迎します！タイプミスの修正、既存ガイドの改善、または新しい教育コンテンツの作成など、Roo Codeを最大限に活用するためのコミュニティ主導のリソースリポジトリの構築を目指しています。任意のページで「Edit this page」をクリックすると、ファイルを編集するためのGithubの適切な場所にすぐに移動できます。または、https://github.com/RooVetGit/Roo-Code-Docs に直接アクセスすることもできます。
+また、ドキュメントへの貢献も歓迎します！タイプミスの修正、既存ガイドの改善、または新しい教育コンテンツの作成など、Symbioteを最大限に活用するためのコミュニティ主導のリソースリポジトリの構築を目指しています。
 
-より大きな機能に取り組む予定がある場合は、Roo Codeのビジョンに合致するかどうかを議論するために、まず[機能リクエスト](https://github.com/RooVetGit/Roo-Code/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop)を作成してください。また、アイデアが私たちの戦略的方向性に合っているかどうかを確認するために、下記の[プロジェクトロードマップ](#プロジェクトロードマップ)をチェックすることもできます。
+より大きな機能に取り組む予定がある場合は、Symbioteのビジョンに合致するかどうかを議論するために、まず[機能リクエスト](https://github.com/RepairYourTech/Symbiote/discussions/categories/feature-requests)を作成してください。また、アイデアが私たちの戦略的方向性に合っているかどうかを確認するために、下記の[プロジェクトロードマップ](#プロジェクトロードマップ)をチェックすることもできます。
 
 ## プロジェクトロードマップ
 
-Roo Codeには、私たちの優先事項と将来の方向性を導く明確な開発ロードマップがあります。私たちのロードマップを理解することで、以下のような助けになります：
+Symbioteには、私たちの優先事項と将来の方向性を導く開発ロードマップがあります。私たちのロードマップを理解することで、以下のような助けになります：
 
 - あなたの貢献をプロジェクトの目標に合わせる
 - あなたの専門知識が最も価値がある領域を特定する
 - 特定のデザイン決定の背景を理解する
 - 私たちのビジョンをサポートする新機能のインスピレーションを得る
 
-現在のロードマップは、6つの主要な柱に焦点を当てています：
+現在のロードマップは、これらの主要な柱に焦点を当てています：
 
 ### プロバイダーサポート
 
-できるだけ多くのプロバイダーをサポートすることを目指しています：
+できるだけ多くのAIプロバイダーをサポートすることを目指しています：
 
-- より汎用的な「OpenAI互換」サポート
-- xAI、Microsoft Azure AI、Alibaba Cloud Qwen、IBM Watsonx、Together AI、DeepInfra、Fireworks AI、Cohere、Perplexity AI、FriendliAI、Replicate
-- OllamaとLM Studioの強化されたサポート
+- 汎用的な「OpenAI互換」サポート
+- Anthropic、Google、xAI、Microsoft Azure AIなどの主要なAIプロバイダーのサポート
+- Ollamaや類似のプラットフォームを通じたローカルモデルの強化されたサポート
 
-### モデルサポート
+### プライバシーとセキュリティ
 
-ローカルモデルを含め、できるだけ多くのモデルでRooが良好に動作することを望んでいます：
+ユーザーのプライバシーとセキュリティを優先します：
 
-- カスタムシステムプロンプティングとワークフローを通じたローカルモデルサポート
-- ベンチマーク評価とテストケース
+- テレメトリーやデータ収集なし
+- 可能な場合はローカル処理オプション
+- ユーザーデータの透明な取り扱い
 
 ### システムサポート
 
-Rooが誰のコンピュータでも良好に動作することを望んでいます：
+Symbioteが誰のコンピュータでも良好に動作することを望んでいます：
 
 - クロスプラットフォームターミナル統合
 - Mac、Windows、Linuxの強力で一貫したサポート
@@ -69,23 +75,22 @@ Rooが誰のコンピュータでも良好に動作することを望んでい�
 - 明確なAPIドキュメント
 - 貢献者のためのより良いガイダンス
 - 多言語ドキュメントリソース
-- インタラクティブな例とコードサンプル
 
 ### 安定性
 
 バグの数を大幅に減らし、自動テストを増やすことを望んでいます：
 
-- デバッグロギングスイッチ
-- バグ/サポートリクエストと一緒に送信するための「マシン/タスク情報」コピーボタン
+- 包括的なテストカバレッジ
+- デバッグロギング機能
+- バグ報告の簡素化されたプロセス
 
 ### 国際化
 
-Rooが誰の言語も話すことを望んでいます：
+Symbioteが世界中のユーザーにアクセス可能であることを望んでいます：
 
-- 我们希望 Roo Code 说每个人的语言
-- Queremos que Roo Code hable el idioma de todos
-- हम चाहते हैं कि Roo Code हर किसी की भाषा बोले
-- نريد أن يتحدث Roo Code لغة الجميع
+- インターフェースでの複数言語のサポート
+- ローカライズされたドキュメント
+- コミュニティ主導の翻訳活動
 
 私たちは特に、ロードマップの目標を前進させる貢献を歓迎します。これらの柱に沿った何かに取り組んでいる場合は、PRの説明でそれについて言及してください。
 
@@ -94,7 +99,7 @@ Rooが誰の言語も話すことを望んでいます：
 1. リポジトリを**クローン**します：
 
 ```sh
-git clone https://github.com/RooVetGit/Roo-Code.git
+git clone https://github.com/RepairYourTech/Symbiote.git
 ```
 
 2. **依存関係をインストール**します：
@@ -110,7 +115,7 @@ npm run dev
 ```
 
 4. **デバッグ**：
-   VSCodeで`F5`キー（または**実行**→**デバッグの開始**）を押すと、Roo Codeがロードされた新しいセッションが開きます。
+   VSCodeで`F5`キー（または**実行**→**デバッグの開始**）を押すと、Symbioteがロードされた新しいセッションが開きます。
 
 ウェブビューへの変更はすぐに反映されます。コア拡張機能への変更は、拡張機能ホストの再起動が必要です。
 
@@ -123,12 +128,12 @@ npm run build
 `bin/`ディレクトリに`.vsix`ファイルが作成され、以下のコマンドでインストールできます：
 
 ```sh
-code --install-extension bin/roo-cline-<version>.vsix
+code --install-extension bin/symbiote-<version>.vsix
 ```
 
 ## コードの作成と提出
 
-誰でもRoo Codeにコードを貢献できますが、貢献がスムーズに統合されるように以下のガイドラインに従ってください：
+誰でもSymbioteにコードを貢献できますが、貢献がスムーズに統合されるように以下のガイドラインに従ってください：
 
 1. **プルリクエストを焦点を絞ったものにする**
 
@@ -171,3 +176,7 @@ code --install-extension bin/roo-cline-<version>.vsix
 ## 貢献同意
 
 プルリクエストを提出することにより、あなたの貢献がプロジェクトと同じライセンス（[Apache 2.0](../LICENSE)）の下でライセンスされることに同意したものとみなします。
+
+## 謝辭
+
+この貢献ガイドは[Roo Codeの貢献ガイド](https://github.com/RooVetGit/Roo-Code/blob/main/CONTRIBUTING.md)から適応され、Symbioteの特定の要件とプロセスを反映するために変更されています。

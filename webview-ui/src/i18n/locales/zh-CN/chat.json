@@ -182,10 +182,10 @@
 	},
 	"announcement": {
 		"title": "🎉 Symbiote v1.0.0 已发布",
-		"description": "Symbiote 是 Roo Code 的一个分支，具有简化安装和无遥测特点。",
+		"description": "Symbiote 是 Roo Code 的一个分支，具有增强隐私和无遥测特点。",
 		"symbioteSection": "Symbiote 功能",
 		"symbioteFeature1": "<bold>无遥测</bold>：Symbiote 通过完全移除所有遥测来尊重您的隐私",
-		"symbioteFeature2": "<bold>简化安装</bold>：适用于所有 VS Code 用户，无需 Qdrant 或 Mem0",
+		"symbioteFeature2": "<bold>增强上下文</bold>：支持 Qdrant 和 Mem0 以实现高级上下文感知（可选）",
 		"symbioteFeature3": "<bold>独立开发</bold>：Symbiote 将独立开发，同时合并 Roo Code 的更新",
 		"rooSection": "最新 Roo Code 更新",
 		"feature1": "<bold>Gemini 2.5 Flash Thinking</bold>: 现在可以使用 Gemini 2.5 Flash 的 thinking 变体并指定 thinking Token 预算",

@@ -14,7 +14,10 @@
 <div align="center">
   <h1>Symbiote</h1>
   <p>Un asistente de programación basado en IA que trabaja con tu base de código, ayudándote a arquitectar, programar, depurar y aumentar tu productividad.</p>
-
+  <p style="font-size: 1.1em; margin-top: 15px;"><strong>Basado en <a href="https://github.com/RooVetGit/Roo-Code" target="_blank">Roo Code</a></strong></p>
+  <a href="https://github.com/RooVetGit/Roo-Code" target="_blank">
+    <img src="https://img.shields.io/badge/Bifurcado%20de-Roo%20Code-6F42C1?style=for-the-badge&logo=github&logoColor=white" alt="Bifurcado de Roo Code">
+  </a>
 </div>
 <br>
 <br>
@@ -125,4 +128,8 @@ Symbiote es un fork de [Roo Code](https://github.com/RooVetGit/Roo-Code), desarr
 
 ## Licencia
 
-[Licencia MIT](../../LICENSE)
+[Apache 2.0 © 2025 RepairYourTech](../../LICENSE)
+
+---
+
+**¡Disfruta de Symbiote!** Estamos ansiosos por ver lo que construyes. ¡Feliz programación!

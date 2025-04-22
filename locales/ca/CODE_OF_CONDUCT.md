@@ -55,7 +55,7 @@ definida i clarificada addicionalment pels mantenidors del projecte.
 ## Aplicació
 
 Els casos de comportament abusiu, assetjador o altrament inacceptable poden ser
-reportats contactant amb l'equip del projecte a support@roocode.com. Totes les queixes
+reportats contactant amb l'equip del projecte a support@repairmytech.com. Totes les queixes
 seran revisades i investigades i resultaran en una resposta que
 es consideri necessària i adequada a les circumstàncies. L'equip del projecte està
 obligat a mantenir la confidencialitat respecte al reportador d'un incident.
@@ -67,10 +67,10 @@ membres del lideratge del projecte.
 
 ## Atribució
 
-Aquest Codi de Conducta està adaptat de la [versió de Cline][cline_coc] del [Pacte de Col·laboradors][homepage], versió 1.4,
+Aquest Codi de Conducta està adaptat de la [versió de Roo Code][roo_coc] del [Pacte de Col·laboradors][homepage], versió 1.4,
 disponible a https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
 
-[cline_coc]: https://github.com/cline/cline/blob/main/CODE_OF_CONDUCT.md
+[roo_coc]: https://github.com/RooVetGit/Roo-Code/blob/main/CODE_OF_CONDUCT.md
 [homepage]: https://www.contributor-covenant.org
 
 Per a respostes a preguntes freqüents sobre aquest codi de conducta, vegeu

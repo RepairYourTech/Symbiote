@@ -4,11 +4,11 @@ import { Terminal } from "../integrations/terminal/Terminal"
 import { t } from "../i18n"
 
 const TERMINAL_COMMAND_IDS = {
-	ADD_TO_CONTEXT: "roo-cline.terminalAddToContext",
-	FIX: "roo-cline.terminalFixCommand",
-	FIX_IN_CURRENT_TASK: "roo-cline.terminalFixCommandInCurrentTask",
-	EXPLAIN: "roo-cline.terminalExplainCommand",
-	EXPLAIN_IN_CURRENT_TASK: "roo-cline.terminalExplainCommandInCurrentTask",
+	ADD_TO_CONTEXT: "symbiote.terminalAddToContext",
+	FIX: "symbiote.terminalFixCommand",
+	FIX_IN_CURRENT_TASK: "symbiote.terminalFixCommandInCurrentTask",
+	EXPLAIN: "symbiote.terminalExplainCommand",
+	EXPLAIN_IN_CURRENT_TASK: "symbiote.terminalExplainCommandInCurrentTask",
 } as const
 
 export const registerTerminalActions = (context: vscode.ExtensionContext) => {

@@ -1,6 +1,6 @@
 import { z } from "zod"
 
-import { RooCodeEventName, rooCodeEventsSchema, rooCodeSettingsSchema } from "./roo-code.js"
+import { SymbioteEventName, symbioteEventsSchema, symbioteSettingsSchema } from "./symbiote.js"
 
 /**
  * Ack
@@ -57,58 +57,58 @@ export enum EvalEventName {
 
 export const taskEventSchema = z.discriminatedUnion("eventName", [
 	z.object({
-		eventName: z.literal(RooCodeEventName.Message),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.Message],
+		eventName: z.literal(SymbioteEventName.Message),
+		payload: symbioteEventsSchema.shape[SymbioteEventName.Message],
 		taskId: z.number().optional(),
 	}),
 	z.object({
-		eventName: z.literal(RooCodeEventName.TaskCreated),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.TaskCreated],
+		eventName: z.literal(SymbioteEventName.TaskCreated),
+		payload: symbioteEventsSchema.shape[SymbioteEventName.TaskCreated],
 		taskId: z.number().optional(),
 	}),
 	z.object({
-		eventName: z.literal(RooCodeEventName.TaskStarted),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.TaskStarted],
+		eventName: z.literal(SymbioteEventName.TaskStarted),
+		payload: symbioteEventsSchema.shape[SymbioteEventName.TaskStarted],
 		taskId: z.number().optional(),
 	}),
 	z.object({
-		eventName: z.literal(RooCodeEventName.TaskModeSwitched),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.TaskModeSwitched],
+		eventName: z.literal(SymbioteEventName.TaskModeSwitched),
+		payload: symbioteEventsSchema.shape[SymbioteEventName.TaskModeSwitched],
 		taskId: z.number().optional(),
 	}),
 	z.object({
-		eventName: z.literal(RooCodeEventName.TaskPaused),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.TaskPaused],
+		eventName: z.literal(SymbioteEventName.TaskPaused),
+		payload: symbioteEventsSchema.shape[SymbioteEventName.TaskPaused],
 		taskId: z.number().optional(),
 	}),
 	z.object({
-		eventName: z.literal(RooCodeEventName.TaskUnpaused),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.TaskUnpaused],
+		eventName: z.literal(SymbioteEventName.TaskUnpaused),
+		payload: symbioteEventsSchema.shape[SymbioteEventName.TaskUnpaused],
 		taskId: z.number().optional(),
 	}),
 	z.object({
-		eventName: z.literal(RooCodeEventName.TaskAskResponded),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.TaskAskResponded],
+		eventName: z.literal(SymbioteEventName.TaskAskResponded),
+		payload: symbioteEventsSchema.shape[SymbioteEventName.TaskAskResponded],
 		taskId: z.number().optional(),
 	}),
 	z.object({
-		eventName: z.literal(RooCodeEventName.TaskAborted),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.TaskAborted],
+		eventName: z.literal(SymbioteEventName.TaskAborted),
+		payload: symbioteEventsSchema.shape[SymbioteEventName.TaskAborted],
 		taskId: z.number().optional(),
 	}),
 	z.object({
-		eventName: z.literal(RooCodeEventName.TaskSpawned),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.TaskSpawned],
+		eventName: z.literal(SymbioteEventName.TaskSpawned),
+		payload: symbioteEventsSchema.shape[SymbioteEventName.TaskSpawned],
 		taskId: z.number().optional(),
 	}),
 	z.object({
-		eventName: z.literal(RooCodeEventName.TaskCompleted),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.TaskCompleted],
+		eventName: z.literal(SymbioteEventName.TaskCompleted),
+		payload: symbioteEventsSchema.shape[SymbioteEventName.TaskCompleted],
 		taskId: z.number().optional(),
 	}),
 	z.object({
-		eventName: z.literal(RooCodeEventName.TaskTokenUsageUpdated),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.TaskTokenUsageUpdated],
+		eventName: z.literal(SymbioteEventName.TaskTokenUsageUpdated),
+		payload: symbioteEventsSchema.shape[SymbioteEventName.TaskTokenUsageUpdated],
 		taskId: z.number().optional(),
 	}),
 	z.object({

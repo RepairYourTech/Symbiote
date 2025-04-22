@@ -1,13 +1,13 @@
-# Roo Code API
+# Symbiote API
 
-The Roo Code extension exposes an API that can be used by other extensions. To use this API in your extension:
+The Symbiote extension exposes an API that can be used by other extensions. To use this API in your extension:
 
-1. Copy `src/extension-api/roo-code.d.ts` to your extension's source directory.
-2. Include `roo-code.d.ts` in your extension's compilation.
+1. Copy `src/extension-api/symbiote.d.ts` to your extension's source directory.
+2. Include `symbiote.d.ts` in your extension's compilation.
 3. Get access to the API with the following code:
 
 ```typescript
-const extension = vscode.extensions.getExtension<RooCodeAPI>("rooveterinaryinc.roo-cline")
+const extension = vscode.extensions.getExtension<SymbioteAPI>("RepairYourTech.symbiote")
 
 if (!extension?.isActive) {
 	throw new Error("Extension is not activated")
@@ -20,7 +20,7 @@ if (!api) {
 }
 
 // Start a new task with an initial message.
-await api.startNewTask("Hello, Roo Code API! Let's make a new project...")
+await api.startNewTask("Hello, Symbiote API! Let's make a new project...")
 
 // Start a new task with an initial message and images.
 await api.startNewTask("Use this design language", ["data:image/webp;base64,..."])
@@ -35,10 +35,10 @@ await api.pressPrimaryButton()
 await api.pressSecondaryButton()
 ```
 
-**NOTE:** To ensure that the `rooveterinaryinc.roo-cline` extension is activated before your extension, add it to the `extensionDependencies` in your `package.json`:
+**NOTE:** To ensure that the `RepairYourTech.symbiote` extension is activated before your extension, add it to the `extensionDependencies` in your `package.json`:
 
 ```json
-"extensionDependencies": ["rooveterinaryinc.roo-cline"]
+"extensionDependencies": ["RepairYourTech.symbiote"]
 ```
 
-For detailed information on the available methods and their usage, refer to the `roo-code.d.ts` file.
+For detailed information on the available methods and their usage, refer to the `symbiote.d.ts` file.

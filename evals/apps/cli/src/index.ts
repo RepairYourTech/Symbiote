@@ -11,11 +11,11 @@ import psTree from "ps-tree"
 import {
 	type ExerciseLanguage,
 	exerciseLanguages,
-	RooCodeEventName,
+	SymbioteEventName,
 	IpcOrigin,
 	IpcMessageType,
 	TaskCommandName,
-	rooCodeDefaults,
+	symbioteDefaults,
 	EvalEventName,
 } from "@evals/types"
 import {
@@ -70,9 +70,9 @@ const run = async (toolbox: GluegunToolbox) => {
 		run = await findRun(id)
 	} else {
 		run = await createRun({
-			model: rooCodeDefaults.openRouterModelId!,
+			model: symbioteDefaults.openRouterModelId!,
 			pid: process.pid,
-			socketPath: path.resolve(os.tmpdir(), `roo-code-evals-${crypto.randomUUID().slice(0, 8)}.sock`),
+			socketPath: path.resolve(os.tmpdir(), `symbiote-evals-${crypto.randomUUID().slice(0, 8)}.sock`),
 		})
 
 		if (language === "all") {
@@ -101,15 +101,15 @@ const run = async (toolbox: GluegunToolbox) => {
 		throw new Error("No tasks found.")
 	}
 
-	await execa({ cwd: exercisesPath })`git config user.name "Roo Code"`
-	await execa({ cwd: exercisesPath })`git config user.email "support@roocode.com"`
+	await execa({ cwd: exercisesPath })`git config user.name "Symbiote"`
+	await execa({ cwd: exercisesPath })`git config user.email "support@symbiote.ai"`
 	await execa({ cwd: exercisesPath })`git checkout -f`
 	await execa({ cwd: exercisesPath })`git clean -fd`
 	await execa({ cwd: exercisesPath })`git checkout -b runs/${run.id}-${crypto.randomUUID().slice(0, 8)} main`
 
 	fs.writeFileSync(
 		path.resolve(exercisesPath, "settings.json"),
-		JSON.stringify({ ...rooCodeDefaults, ...run.settings }, null, 2),
+		JSON.stringify({ ...symbioteDefaults, ...run.settings }, null, 2),
 	)
 
 	const server = new IpcServer(run.socketPath, () => {})
@@ -186,7 +186,7 @@ const runExercise = async ({ run, task, server }: { run: Run; task: Task; server
 
 	await execa({
 		env: {
-			ROO_CODE_IPC_SOCKET_PATH: taskSocketPath,
+			SYMBIOTE_IPC_SOCKET_PATH: taskSocketPath,
 		},
 		shell: "/bin/bash",
 	})`code --disable-workspace-trust -n ${workspacePath}`
@@ -208,12 +208,12 @@ const runExercise = async ({ run, task, server }: { run: Run; task: Task; server
 	let taskStartedAt = Date.now()
 	let taskFinishedAt: number | undefined
 	let taskMetricsId: number | undefined
-	let rooTaskId: string | undefined
+	let symbioteTaskId: string | undefined
 	let isClientDisconnected = false
 
-	const ignoreEvents: Record<"broadcast" | "log", (RooCodeEventName | EvalEventName)[]> = {
-		broadcast: [RooCodeEventName.Message],
-		log: [RooCodeEventName.Message, RooCodeEventName.TaskTokenUsageUpdated, RooCodeEventName.TaskAskResponded],
+	const ignoreEvents: Record<"broadcast" | "log", (SymbioteEventName | EvalEventName)[]> = {
+		broadcast: [SymbioteEventName.Message],
+		log: [SymbioteEventName.Message, SymbioteEventName.TaskTokenUsageUpdated, SymbioteEventName.TaskAskResponded],
 	}
 
 	client.on(IpcMessageType.TaskEvent, async (taskEvent) => {
@@ -235,7 +235,7 @@ const runExercise = async ({ run, task, server }: { run: Run; task: Task; server
 			)
 		}
 
-		if (eventName === RooCodeEventName.TaskStarted) {
+		if (eventName === SymbioteEventName.TaskStarted) {
 			taskStartedAt = Date.now()
 
 			const taskMetrics = await createTaskMetrics({
@@ -252,11 +252,11 @@ const runExercise = async ({ run, task, server }: { run: Run; task: Task; server
 
 			taskStartedAt = Date.now()
 			taskMetricsId = taskMetrics.id
-			rooTaskId = payload[0]
+			symbioteTaskId = payload[0]
 		}
 
 		if (
-			(eventName === RooCodeEventName.TaskTokenUsageUpdated || eventName === RooCodeEventName.TaskCompleted) &&
+			(eventName === SymbioteEventName.TaskTokenUsageUpdated || eventName === SymbioteEventName.TaskCompleted) &&
 			taskMetricsId
 		) {
 			const duration = Date.now() - taskStartedAt
@@ -275,12 +275,12 @@ const runExercise = async ({ run, task, server }: { run: Run; task: Task; server
 			})
 		}
 
-		if (eventName === RooCodeEventName.TaskCompleted && taskMetricsId) {
+		if (eventName === SymbioteEventName.TaskCompleted && taskMetricsId) {
 			const toolUsage = payload[2]
 			await updateTaskMetrics(taskMetricsId, { toolUsage })
 		}
 
-		if (eventName === RooCodeEventName.TaskAborted || eventName === RooCodeEventName.TaskCompleted) {
+		if (eventName === SymbioteEventName.TaskAborted || eventName === SymbioteEventName.TaskCompleted) {
 			taskFinishedAt = Date.now()
 			await updateTask(task.id, { finishedAt: new Date() })
 		}
@@ -301,7 +301,7 @@ const runExercise = async ({ run, task, server }: { run: Run; task: Task; server
 			commandName: TaskCommandName.StartNewTask,
 			data: {
 				configuration: {
-					...rooCodeDefaults,
+					...symbioteDefaults,
 					openRouterApiKey: process.env.OPENROUTER_API_KEY!,
 					...run.settings,
 				},
@@ -318,12 +318,12 @@ const runExercise = async ({ run, task, server }: { run: Run; task: Task; server
 		console.log(`${Date.now()} [cli#runExercise | ${language} / ${exercise}] time limit reached`)
 
 		// Cancel the task.
-		if (rooTaskId && !isClientDisconnected) {
+		if (symbioteTaskId && !isClientDisconnected) {
 			client.sendMessage({
 				type: IpcMessageType.TaskCommand,
 				origin: IpcOrigin.Client,
 				clientId: client.clientId!,
-				data: { commandName: TaskCommandName.CancelTask, data: rooTaskId },
+				data: { commandName: TaskCommandName.CancelTask, data: symbioteTaskId },
 			})
 
 			// Allow some time for the task to cancel.
@@ -334,12 +334,12 @@ const runExercise = async ({ run, task, server }: { run: Run; task: Task; server
 	}
 
 	if (!isClientDisconnected) {
-		if (rooTaskId) {
+		if (symbioteTaskId) {
 			client.sendMessage({
 				type: IpcMessageType.TaskCommand,
 				origin: IpcOrigin.Client,
 				clientId: client.clientId!,
-				data: { commandName: TaskCommandName.CloseTask, data: rooTaskId },
+				data: { commandName: TaskCommandName.CloseTask, data: symbioteTaskId },
 			})
 
 			// Allow some time for the window to close.

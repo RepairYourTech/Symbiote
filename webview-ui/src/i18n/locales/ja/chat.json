@@ -182,10 +182,10 @@
 	},
 	"announcement": {
 		"title": "🎉 Symbiote v1.0.0 リリース",
-		"description": "SymbioteはRoo Codeのフォークで、簡素化されたインストールとテレメトリーなしで動作します。",
+		"description": "SymbioteはRoo Codeのフォークで、プライバシー強化とテレメトリーなしで動作します。",
 		"symbioteSection": "Symbioteの機能",
 		"symbioteFeature1": "<bold>テレメトリーなし</bold>：Symbioteはすべてのテレメトリーを完全に削除してプライバシーを尊重します",
-		"symbioteFeature2": "<bold>簡素化されたインストール</bold>：QdrantやMem0を必要とせず、すべてのVS Codeユーザーに対応",
+		"symbioteFeature2": "<bold>コンテキスト強化</bold>：高度なコンテキスト認識のためのQdrantとMem0のサポート（オプション）",
 		"symbioteFeature3": "<bold>独立した開発</bold>：SymbioteはRoo Codeの更新を取り込みながら独自に開発を進めます",
 		"rooSection": "最新のRoo Codeアップデート",
 		"feature1": "<bold>Gemini 2.5 Flash Thinking</bold>: Gemini 2.5 Flashのthinkingバリアントを使用し、thinking用のトークン予算を指定できるようになりました",

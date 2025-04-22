@@ -8,7 +8,7 @@ import { Tab, TabContent } from "../common/Tab"
 import { Trans } from "react-i18next"
 import { useAppTranslation } from "../../i18n/TranslationContext"
 import { getRequestyAuthUrl, getOpenRouterAuthUrl } from "../../oauth/urls"
-import SymbioteHero from "./RooHero"
+import SymbioteHero from "./SymbioteHero"
 import knuthShuffle from "knuth-shuffle-seeded"
 
 const WelcomeView = () => {
